@@ -1,0 +1,24 @@
+{
+  "startNum" : 0,
+  "foundNum" : 1,
+  "returnedNum" : 1,
+  "searchTime" : "0.000 sec",
+  "transmissionTime" : "0.001 sec",
+  "list" : [ {
+    "pk" : "64077",
+    "created" : "2020-09-19T23:06:57.242-06:00[America/Denver]",
+    "sessionId" : "3ca343758e9686ebfbe64fa003e4f033",
+    "userId" : "2e2a2ee6-6c02-465f-b04d-ae212644c8bd",
+    "userKey" : "64036",
+    "saves" : [ "blockEndTime", "blockFriday", "blockMonday", "blockStartTime", "blockThursday", "blockTuesday", "blockWednesday", "created", "sessionId", "userId", "userKey", "ageKey", "enrollmentKeys" ],
+    "enrollmentKeys" : [ "64078" ],
+    "ageKey" : "64076",
+    "blockStartTime" : "07:00",
+    "blockEndTime" : "17:00",
+    "blockMonday" : true,
+    "blockTuesday" : true,
+    "blockWednesday" : true,
+    "blockThursday" : true,
+    "blockFriday" : true
+  } ]
+}

@@ -1,0 +1,19 @@
+{
+  "startNum" : 0,
+  "foundNum" : 1,
+  "returnedNum" : 1,
+  "searchTime" : "0.000 sec",
+  "transmissionTime" : "0.000 sec",
+  "list" : [ {
+    "pk" : "64075",
+    "created" : "2020-09-19T22:57:19.694-06:00[America/Denver]",
+    "sessionId" : "3ca343758e9686ebfbe64fa003e4f033",
+    "userId" : "2e2a2ee6-6c02-465f-b04d-ae212644c8bd",
+    "userKey" : "64036",
+    "saves" : [ "created", "sessionId", "userId", "userKey", "yearEnrollmentFee", "schoolKey", "ageKeys", "enrollmentKeys" ],
+    "schoolKey" : "64074",
+    "enrollmentKeys" : [ "64078" ],
+    "ageKeys" : [ "64076" ],
+    "yearEnrollmentFee" : "5.00"
+  } ]
+}
