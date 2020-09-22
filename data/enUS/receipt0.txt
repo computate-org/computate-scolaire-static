@@ -1,8 +1,0 @@
-{
-  "startNum" : 0,
-  "foundNum" : 0,
-  "returnedNum" : 0,
-  "searchTime" : "0.000 sec",
-  "transmissionTime" : "0.000 sec",
-  "list" : [ ]
-}
