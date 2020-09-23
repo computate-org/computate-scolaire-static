@@ -10,7 +10,7 @@
     "sessionId" : "3ca343758e9686ebfbe64fa003e4f033",
     "userId" : "2e2a2ee6-6c02-465f-b04d-ae212644c8bd",
     "userKey" : "64036",
-    "saves" : [ "created", "familyName", "personFirstName", "sessionId", "userId", "userKey", "enrollmentKeys" ],
+    "saves" : [ "userKey", "personFirstName", "created", "sessionId", "familyName", "userId", "enrollmentKeys" ],
     "enrollmentKeys" : [ "64078" ],
     "personFirstName" : "Smike",
     "familyName" : "Nickleby"

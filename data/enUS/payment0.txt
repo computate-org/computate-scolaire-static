@@ -71,6 +71,17 @@
     "chargeAmount" : "100.00",
     "chargeMonth" : true
   }, {
+    "pk" : "64181",
+    "created" : "2020-09-22T11:48:50.004-06:00[America/Denver]",
+    "sessionId" : "4d40fb858f17255a1e5aa0a260a11eb3",
+    "userId" : "2e2a2ee6-6c02-465f-b04d-ae212644c8bd",
+    "userKey" : "64036",
+    "saves" : [ "chargeEnrollment", "paymentDate", "userKey", "sessionId", "created", "chargeAmount", "userId", "enrollmentKey" ],
+    "enrollmentKey" : "64078",
+    "paymentDate" : "2020-09-25",
+    "chargeAmount" : "5.00",
+    "chargeEnrollment" : true
+  }, {
     "pk" : "64185",
     "created" : "2020-09-22T11:48:50.006-06:00[America/Denver]",
     "sessionId" : "4d40fb858f17255a1e5aa0a260a11eb3",
@@ -92,17 +103,6 @@
     "paymentDate" : "2020-09-25",
     "chargeAmount" : "200.00",
     "chargeFirstLast" : true
-  }, {
-    "pk" : "64181",
-    "created" : "2020-09-22T11:48:50.004-06:00[America/Denver]",
-    "sessionId" : "4d40fb858f17255a1e5aa0a260a11eb3",
-    "userId" : "2e2a2ee6-6c02-465f-b04d-ae212644c8bd",
-    "userKey" : "64036",
-    "saves" : [ "chargeEnrollment", "paymentDate", "userKey", "sessionId", "created", "chargeAmount", "userId", "enrollmentKey" ],
-    "enrollmentKey" : "64078",
-    "paymentDate" : "2020-09-25",
-    "chargeAmount" : "5.00",
-    "chargeEnrollment" : true
   }, {
     "pk" : "64179",
     "created" : "2020-09-22T11:48:50.006-06:00[America/Denver]",
