@@ -316,9 +316,9 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurPk = $formulaireValeurs.find('.valeurPk').val();
 	var removePk = $formulaireValeurs.find('.removePk').val() === 'true';
 	var setPk = removePk ? null : $formulaireValeurs.find('.setPk').val();
+	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(removePk || setPk != null && setPk !== '')
 		vals['setPk'] = setPk;
-	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(addPk != null && addPk !== '')
 		vals['addPk'] = addPk;
 	var removePk = $formulaireValeurs.find('.removePk').val();
@@ -328,9 +328,9 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurCree = $formulaireValeurs.find('.valeurCree').val();
 	var removeCree = $formulaireValeurs.find('.removeCree').val() === 'true';
 	var setCree = removeCree ? null : $formulaireValeurs.find('.setCree').val();
+	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(removeCree || setCree != null && setCree !== '')
 		vals['setCree'] = setCree;
-	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(addCree != null && addCree !== '')
 		vals['addCree'] = addCree;
 	var removeCree = $formulaireValeurs.find('.removeCree').val();
@@ -340,9 +340,9 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurModifie = $formulaireValeurs.find('.valeurModifie').val();
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val() === 'true';
 	var setModifie = removeModifie ? null : $formulaireValeurs.find('.setModifie').val();
+	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(removeModifie || setModifie != null && setModifie !== '')
 		vals['setModifie'] = setModifie;
-	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(addModifie != null && addModifie !== '')
 		vals['addModifie'] = addModifie;
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val();
@@ -352,9 +352,9 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurObjetId = $formulaireValeurs.find('.valeurObjetId').val();
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val() === 'true';
 	var setObjetId = removeObjetId ? null : $formulaireValeurs.find('.setObjetId').val();
+	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(removeObjetId || setObjetId != null && setObjetId !== '')
 		vals['setObjetId'] = setObjetId;
-	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(addObjetId != null && addObjetId !== '')
 		vals['addObjetId'] = addObjetId;
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val();
@@ -367,10 +367,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurArchive = null;
 	if(valeurArchiveSelectVal != null && valeurArchiveSelectVal !== '')
 		valeurArchive = valeurArchiveSelectVal == 'true';
-	setArchive = removeArchive ? null : valeurArchive;
+	var setArchive = removeArchive ? null : valeurArchive;
+	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(removeArchive || setArchive != null && setArchive !== '')
 		vals['setArchive'] = setArchive;
-	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(addArchive != null && addArchive !== '')
 		vals['addArchive'] = addArchive;
 	var removeArchive = $formulaireValeurs.find('.removeArchive').prop('checked');
@@ -383,10 +383,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurSupprime = null;
 	if(valeurSupprimeSelectVal != null && valeurSupprimeSelectVal !== '')
 		valeurSupprime = valeurSupprimeSelectVal == 'true';
-	setSupprime = removeSupprime ? null : valeurSupprime;
+	var setSupprime = removeSupprime ? null : valeurSupprime;
+	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(removeSupprime || setSupprime != null && setSupprime !== '')
 		vals['setSupprime'] = setSupprime;
-	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(addSupprime != null && addSupprime !== '')
 		vals['addSupprime'] = addSupprime;
 	var removeSupprime = $formulaireValeurs.find('.removeSupprime').prop('checked');
@@ -396,9 +396,9 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurDesignPageNomComplet = $formulaireValeurs.find('.valeurDesignPageNomComplet').val();
 	var removeDesignPageNomComplet = $formulaireValeurs.find('.removeDesignPageNomComplet').val() === 'true';
 	var setDesignPageNomComplet = removeDesignPageNomComplet ? null : $formulaireValeurs.find('.setDesignPageNomComplet').val();
+	var addDesignPageNomComplet = $formulaireValeurs.find('.addDesignPageNomComplet').val();
 	if(removeDesignPageNomComplet || setDesignPageNomComplet != null && setDesignPageNomComplet !== '')
 		vals['setDesignPageNomComplet'] = setDesignPageNomComplet;
-	var addDesignPageNomComplet = $formulaireValeurs.find('.addDesignPageNomComplet').val();
 	if(addDesignPageNomComplet != null && addDesignPageNomComplet !== '')
 		vals['addDesignPageNomComplet'] = addDesignPageNomComplet;
 	var removeDesignPageNomComplet = $formulaireValeurs.find('.removeDesignPageNomComplet').val();
@@ -411,10 +411,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurDesignCache = null;
 	if(valeurDesignCacheSelectVal != null && valeurDesignCacheSelectVal !== '')
 		valeurDesignCache = valeurDesignCacheSelectVal == 'true';
-	setDesignCache = removeDesignCache ? null : valeurDesignCache;
+	var setDesignCache = removeDesignCache ? null : valeurDesignCache;
+	var addDesignCache = $formulaireValeurs.find('.addDesignCache').prop('checked');
 	if(removeDesignCache || setDesignCache != null && setDesignCache !== '')
 		vals['setDesignCache'] = setDesignCache;
-	var addDesignCache = $formulaireValeurs.find('.addDesignCache').prop('checked');
 	if(addDesignCache != null && addDesignCache !== '')
 		vals['addDesignCache'] = addDesignCache;
 	var removeDesignCache = $formulaireValeurs.find('.removeDesignCache').prop('checked');
@@ -427,10 +427,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurDesignAdmin = null;
 	if(valeurDesignAdminSelectVal != null && valeurDesignAdminSelectVal !== '')
 		valeurDesignAdmin = valeurDesignAdminSelectVal == 'true';
-	setDesignAdmin = removeDesignAdmin ? null : valeurDesignAdmin;
+	var setDesignAdmin = removeDesignAdmin ? null : valeurDesignAdmin;
+	var addDesignAdmin = $formulaireValeurs.find('.addDesignAdmin').prop('checked');
 	if(removeDesignAdmin || setDesignAdmin != null && setDesignAdmin !== '')
 		vals['setDesignAdmin'] = setDesignAdmin;
-	var addDesignAdmin = $formulaireValeurs.find('.addDesignAdmin').prop('checked');
 	if(addDesignAdmin != null && addDesignAdmin !== '')
 		vals['addDesignAdmin'] = addDesignAdmin;
 	var removeDesignAdmin = $formulaireValeurs.find('.removeDesignAdmin').prop('checked');
@@ -443,10 +443,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurDesignIgnorerNomEnfantVide = null;
 	if(valeurDesignIgnorerNomEnfantVideSelectVal != null && valeurDesignIgnorerNomEnfantVideSelectVal !== '')
 		valeurDesignIgnorerNomEnfantVide = valeurDesignIgnorerNomEnfantVideSelectVal == 'true';
-	setDesignIgnorerNomEnfantVide = removeDesignIgnorerNomEnfantVide ? null : valeurDesignIgnorerNomEnfantVide;
+	var setDesignIgnorerNomEnfantVide = removeDesignIgnorerNomEnfantVide ? null : valeurDesignIgnorerNomEnfantVide;
+	var addDesignIgnorerNomEnfantVide = $formulaireValeurs.find('.addDesignIgnorerNomEnfantVide').prop('checked');
 	if(removeDesignIgnorerNomEnfantVide || setDesignIgnorerNomEnfantVide != null && setDesignIgnorerNomEnfantVide !== '')
 		vals['setDesignIgnorerNomEnfantVide'] = setDesignIgnorerNomEnfantVide;
-	var addDesignIgnorerNomEnfantVide = $formulaireValeurs.find('.addDesignIgnorerNomEnfantVide').prop('checked');
 	if(addDesignIgnorerNomEnfantVide != null && addDesignIgnorerNomEnfantVide !== '')
 		vals['addDesignIgnorerNomEnfantVide'] = addDesignIgnorerNomEnfantVide;
 	var removeDesignIgnorerNomEnfantVide = $formulaireValeurs.find('.removeDesignIgnorerNomEnfantVide').prop('checked');
@@ -459,10 +459,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurDesignIgnorerPaiementsPasEnSouffrance = null;
 	if(valeurDesignIgnorerPaiementsPasEnSouffranceSelectVal != null && valeurDesignIgnorerPaiementsPasEnSouffranceSelectVal !== '')
 		valeurDesignIgnorerPaiementsPasEnSouffrance = valeurDesignIgnorerPaiementsPasEnSouffranceSelectVal == 'true';
-	setDesignIgnorerPaiementsPasEnSouffrance = removeDesignIgnorerPaiementsPasEnSouffrance ? null : valeurDesignIgnorerPaiementsPasEnSouffrance;
+	var setDesignIgnorerPaiementsPasEnSouffrance = removeDesignIgnorerPaiementsPasEnSouffrance ? null : valeurDesignIgnorerPaiementsPasEnSouffrance;
+	var addDesignIgnorerPaiementsPasEnSouffrance = $formulaireValeurs.find('.addDesignIgnorerPaiementsPasEnSouffrance').prop('checked');
 	if(removeDesignIgnorerPaiementsPasEnSouffrance || setDesignIgnorerPaiementsPasEnSouffrance != null && setDesignIgnorerPaiementsPasEnSouffrance !== '')
 		vals['setDesignIgnorerPaiementsPasEnSouffrance'] = setDesignIgnorerPaiementsPasEnSouffrance;
-	var addDesignIgnorerPaiementsPasEnSouffrance = $formulaireValeurs.find('.addDesignIgnorerPaiementsPasEnSouffrance').prop('checked');
 	if(addDesignIgnorerPaiementsPasEnSouffrance != null && addDesignIgnorerPaiementsPasEnSouffrance !== '')
 		vals['addDesignIgnorerPaiementsPasEnSouffrance'] = addDesignIgnorerPaiementsPasEnSouffrance;
 	var removeDesignIgnorerPaiementsPasEnSouffrance = $formulaireValeurs.find('.removeDesignIgnorerPaiementsPasEnSouffrance').prop('checked');
@@ -475,10 +475,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurDesignIgnorerPaiementsEnSouffrance = null;
 	if(valeurDesignIgnorerPaiementsEnSouffranceSelectVal != null && valeurDesignIgnorerPaiementsEnSouffranceSelectVal !== '')
 		valeurDesignIgnorerPaiementsEnSouffrance = valeurDesignIgnorerPaiementsEnSouffranceSelectVal == 'true';
-	setDesignIgnorerPaiementsEnSouffrance = removeDesignIgnorerPaiementsEnSouffrance ? null : valeurDesignIgnorerPaiementsEnSouffrance;
+	var setDesignIgnorerPaiementsEnSouffrance = removeDesignIgnorerPaiementsEnSouffrance ? null : valeurDesignIgnorerPaiementsEnSouffrance;
+	var addDesignIgnorerPaiementsEnSouffrance = $formulaireValeurs.find('.addDesignIgnorerPaiementsEnSouffrance').prop('checked');
 	if(removeDesignIgnorerPaiementsEnSouffrance || setDesignIgnorerPaiementsEnSouffrance != null && setDesignIgnorerPaiementsEnSouffrance !== '')
 		vals['setDesignIgnorerPaiementsEnSouffrance'] = setDesignIgnorerPaiementsEnSouffrance;
-	var addDesignIgnorerPaiementsEnSouffrance = $formulaireValeurs.find('.addDesignIgnorerPaiementsEnSouffrance').prop('checked');
 	if(addDesignIgnorerPaiementsEnSouffrance != null && addDesignIgnorerPaiementsEnSouffrance !== '')
 		vals['addDesignIgnorerPaiementsEnSouffrance'] = addDesignIgnorerPaiementsEnSouffrance;
 	var removeDesignIgnorerPaiementsEnSouffrance = $formulaireValeurs.find('.removeDesignIgnorerPaiementsEnSouffrance').prop('checked');
@@ -491,10 +491,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurDesignFiltrerInscriptionCle = null;
 	if(valeurDesignFiltrerInscriptionCleSelectVal != null && valeurDesignFiltrerInscriptionCleSelectVal !== '')
 		valeurDesignFiltrerInscriptionCle = valeurDesignFiltrerInscriptionCleSelectVal == 'true';
-	setDesignFiltrerInscriptionCle = removeDesignFiltrerInscriptionCle ? null : valeurDesignFiltrerInscriptionCle;
+	var setDesignFiltrerInscriptionCle = removeDesignFiltrerInscriptionCle ? null : valeurDesignFiltrerInscriptionCle;
+	var addDesignFiltrerInscriptionCle = $formulaireValeurs.find('.addDesignFiltrerInscriptionCle').prop('checked');
 	if(removeDesignFiltrerInscriptionCle || setDesignFiltrerInscriptionCle != null && setDesignFiltrerInscriptionCle !== '')
 		vals['setDesignFiltrerInscriptionCle'] = setDesignFiltrerInscriptionCle;
-	var addDesignFiltrerInscriptionCle = $formulaireValeurs.find('.addDesignFiltrerInscriptionCle').prop('checked');
 	if(addDesignFiltrerInscriptionCle != null && addDesignFiltrerInscriptionCle !== '')
 		vals['addDesignFiltrerInscriptionCle'] = addDesignFiltrerInscriptionCle;
 	var removeDesignFiltrerInscriptionCle = $formulaireValeurs.find('.removeDesignFiltrerInscriptionCle').prop('checked');
@@ -507,10 +507,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurDesignInscriptionTriMoisJourDeNaissance = null;
 	if(valeurDesignInscriptionTriMoisJourDeNaissanceSelectVal != null && valeurDesignInscriptionTriMoisJourDeNaissanceSelectVal !== '')
 		valeurDesignInscriptionTriMoisJourDeNaissance = valeurDesignInscriptionTriMoisJourDeNaissanceSelectVal == 'true';
-	setDesignInscriptionTriMoisJourDeNaissance = removeDesignInscriptionTriMoisJourDeNaissance ? null : valeurDesignInscriptionTriMoisJourDeNaissance;
+	var setDesignInscriptionTriMoisJourDeNaissance = removeDesignInscriptionTriMoisJourDeNaissance ? null : valeurDesignInscriptionTriMoisJourDeNaissance;
+	var addDesignInscriptionTriMoisJourDeNaissance = $formulaireValeurs.find('.addDesignInscriptionTriMoisJourDeNaissance').prop('checked');
 	if(removeDesignInscriptionTriMoisJourDeNaissance || setDesignInscriptionTriMoisJourDeNaissance != null && setDesignInscriptionTriMoisJourDeNaissance !== '')
 		vals['setDesignInscriptionTriMoisJourDeNaissance'] = setDesignInscriptionTriMoisJourDeNaissance;
-	var addDesignInscriptionTriMoisJourDeNaissance = $formulaireValeurs.find('.addDesignInscriptionTriMoisJourDeNaissance').prop('checked');
 	if(addDesignInscriptionTriMoisJourDeNaissance != null && addDesignInscriptionTriMoisJourDeNaissance !== '')
 		vals['addDesignInscriptionTriMoisJourDeNaissance'] = addDesignInscriptionTriMoisJourDeNaissance;
 	var removeDesignInscriptionTriMoisJourDeNaissance = $formulaireValeurs.find('.removeDesignInscriptionTriMoisJourDeNaissance').prop('checked');
@@ -523,10 +523,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurDesignInscriptionTriNomGroupe = null;
 	if(valeurDesignInscriptionTriNomGroupeSelectVal != null && valeurDesignInscriptionTriNomGroupeSelectVal !== '')
 		valeurDesignInscriptionTriNomGroupe = valeurDesignInscriptionTriNomGroupeSelectVal == 'true';
-	setDesignInscriptionTriNomGroupe = removeDesignInscriptionTriNomGroupe ? null : valeurDesignInscriptionTriNomGroupe;
+	var setDesignInscriptionTriNomGroupe = removeDesignInscriptionTriNomGroupe ? null : valeurDesignInscriptionTriNomGroupe;
+	var addDesignInscriptionTriNomGroupe = $formulaireValeurs.find('.addDesignInscriptionTriNomGroupe').prop('checked');
 	if(removeDesignInscriptionTriNomGroupe || setDesignInscriptionTriNomGroupe != null && setDesignInscriptionTriNomGroupe !== '')
 		vals['setDesignInscriptionTriNomGroupe'] = setDesignInscriptionTriNomGroupe;
-	var addDesignInscriptionTriNomGroupe = $formulaireValeurs.find('.addDesignInscriptionTriNomGroupe').prop('checked');
 	if(addDesignInscriptionTriNomGroupe != null && addDesignInscriptionTriNomGroupe !== '')
 		vals['addDesignInscriptionTriNomGroupe'] = addDesignInscriptionTriNomGroupe;
 	var removeDesignInscriptionTriNomGroupe = $formulaireValeurs.find('.removeDesignInscriptionTriNomGroupe').prop('checked');
@@ -539,10 +539,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurDesignInscriptionTriNomEnfant = null;
 	if(valeurDesignInscriptionTriNomEnfantSelectVal != null && valeurDesignInscriptionTriNomEnfantSelectVal !== '')
 		valeurDesignInscriptionTriNomEnfant = valeurDesignInscriptionTriNomEnfantSelectVal == 'true';
-	setDesignInscriptionTriNomEnfant = removeDesignInscriptionTriNomEnfant ? null : valeurDesignInscriptionTriNomEnfant;
+	var setDesignInscriptionTriNomEnfant = removeDesignInscriptionTriNomEnfant ? null : valeurDesignInscriptionTriNomEnfant;
+	var addDesignInscriptionTriNomEnfant = $formulaireValeurs.find('.addDesignInscriptionTriNomEnfant').prop('checked');
 	if(removeDesignInscriptionTriNomEnfant || setDesignInscriptionTriNomEnfant != null && setDesignInscriptionTriNomEnfant !== '')
 		vals['setDesignInscriptionTriNomEnfant'] = setDesignInscriptionTriNomEnfant;
-	var addDesignInscriptionTriNomEnfant = $formulaireValeurs.find('.addDesignInscriptionTriNomEnfant').prop('checked');
 	if(addDesignInscriptionTriNomEnfant != null && addDesignInscriptionTriNomEnfant !== '')
 		vals['addDesignInscriptionTriNomEnfant'] = addDesignInscriptionTriNomEnfant;
 	var removeDesignInscriptionTriNomEnfant = $formulaireValeurs.find('.removeDesignInscriptionTriNomEnfant').prop('checked');
@@ -555,10 +555,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurRechercherAnnees = null;
 	if(valeurRechercherAnneesSelectVal != null && valeurRechercherAnneesSelectVal !== '')
 		valeurRechercherAnnees = valeurRechercherAnneesSelectVal == 'true';
-	setRechercherAnnees = removeRechercherAnnees ? null : valeurRechercherAnnees;
+	var setRechercherAnnees = removeRechercherAnnees ? null : valeurRechercherAnnees;
+	var addRechercherAnnees = $formulaireValeurs.find('.addRechercherAnnees').prop('checked');
 	if(removeRechercherAnnees || setRechercherAnnees != null && setRechercherAnnees !== '')
 		vals['setRechercherAnnees'] = setRechercherAnnees;
-	var addRechercherAnnees = $formulaireValeurs.find('.addRechercherAnnees').prop('checked');
 	if(addRechercherAnnees != null && addRechercherAnnees !== '')
 		vals['addRechercherAnnees'] = addRechercherAnnees;
 	var removeRechercherAnnees = $formulaireValeurs.find('.removeRechercherAnnees').prop('checked');
@@ -571,10 +571,10 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurRechercherPaiements = null;
 	if(valeurRechercherPaiementsSelectVal != null && valeurRechercherPaiementsSelectVal !== '')
 		valeurRechercherPaiements = valeurRechercherPaiementsSelectVal == 'true';
-	setRechercherPaiements = removeRechercherPaiements ? null : valeurRechercherPaiements;
+	var setRechercherPaiements = removeRechercherPaiements ? null : valeurRechercherPaiements;
+	var addRechercherPaiements = $formulaireValeurs.find('.addRechercherPaiements').prop('checked');
 	if(removeRechercherPaiements || setRechercherPaiements != null && setRechercherPaiements !== '')
 		vals['setRechercherPaiements'] = setRechercherPaiements;
-	var addRechercherPaiements = $formulaireValeurs.find('.addRechercherPaiements').prop('checked');
 	if(addRechercherPaiements != null && addRechercherPaiements !== '')
 		vals['addRechercherPaiements'] = addRechercherPaiements;
 	var removeRechercherPaiements = $formulaireValeurs.find('.removeRechercherPaiements').prop('checked');
@@ -592,9 +592,9 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurInheritPk = $formulaireValeurs.find('.valeurInheritPk').val();
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val() === 'true';
 	var setInheritPk = removeInheritPk ? null : $formulaireValeurs.find('.setInheritPk').val();
+	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(removeInheritPk || setInheritPk != null && setInheritPk !== '')
 		vals['setInheritPk'] = setInheritPk;
-	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(addInheritPk != null && addInheritPk !== '')
 		vals['addInheritPk'] = addInheritPk;
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val();
@@ -604,9 +604,9 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurSessionId = $formulaireValeurs.find('.valeurSessionId').val();
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val() === 'true';
 	var setSessionId = removeSessionId ? null : $formulaireValeurs.find('.setSessionId').val();
+	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(removeSessionId || setSessionId != null && setSessionId !== '')
 		vals['setSessionId'] = setSessionId;
-	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(addSessionId != null && addSessionId !== '')
 		vals['addSessionId'] = addSessionId;
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val();
@@ -616,9 +616,9 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurUtilisateurId = $formulaireValeurs.find('.valeurUtilisateurId').val();
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val() === 'true';
 	var setUtilisateurId = removeUtilisateurId ? null : $formulaireValeurs.find('.setUtilisateurId').val();
+	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(removeUtilisateurId || setUtilisateurId != null && setUtilisateurId !== '')
 		vals['setUtilisateurId'] = setUtilisateurId;
-	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(addUtilisateurId != null && addUtilisateurId !== '')
 		vals['addUtilisateurId'] = addUtilisateurId;
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val();
@@ -628,9 +628,9 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurUtilisateurCle = $formulaireValeurs.find('.valeurUtilisateurCle').val();
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val() === 'true';
 	var setUtilisateurCle = removeUtilisateurCle ? null : $formulaireValeurs.find('.setUtilisateurCle').val();
+	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(removeUtilisateurCle || setUtilisateurCle != null && setUtilisateurCle !== '')
 		vals['setUtilisateurCle'] = setUtilisateurCle;
-	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(addUtilisateurCle != null && addUtilisateurCle !== '')
 		vals['addUtilisateurCle'] = addUtilisateurCle;
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val();
@@ -640,9 +640,9 @@ async function patchDesignPage($formulaireFiltres, $formulaireValeurs, pk, succe
 	var valeurObjetTitre = $formulaireValeurs.find('.valeurObjetTitre').val();
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val() === 'true';
 	var setObjetTitre = removeObjetTitre ? null : $formulaireValeurs.find('.setObjetTitre').val();
+	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(removeObjetTitre || setObjetTitre != null && setObjetTitre !== '')
 		vals['setObjetTitre'] = setObjetTitre;
-	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(addObjetTitre != null && addObjetTitre !== '')
 		vals['addObjetTitre'] = addObjetTitre;
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val();
@@ -2052,10 +2052,10 @@ async function websocketDesignPage(success) {
 			var pkPage = $('#DesignPageForm :input[name=pk]').val();
 			var pks = json['pks'];
 			var empty = json['empty'];
-			var numFound = json['numFound'];
-			var numPATCH = json['numPATCH'];
+			var numFound = parseInt(json['numFound']);
+			var numPATCH = parseInt(json['numPATCH']);
 			var percent = Math.floor( numPATCH / numFound * 100 ) + '%';
-			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id);
+			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id).attr('data-numPATCH', numPATCH);
 			var $margin = $('<div>').attr('class', 'w3-margin ').attr('id', 'margin-' + id);
 			var $card = $('<div>').attr('class', 'w3-card w3-white ').attr('id', 'card-' + id);
 			var $header = $('<div>').attr('class', 'w3-container fa-khaki ').attr('id', 'header-' + id);
@@ -2074,10 +2074,18 @@ async function websocketDesignPage(success) {
 			$card.append($body);
 			$box.append($margin);
 			$margin.append($card);
-			$('.box-' + id).remove();
-			if(numPATCH < numFound)
-			$('.top-box').append($box);
-			if(pk && pkPage && pk == pkPage) {;
+			if(numPATCH < numFound) {
+				var $old_box = $('.box-' + id);
+				if(!$old_box.size()) {
+					$('.top-box').append($box);
+				} else if($old_box && $old_box.attr('data-numPATCH') < numFound) {
+					$('.box-' + id).remove();
+					$('.top-box').append($box);
+				}
+			} else {
+				$('.box-' + id).remove();
+			}
+			if(pk && pkPage && pk == pkPage) {
 				if(success)
 					success(json);
 			}

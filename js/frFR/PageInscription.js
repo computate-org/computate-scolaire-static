@@ -632,9 +632,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurPk = $formulaireValeurs.find('.valeurPk').val();
 	var removePk = $formulaireValeurs.find('.removePk').val() === 'true';
 	var setPk = removePk ? null : $formulaireValeurs.find('.setPk').val();
+	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(removePk || setPk != null && setPk !== '')
 		vals['setPk'] = setPk;
-	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(addPk != null && addPk !== '')
 		vals['addPk'] = addPk;
 	var removePk = $formulaireValeurs.find('.removePk').val();
@@ -644,9 +644,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurCree = $formulaireValeurs.find('.valeurCree').val();
 	var removeCree = $formulaireValeurs.find('.removeCree').val() === 'true';
 	var setCree = removeCree ? null : $formulaireValeurs.find('.setCree').val();
+	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(removeCree || setCree != null && setCree !== '')
 		vals['setCree'] = setCree;
-	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(addCree != null && addCree !== '')
 		vals['addCree'] = addCree;
 	var removeCree = $formulaireValeurs.find('.removeCree').val();
@@ -656,9 +656,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurModifie = $formulaireValeurs.find('.valeurModifie').val();
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val() === 'true';
 	var setModifie = removeModifie ? null : $formulaireValeurs.find('.setModifie').val();
+	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(removeModifie || setModifie != null && setModifie !== '')
 		vals['setModifie'] = setModifie;
-	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(addModifie != null && addModifie !== '')
 		vals['addModifie'] = addModifie;
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val();
@@ -668,9 +668,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurObjetId = $formulaireValeurs.find('.valeurObjetId').val();
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val() === 'true';
 	var setObjetId = removeObjetId ? null : $formulaireValeurs.find('.setObjetId').val();
+	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(removeObjetId || setObjetId != null && setObjetId !== '')
 		vals['setObjetId'] = setObjetId;
-	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(addObjetId != null && addObjetId !== '')
 		vals['addObjetId'] = addObjetId;
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val();
@@ -683,10 +683,10 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurArchive = null;
 	if(valeurArchiveSelectVal != null && valeurArchiveSelectVal !== '')
 		valeurArchive = valeurArchiveSelectVal == 'true';
-	setArchive = removeArchive ? null : valeurArchive;
+	var setArchive = removeArchive ? null : valeurArchive;
+	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(removeArchive || setArchive != null && setArchive !== '')
 		vals['setArchive'] = setArchive;
-	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(addArchive != null && addArchive !== '')
 		vals['addArchive'] = addArchive;
 	var removeArchive = $formulaireValeurs.find('.removeArchive').prop('checked');
@@ -699,10 +699,10 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurSupprime = null;
 	if(valeurSupprimeSelectVal != null && valeurSupprimeSelectVal !== '')
 		valeurSupprime = valeurSupprimeSelectVal == 'true';
-	setSupprime = removeSupprime ? null : valeurSupprime;
+	var setSupprime = removeSupprime ? null : valeurSupprime;
+	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(removeSupprime || setSupprime != null && setSupprime !== '')
 		vals['setSupprime'] = setSupprime;
-	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(addSupprime != null && addSupprime !== '')
 		vals['addSupprime'] = addSupprime;
 	var removeSupprime = $formulaireValeurs.find('.removeSupprime').prop('checked');
@@ -712,9 +712,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurPhoto = $formulaireValeurs.find('.valeurPhoto').val();
 	var removePhoto = $formulaireValeurs.find('.removePhoto').val() === 'true';
 	var setPhoto = removePhoto ? null : $formulaireValeurs.find('.setPhoto').val();
+	var addPhoto = $formulaireValeurs.find('.addPhoto').val();
 	if(removePhoto || setPhoto != null && setPhoto !== '')
 		vals['setPhoto'] = setPhoto;
-	var addPhoto = $formulaireValeurs.find('.addPhoto').val();
 	if(addPhoto != null && addPhoto !== '')
 		vals['addPhoto'] = addPhoto;
 	var removePhoto = $formulaireValeurs.find('.removePhoto').val();
@@ -724,9 +724,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionNomGroupe = $formulaireValeurs.find('.valeurInscriptionNomGroupe').val();
 	var removeInscriptionNomGroupe = $formulaireValeurs.find('.removeInscriptionNomGroupe').val() === 'true';
 	var setInscriptionNomGroupe = removeInscriptionNomGroupe ? null : $formulaireValeurs.find('.setInscriptionNomGroupe').val();
+	var addInscriptionNomGroupe = $formulaireValeurs.find('.addInscriptionNomGroupe').val();
 	if(removeInscriptionNomGroupe || setInscriptionNomGroupe != null && setInscriptionNomGroupe !== '')
 		vals['setInscriptionNomGroupe'] = setInscriptionNomGroupe;
-	var addInscriptionNomGroupe = $formulaireValeurs.find('.addInscriptionNomGroupe').val();
 	if(addInscriptionNomGroupe != null && addInscriptionNomGroupe !== '')
 		vals['addInscriptionNomGroupe'] = addInscriptionNomGroupe;
 	var removeInscriptionNomGroupe = $formulaireValeurs.find('.removeInscriptionNomGroupe').val();
@@ -736,9 +736,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurCustomerProfileId = $formulaireValeurs.find('.valeurCustomerProfileId').val();
 	var removeCustomerProfileId = $formulaireValeurs.find('.removeCustomerProfileId').val() === 'true';
 	var setCustomerProfileId = removeCustomerProfileId ? null : $formulaireValeurs.find('.setCustomerProfileId').val();
+	var addCustomerProfileId = $formulaireValeurs.find('.addCustomerProfileId').val();
 	if(removeCustomerProfileId || setCustomerProfileId != null && setCustomerProfileId !== '')
 		vals['setCustomerProfileId'] = setCustomerProfileId;
-	var addCustomerProfileId = $formulaireValeurs.find('.addCustomerProfileId').val();
 	if(addCustomerProfileId != null && addCustomerProfileId !== '')
 		vals['addCustomerProfileId'] = addCustomerProfileId;
 	var removeCustomerProfileId = $formulaireValeurs.find('.removeCustomerProfileId').val();
@@ -751,10 +751,10 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionPaimentComplet = null;
 	if(valeurInscriptionPaimentCompletSelectVal != null && valeurInscriptionPaimentCompletSelectVal !== '')
 		valeurInscriptionPaimentComplet = valeurInscriptionPaimentCompletSelectVal == 'true';
-	setInscriptionPaimentComplet = removeInscriptionPaimentComplet ? null : valeurInscriptionPaimentComplet;
+	var setInscriptionPaimentComplet = removeInscriptionPaimentComplet ? null : valeurInscriptionPaimentComplet;
+	var addInscriptionPaimentComplet = $formulaireValeurs.find('.addInscriptionPaimentComplet').prop('checked');
 	if(removeInscriptionPaimentComplet || setInscriptionPaimentComplet != null && setInscriptionPaimentComplet !== '')
 		vals['setInscriptionPaimentComplet'] = setInscriptionPaimentComplet;
-	var addInscriptionPaimentComplet = $formulaireValeurs.find('.addInscriptionPaimentComplet').prop('checked');
 	if(addInscriptionPaimentComplet != null && addInscriptionPaimentComplet !== '')
 		vals['addInscriptionPaimentComplet'] = addInscriptionPaimentComplet;
 	var removeInscriptionPaimentComplet = $formulaireValeurs.find('.removeInscriptionPaimentComplet').prop('checked');
@@ -767,10 +767,10 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurEnfantPropre = null;
 	if(valeurEnfantPropreSelectVal != null && valeurEnfantPropreSelectVal !== '')
 		valeurEnfantPropre = valeurEnfantPropreSelectVal == 'true';
-	setEnfantPropre = removeEnfantPropre ? null : valeurEnfantPropre;
+	var setEnfantPropre = removeEnfantPropre ? null : valeurEnfantPropre;
+	var addEnfantPropre = $formulaireValeurs.find('.addEnfantPropre').prop('checked');
 	if(removeEnfantPropre || setEnfantPropre != null && setEnfantPropre !== '')
 		vals['setEnfantPropre'] = setEnfantPropre;
-	var addEnfantPropre = $formulaireValeurs.find('.addEnfantPropre').prop('checked');
 	if(addEnfantPropre != null && addEnfantPropre !== '')
 		vals['addEnfantPropre'] = addEnfantPropre;
 	var removeEnfantPropre = $formulaireValeurs.find('.removeEnfantPropre').prop('checked');
@@ -783,10 +783,10 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionPaimentChaqueMois = null;
 	if(valeurInscriptionPaimentChaqueMoisSelectVal != null && valeurInscriptionPaimentChaqueMoisSelectVal !== '')
 		valeurInscriptionPaimentChaqueMois = valeurInscriptionPaimentChaqueMoisSelectVal == 'true';
-	setInscriptionPaimentChaqueMois = removeInscriptionPaimentChaqueMois ? null : valeurInscriptionPaimentChaqueMois;
+	var setInscriptionPaimentChaqueMois = removeInscriptionPaimentChaqueMois ? null : valeurInscriptionPaimentChaqueMois;
+	var addInscriptionPaimentChaqueMois = $formulaireValeurs.find('.addInscriptionPaimentChaqueMois').prop('checked');
 	if(removeInscriptionPaimentChaqueMois || setInscriptionPaimentChaqueMois != null && setInscriptionPaimentChaqueMois !== '')
 		vals['setInscriptionPaimentChaqueMois'] = setInscriptionPaimentChaqueMois;
-	var addInscriptionPaimentChaqueMois = $formulaireValeurs.find('.addInscriptionPaimentChaqueMois').prop('checked');
 	if(addInscriptionPaimentChaqueMois != null && addInscriptionPaimentChaqueMois !== '')
 		vals['addInscriptionPaimentChaqueMois'] = addInscriptionPaimentChaqueMois;
 	var removeInscriptionPaimentChaqueMois = $formulaireValeurs.find('.removeInscriptionPaimentChaqueMois').prop('checked');
@@ -799,10 +799,10 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionImmunisations = null;
 	if(valeurInscriptionImmunisationsSelectVal != null && valeurInscriptionImmunisationsSelectVal !== '')
 		valeurInscriptionImmunisations = valeurInscriptionImmunisationsSelectVal == 'true';
-	setInscriptionImmunisations = removeInscriptionImmunisations ? null : valeurInscriptionImmunisations;
+	var setInscriptionImmunisations = removeInscriptionImmunisations ? null : valeurInscriptionImmunisations;
+	var addInscriptionImmunisations = $formulaireValeurs.find('.addInscriptionImmunisations').prop('checked');
 	if(removeInscriptionImmunisations || setInscriptionImmunisations != null && setInscriptionImmunisations !== '')
 		vals['setInscriptionImmunisations'] = setInscriptionImmunisations;
-	var addInscriptionImmunisations = $formulaireValeurs.find('.addInscriptionImmunisations').prop('checked');
 	if(addInscriptionImmunisations != null && addInscriptionImmunisations !== '')
 		vals['addInscriptionImmunisations'] = addInscriptionImmunisations;
 	var removeInscriptionImmunisations = $formulaireValeurs.find('.removeInscriptionImmunisations').prop('checked');
@@ -815,10 +815,10 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionApprouve = null;
 	if(valeurInscriptionApprouveSelectVal != null && valeurInscriptionApprouveSelectVal !== '')
 		valeurInscriptionApprouve = valeurInscriptionApprouveSelectVal == 'true';
-	setInscriptionApprouve = removeInscriptionApprouve ? null : valeurInscriptionApprouve;
+	var setInscriptionApprouve = removeInscriptionApprouve ? null : valeurInscriptionApprouve;
+	var addInscriptionApprouve = $formulaireValeurs.find('.addInscriptionApprouve').prop('checked');
 	if(removeInscriptionApprouve || setInscriptionApprouve != null && setInscriptionApprouve !== '')
 		vals['setInscriptionApprouve'] = setInscriptionApprouve;
-	var addInscriptionApprouve = $formulaireValeurs.find('.addInscriptionApprouve').prop('checked');
 	if(addInscriptionApprouve != null && addInscriptionApprouve !== '')
 		vals['addInscriptionApprouve'] = addInscriptionApprouve;
 	var removeInscriptionApprouve = $formulaireValeurs.find('.removeInscriptionApprouve').prop('checked');
@@ -831,10 +831,10 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurFamilleMarie = null;
 	if(valeurFamilleMarieSelectVal != null && valeurFamilleMarieSelectVal !== '')
 		valeurFamilleMarie = valeurFamilleMarieSelectVal == 'true';
-	setFamilleMarie = removeFamilleMarie ? null : valeurFamilleMarie;
+	var setFamilleMarie = removeFamilleMarie ? null : valeurFamilleMarie;
+	var addFamilleMarie = $formulaireValeurs.find('.addFamilleMarie').prop('checked');
 	if(removeFamilleMarie || setFamilleMarie != null && setFamilleMarie !== '')
 		vals['setFamilleMarie'] = setFamilleMarie;
-	var addFamilleMarie = $formulaireValeurs.find('.addFamilleMarie').prop('checked');
 	if(addFamilleMarie != null && addFamilleMarie !== '')
 		vals['addFamilleMarie'] = addFamilleMarie;
 	var removeFamilleMarie = $formulaireValeurs.find('.removeFamilleMarie').prop('checked');
@@ -847,10 +847,10 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurFamilleSepare = null;
 	if(valeurFamilleSepareSelectVal != null && valeurFamilleSepareSelectVal !== '')
 		valeurFamilleSepare = valeurFamilleSepareSelectVal == 'true';
-	setFamilleSepare = removeFamilleSepare ? null : valeurFamilleSepare;
+	var setFamilleSepare = removeFamilleSepare ? null : valeurFamilleSepare;
+	var addFamilleSepare = $formulaireValeurs.find('.addFamilleSepare').prop('checked');
 	if(removeFamilleSepare || setFamilleSepare != null && setFamilleSepare !== '')
 		vals['setFamilleSepare'] = setFamilleSepare;
-	var addFamilleSepare = $formulaireValeurs.find('.addFamilleSepare').prop('checked');
 	if(addFamilleSepare != null && addFamilleSepare !== '')
 		vals['addFamilleSepare'] = addFamilleSepare;
 	var removeFamilleSepare = $formulaireValeurs.find('.removeFamilleSepare').prop('checked');
@@ -863,10 +863,10 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurFamilleDivorce = null;
 	if(valeurFamilleDivorceSelectVal != null && valeurFamilleDivorceSelectVal !== '')
 		valeurFamilleDivorce = valeurFamilleDivorceSelectVal == 'true';
-	setFamilleDivorce = removeFamilleDivorce ? null : valeurFamilleDivorce;
+	var setFamilleDivorce = removeFamilleDivorce ? null : valeurFamilleDivorce;
+	var addFamilleDivorce = $formulaireValeurs.find('.addFamilleDivorce').prop('checked');
 	if(removeFamilleDivorce || setFamilleDivorce != null && setFamilleDivorce !== '')
 		vals['setFamilleDivorce'] = setFamilleDivorce;
-	var addFamilleDivorce = $formulaireValeurs.find('.addFamilleDivorce').prop('checked');
 	if(addFamilleDivorce != null && addFamilleDivorce !== '')
 		vals['addFamilleDivorce'] = addFamilleDivorce;
 	var removeFamilleDivorce = $formulaireValeurs.find('.removeFamilleDivorce').prop('checked');
@@ -876,9 +876,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurFamilleAddresse = $formulaireValeurs.find('.valeurFamilleAddresse').val();
 	var removeFamilleAddresse = $formulaireValeurs.find('.removeFamilleAddresse').val() === 'true';
 	var setFamilleAddresse = removeFamilleAddresse ? null : $formulaireValeurs.find('.setFamilleAddresse').val();
+	var addFamilleAddresse = $formulaireValeurs.find('.addFamilleAddresse').val();
 	if(removeFamilleAddresse || setFamilleAddresse != null && setFamilleAddresse !== '')
 		vals['setFamilleAddresse'] = setFamilleAddresse;
-	var addFamilleAddresse = $formulaireValeurs.find('.addFamilleAddresse').val();
 	if(addFamilleAddresse != null && addFamilleAddresse !== '')
 		vals['addFamilleAddresse'] = addFamilleAddresse;
 	var removeFamilleAddresse = $formulaireValeurs.find('.removeFamilleAddresse').val();
@@ -888,9 +888,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.valeurInscriptionConsiderationsSpeciales').val();
 	var removeInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.removeInscriptionConsiderationsSpeciales').val() === 'true';
 	var setInscriptionConsiderationsSpeciales = removeInscriptionConsiderationsSpeciales ? null : $formulaireValeurs.find('.setInscriptionConsiderationsSpeciales').val();
+	var addInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.addInscriptionConsiderationsSpeciales').val();
 	if(removeInscriptionConsiderationsSpeciales || setInscriptionConsiderationsSpeciales != null && setInscriptionConsiderationsSpeciales !== '')
 		vals['setInscriptionConsiderationsSpeciales'] = setInscriptionConsiderationsSpeciales;
-	var addInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.addInscriptionConsiderationsSpeciales').val();
 	if(addInscriptionConsiderationsSpeciales != null && addInscriptionConsiderationsSpeciales !== '')
 		vals['addInscriptionConsiderationsSpeciales'] = addInscriptionConsiderationsSpeciales;
 	var removeInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.removeInscriptionConsiderationsSpeciales').val();
@@ -900,9 +900,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurEnfantConditionsMedicales = $formulaireValeurs.find('.valeurEnfantConditionsMedicales').val();
 	var removeEnfantConditionsMedicales = $formulaireValeurs.find('.removeEnfantConditionsMedicales').val() === 'true';
 	var setEnfantConditionsMedicales = removeEnfantConditionsMedicales ? null : $formulaireValeurs.find('.setEnfantConditionsMedicales').val();
+	var addEnfantConditionsMedicales = $formulaireValeurs.find('.addEnfantConditionsMedicales').val();
 	if(removeEnfantConditionsMedicales || setEnfantConditionsMedicales != null && setEnfantConditionsMedicales !== '')
 		vals['setEnfantConditionsMedicales'] = setEnfantConditionsMedicales;
-	var addEnfantConditionsMedicales = $formulaireValeurs.find('.addEnfantConditionsMedicales').val();
 	if(addEnfantConditionsMedicales != null && addEnfantConditionsMedicales !== '')
 		vals['addEnfantConditionsMedicales'] = addEnfantConditionsMedicales;
 	var removeEnfantConditionsMedicales = $formulaireValeurs.find('.removeEnfantConditionsMedicales').val();
@@ -912,9 +912,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.valeurEnfantEcolesPrecedemmentFrequentees').val();
 	var removeEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.removeEnfantEcolesPrecedemmentFrequentees').val() === 'true';
 	var setEnfantEcolesPrecedemmentFrequentees = removeEnfantEcolesPrecedemmentFrequentees ? null : $formulaireValeurs.find('.setEnfantEcolesPrecedemmentFrequentees').val();
+	var addEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.addEnfantEcolesPrecedemmentFrequentees').val();
 	if(removeEnfantEcolesPrecedemmentFrequentees || setEnfantEcolesPrecedemmentFrequentees != null && setEnfantEcolesPrecedemmentFrequentees !== '')
 		vals['setEnfantEcolesPrecedemmentFrequentees'] = setEnfantEcolesPrecedemmentFrequentees;
-	var addEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.addEnfantEcolesPrecedemmentFrequentees').val();
 	if(addEnfantEcolesPrecedemmentFrequentees != null && addEnfantEcolesPrecedemmentFrequentees !== '')
 		vals['addEnfantEcolesPrecedemmentFrequentees'] = addEnfantEcolesPrecedemmentFrequentees;
 	var removeEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.removeEnfantEcolesPrecedemmentFrequentees').val();
@@ -924,9 +924,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.valeurFamilleCommentVousConnaissezEcole').val();
 	var removeFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.removeFamilleCommentVousConnaissezEcole').val() === 'true';
 	var setFamilleCommentVousConnaissezEcole = removeFamilleCommentVousConnaissezEcole ? null : $formulaireValeurs.find('.setFamilleCommentVousConnaissezEcole').val();
+	var addFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.addFamilleCommentVousConnaissezEcole').val();
 	if(removeFamilleCommentVousConnaissezEcole || setFamilleCommentVousConnaissezEcole != null && setFamilleCommentVousConnaissezEcole !== '')
 		vals['setFamilleCommentVousConnaissezEcole'] = setFamilleCommentVousConnaissezEcole;
-	var addFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.addFamilleCommentVousConnaissezEcole').val();
 	if(addFamilleCommentVousConnaissezEcole != null && addFamilleCommentVousConnaissezEcole !== '')
 		vals['addFamilleCommentVousConnaissezEcole'] = addFamilleCommentVousConnaissezEcole;
 	var removeFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.removeFamilleCommentVousConnaissezEcole').val();
@@ -936,9 +936,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurEnfantDescription = $formulaireValeurs.find('.valeurEnfantDescription').val();
 	var removeEnfantDescription = $formulaireValeurs.find('.removeEnfantDescription').val() === 'true';
 	var setEnfantDescription = removeEnfantDescription ? null : $formulaireValeurs.find('.setEnfantDescription').val();
+	var addEnfantDescription = $formulaireValeurs.find('.addEnfantDescription').val();
 	if(removeEnfantDescription || setEnfantDescription != null && setEnfantDescription !== '')
 		vals['setEnfantDescription'] = setEnfantDescription;
-	var addEnfantDescription = $formulaireValeurs.find('.addEnfantDescription').val();
 	if(addEnfantDescription != null && addEnfantDescription !== '')
 		vals['addEnfantDescription'] = addEnfantDescription;
 	var removeEnfantDescription = $formulaireValeurs.find('.removeEnfantDescription').val();
@@ -948,9 +948,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurEnfantObjectifs = $formulaireValeurs.find('.valeurEnfantObjectifs').val();
 	var removeEnfantObjectifs = $formulaireValeurs.find('.removeEnfantObjectifs').val() === 'true';
 	var setEnfantObjectifs = removeEnfantObjectifs ? null : $formulaireValeurs.find('.setEnfantObjectifs').val();
+	var addEnfantObjectifs = $formulaireValeurs.find('.addEnfantObjectifs').val();
 	if(removeEnfantObjectifs || setEnfantObjectifs != null && setEnfantObjectifs !== '')
 		vals['setEnfantObjectifs'] = setEnfantObjectifs;
-	var addEnfantObjectifs = $formulaireValeurs.find('.addEnfantObjectifs').val();
 	if(addEnfantObjectifs != null && addEnfantObjectifs !== '')
 		vals['addEnfantObjectifs'] = addEnfantObjectifs;
 	var removeEnfantObjectifs = $formulaireValeurs.find('.removeEnfantObjectifs').val();
@@ -992,9 +992,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInheritPk = $formulaireValeurs.find('.valeurInheritPk').val();
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val() === 'true';
 	var setInheritPk = removeInheritPk ? null : $formulaireValeurs.find('.setInheritPk').val();
+	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(removeInheritPk || setInheritPk != null && setInheritPk !== '')
 		vals['setInheritPk'] = setInheritPk;
-	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(addInheritPk != null && addInheritPk !== '')
 		vals['addInheritPk'] = addInheritPk;
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val();
@@ -1004,9 +1004,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurSessionId = $formulaireValeurs.find('.valeurSessionId').val();
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val() === 'true';
 	var setSessionId = removeSessionId ? null : $formulaireValeurs.find('.setSessionId').val();
+	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(removeSessionId || setSessionId != null && setSessionId !== '')
 		vals['setSessionId'] = setSessionId;
-	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(addSessionId != null && addSessionId !== '')
 		vals['addSessionId'] = addSessionId;
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val();
@@ -1016,9 +1016,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurUtilisateurId = $formulaireValeurs.find('.valeurUtilisateurId').val();
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val() === 'true';
 	var setUtilisateurId = removeUtilisateurId ? null : $formulaireValeurs.find('.setUtilisateurId').val();
+	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(removeUtilisateurId || setUtilisateurId != null && setUtilisateurId !== '')
 		vals['setUtilisateurId'] = setUtilisateurId;
-	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(addUtilisateurId != null && addUtilisateurId !== '')
 		vals['addUtilisateurId'] = addUtilisateurId;
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val();
@@ -1028,9 +1028,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurUtilisateurCle = $formulaireValeurs.find('.valeurUtilisateurCle').val();
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val() === 'true';
 	var setUtilisateurCle = removeUtilisateurCle ? null : $formulaireValeurs.find('.setUtilisateurCle').val();
+	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(removeUtilisateurCle || setUtilisateurCle != null && setUtilisateurCle !== '')
 		vals['setUtilisateurCle'] = setUtilisateurCle;
-	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(addUtilisateurCle != null && addUtilisateurCle !== '')
 		vals['addUtilisateurCle'] = addUtilisateurCle;
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val();
@@ -1040,9 +1040,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurObjetTitre = $formulaireValeurs.find('.valeurObjetTitre').val();
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val() === 'true';
 	var setObjetTitre = removeObjetTitre ? null : $formulaireValeurs.find('.setObjetTitre').val();
+	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(removeObjetTitre || setObjetTitre != null && setObjetTitre !== '')
 		vals['setObjetTitre'] = setObjetTitre;
-	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(addObjetTitre != null && addObjetTitre !== '')
 		vals['addObjetTitre'] = addObjetTitre;
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val();
@@ -1052,9 +1052,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurEnfantNomComplet = $formulaireValeurs.find('.valeurEnfantNomComplet').val();
 	var removeEnfantNomComplet = $formulaireValeurs.find('.removeEnfantNomComplet').val() === 'true';
 	var setEnfantNomComplet = removeEnfantNomComplet ? null : $formulaireValeurs.find('.setEnfantNomComplet').val();
+	var addEnfantNomComplet = $formulaireValeurs.find('.addEnfantNomComplet').val();
 	if(removeEnfantNomComplet || setEnfantNomComplet != null && setEnfantNomComplet !== '')
 		vals['setEnfantNomComplet'] = setEnfantNomComplet;
-	var addEnfantNomComplet = $formulaireValeurs.find('.addEnfantNomComplet').val();
 	if(addEnfantNomComplet != null && addEnfantNomComplet !== '')
 		vals['addEnfantNomComplet'] = addEnfantNomComplet;
 	var removeEnfantNomComplet = $formulaireValeurs.find('.removeEnfantNomComplet').val();
@@ -1064,9 +1064,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurEnfantNomCompletPrefere = $formulaireValeurs.find('.valeurEnfantNomCompletPrefere').val();
 	var removeEnfantNomCompletPrefere = $formulaireValeurs.find('.removeEnfantNomCompletPrefere').val() === 'true';
 	var setEnfantNomCompletPrefere = removeEnfantNomCompletPrefere ? null : $formulaireValeurs.find('.setEnfantNomCompletPrefere').val();
+	var addEnfantNomCompletPrefere = $formulaireValeurs.find('.addEnfantNomCompletPrefere').val();
 	if(removeEnfantNomCompletPrefere || setEnfantNomCompletPrefere != null && setEnfantNomCompletPrefere !== '')
 		vals['setEnfantNomCompletPrefere'] = setEnfantNomCompletPrefere;
-	var addEnfantNomCompletPrefere = $formulaireValeurs.find('.addEnfantNomCompletPrefere').val();
 	if(addEnfantNomCompletPrefere != null && addEnfantNomCompletPrefere !== '')
 		vals['addEnfantNomCompletPrefere'] = addEnfantNomCompletPrefere;
 	var removeEnfantNomCompletPrefere = $formulaireValeurs.find('.removeEnfantNomCompletPrefere').val();
@@ -1076,9 +1076,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurEnfantDateNaissance = $formulaireValeurs.find('.valeurEnfantDateNaissance').val();
 	var removeEnfantDateNaissance = $formulaireValeurs.find('.removeEnfantDateNaissance').val() === 'true';
 	var setEnfantDateNaissance = removeEnfantDateNaissance ? null : $formulaireValeurs.find('.setEnfantDateNaissance').val();
+	var addEnfantDateNaissance = $formulaireValeurs.find('.addEnfantDateNaissance').val();
+	var setMoment = setEnfantDateNaissance ? moment(setEnfantDateNaissance, 'DD-MM-YYYY') : null; 
+	var addMoment = addEnfantDateNaissance ? moment(addEnfantDateNaissance, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setEnfantDateNaissance = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addEnfantDateNaissance = s;
+	} 
 	if(removeEnfantDateNaissance || setEnfantDateNaissance != null && setEnfantDateNaissance !== '')
 		vals['setEnfantDateNaissance'] = setEnfantDateNaissance;
-	var addEnfantDateNaissance = $formulaireValeurs.find('.addEnfantDateNaissance').val();
 	if(addEnfantDateNaissance != null && addEnfantDateNaissance !== '')
 		vals['addEnfantDateNaissance'] = addEnfantDateNaissance;
 	var removeEnfantDateNaissance = $formulaireValeurs.find('.removeEnfantDateNaissance').val();
@@ -1088,9 +1098,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurEcoleAddresse = $formulaireValeurs.find('.valeurEcoleAddresse').val();
 	var removeEcoleAddresse = $formulaireValeurs.find('.removeEcoleAddresse').val() === 'true';
 	var setEcoleAddresse = removeEcoleAddresse ? null : $formulaireValeurs.find('.setEcoleAddresse').val();
+	var addEcoleAddresse = $formulaireValeurs.find('.addEcoleAddresse').val();
 	if(removeEcoleAddresse || setEcoleAddresse != null && setEcoleAddresse !== '')
 		vals['setEcoleAddresse'] = setEcoleAddresse;
-	var addEcoleAddresse = $formulaireValeurs.find('.addEcoleAddresse').val();
 	if(addEcoleAddresse != null && addEcoleAddresse !== '')
 		vals['addEcoleAddresse'] = addEcoleAddresse;
 	var removeEcoleAddresse = $formulaireValeurs.find('.removeEcoleAddresse').val();
@@ -1100,9 +1110,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionDateFrais = $formulaireValeurs.find('.valeurInscriptionDateFrais').val();
 	var removeInscriptionDateFrais = $formulaireValeurs.find('.removeInscriptionDateFrais').val() === 'true';
 	var setInscriptionDateFrais = removeInscriptionDateFrais ? null : $formulaireValeurs.find('.setInscriptionDateFrais').val();
+	var addInscriptionDateFrais = $formulaireValeurs.find('.addInscriptionDateFrais').val();
+	var setMoment = setInscriptionDateFrais ? moment(setInscriptionDateFrais, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDateFrais ? moment(addInscriptionDateFrais, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDateFrais = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDateFrais = s;
+	} 
 	if(removeInscriptionDateFrais || setInscriptionDateFrais != null && setInscriptionDateFrais !== '')
 		vals['setInscriptionDateFrais'] = setInscriptionDateFrais;
-	var addInscriptionDateFrais = $formulaireValeurs.find('.addInscriptionDateFrais').val();
 	if(addInscriptionDateFrais != null && addInscriptionDateFrais !== '')
 		vals['addInscriptionDateFrais'] = addInscriptionDateFrais;
 	var removeInscriptionDateFrais = $formulaireValeurs.find('.removeInscriptionDateFrais').val();
@@ -1112,9 +1132,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionNomsParents = $formulaireValeurs.find('.valeurInscriptionNomsParents').val();
 	var removeInscriptionNomsParents = $formulaireValeurs.find('.removeInscriptionNomsParents').val() === 'true';
 	var setInscriptionNomsParents = removeInscriptionNomsParents ? null : $formulaireValeurs.find('.setInscriptionNomsParents').val();
+	var addInscriptionNomsParents = $formulaireValeurs.find('.addInscriptionNomsParents').val();
 	if(removeInscriptionNomsParents || setInscriptionNomsParents != null && setInscriptionNomsParents !== '')
 		vals['setInscriptionNomsParents'] = setInscriptionNomsParents;
-	var addInscriptionNomsParents = $formulaireValeurs.find('.addInscriptionNomsParents').val();
 	if(addInscriptionNomsParents != null && addInscriptionNomsParents !== '')
 		vals['addInscriptionNomsParents'] = addInscriptionNomsParents;
 	var removeInscriptionNomsParents = $formulaireValeurs.find('.removeInscriptionNomsParents').val();
@@ -1124,9 +1144,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionSignature1 = $formulaireValeurs.find('.valeurInscriptionSignature1').val();
 	var removeInscriptionSignature1 = $formulaireValeurs.find('.removeInscriptionSignature1').val() === 'true';
 	var setInscriptionSignature1 = removeInscriptionSignature1 ? null : $formulaireValeurs.find('.setInscriptionSignature1').val();
+	var addInscriptionSignature1 = $formulaireValeurs.find('.addInscriptionSignature1').val();
 	if(removeInscriptionSignature1 || setInscriptionSignature1 != null && setInscriptionSignature1 !== '')
 		vals['setInscriptionSignature1'] = setInscriptionSignature1;
-	var addInscriptionSignature1 = $formulaireValeurs.find('.addInscriptionSignature1').val();
 	if(addInscriptionSignature1 != null && addInscriptionSignature1 !== '')
 		vals['addInscriptionSignature1'] = addInscriptionSignature1;
 	var removeInscriptionSignature1 = $formulaireValeurs.find('.removeInscriptionSignature1').val();
@@ -1136,9 +1156,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionSignature2 = $formulaireValeurs.find('.valeurInscriptionSignature2').val();
 	var removeInscriptionSignature2 = $formulaireValeurs.find('.removeInscriptionSignature2').val() === 'true';
 	var setInscriptionSignature2 = removeInscriptionSignature2 ? null : $formulaireValeurs.find('.setInscriptionSignature2').val();
+	var addInscriptionSignature2 = $formulaireValeurs.find('.addInscriptionSignature2').val();
 	if(removeInscriptionSignature2 || setInscriptionSignature2 != null && setInscriptionSignature2 !== '')
 		vals['setInscriptionSignature2'] = setInscriptionSignature2;
-	var addInscriptionSignature2 = $formulaireValeurs.find('.addInscriptionSignature2').val();
 	if(addInscriptionSignature2 != null && addInscriptionSignature2 !== '')
 		vals['addInscriptionSignature2'] = addInscriptionSignature2;
 	var removeInscriptionSignature2 = $formulaireValeurs.find('.removeInscriptionSignature2').val();
@@ -1148,9 +1168,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionSignature3 = $formulaireValeurs.find('.valeurInscriptionSignature3').val();
 	var removeInscriptionSignature3 = $formulaireValeurs.find('.removeInscriptionSignature3').val() === 'true';
 	var setInscriptionSignature3 = removeInscriptionSignature3 ? null : $formulaireValeurs.find('.setInscriptionSignature3').val();
+	var addInscriptionSignature3 = $formulaireValeurs.find('.addInscriptionSignature3').val();
 	if(removeInscriptionSignature3 || setInscriptionSignature3 != null && setInscriptionSignature3 !== '')
 		vals['setInscriptionSignature3'] = setInscriptionSignature3;
-	var addInscriptionSignature3 = $formulaireValeurs.find('.addInscriptionSignature3').val();
 	if(addInscriptionSignature3 != null && addInscriptionSignature3 !== '')
 		vals['addInscriptionSignature3'] = addInscriptionSignature3;
 	var removeInscriptionSignature3 = $formulaireValeurs.find('.removeInscriptionSignature3').val();
@@ -1160,9 +1180,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionSignature4 = $formulaireValeurs.find('.valeurInscriptionSignature4').val();
 	var removeInscriptionSignature4 = $formulaireValeurs.find('.removeInscriptionSignature4').val() === 'true';
 	var setInscriptionSignature4 = removeInscriptionSignature4 ? null : $formulaireValeurs.find('.setInscriptionSignature4').val();
+	var addInscriptionSignature4 = $formulaireValeurs.find('.addInscriptionSignature4').val();
 	if(removeInscriptionSignature4 || setInscriptionSignature4 != null && setInscriptionSignature4 !== '')
 		vals['setInscriptionSignature4'] = setInscriptionSignature4;
-	var addInscriptionSignature4 = $formulaireValeurs.find('.addInscriptionSignature4').val();
 	if(addInscriptionSignature4 != null && addInscriptionSignature4 !== '')
 		vals['addInscriptionSignature4'] = addInscriptionSignature4;
 	var removeInscriptionSignature4 = $formulaireValeurs.find('.removeInscriptionSignature4').val();
@@ -1172,9 +1192,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionSignature5 = $formulaireValeurs.find('.valeurInscriptionSignature5').val();
 	var removeInscriptionSignature5 = $formulaireValeurs.find('.removeInscriptionSignature5').val() === 'true';
 	var setInscriptionSignature5 = removeInscriptionSignature5 ? null : $formulaireValeurs.find('.setInscriptionSignature5').val();
+	var addInscriptionSignature5 = $formulaireValeurs.find('.addInscriptionSignature5').val();
 	if(removeInscriptionSignature5 || setInscriptionSignature5 != null && setInscriptionSignature5 !== '')
 		vals['setInscriptionSignature5'] = setInscriptionSignature5;
-	var addInscriptionSignature5 = $formulaireValeurs.find('.addInscriptionSignature5').val();
 	if(addInscriptionSignature5 != null && addInscriptionSignature5 !== '')
 		vals['addInscriptionSignature5'] = addInscriptionSignature5;
 	var removeInscriptionSignature5 = $formulaireValeurs.find('.removeInscriptionSignature5').val();
@@ -1184,9 +1204,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionSignature6 = $formulaireValeurs.find('.valeurInscriptionSignature6').val();
 	var removeInscriptionSignature6 = $formulaireValeurs.find('.removeInscriptionSignature6').val() === 'true';
 	var setInscriptionSignature6 = removeInscriptionSignature6 ? null : $formulaireValeurs.find('.setInscriptionSignature6').val();
+	var addInscriptionSignature6 = $formulaireValeurs.find('.addInscriptionSignature6').val();
 	if(removeInscriptionSignature6 || setInscriptionSignature6 != null && setInscriptionSignature6 !== '')
 		vals['setInscriptionSignature6'] = setInscriptionSignature6;
-	var addInscriptionSignature6 = $formulaireValeurs.find('.addInscriptionSignature6').val();
 	if(addInscriptionSignature6 != null && addInscriptionSignature6 !== '')
 		vals['addInscriptionSignature6'] = addInscriptionSignature6;
 	var removeInscriptionSignature6 = $formulaireValeurs.find('.removeInscriptionSignature6').val();
@@ -1196,9 +1216,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionSignature7 = $formulaireValeurs.find('.valeurInscriptionSignature7').val();
 	var removeInscriptionSignature7 = $formulaireValeurs.find('.removeInscriptionSignature7').val() === 'true';
 	var setInscriptionSignature7 = removeInscriptionSignature7 ? null : $formulaireValeurs.find('.setInscriptionSignature7').val();
+	var addInscriptionSignature7 = $formulaireValeurs.find('.addInscriptionSignature7').val();
 	if(removeInscriptionSignature7 || setInscriptionSignature7 != null && setInscriptionSignature7 !== '')
 		vals['setInscriptionSignature7'] = setInscriptionSignature7;
-	var addInscriptionSignature7 = $formulaireValeurs.find('.addInscriptionSignature7').val();
 	if(addInscriptionSignature7 != null && addInscriptionSignature7 !== '')
 		vals['addInscriptionSignature7'] = addInscriptionSignature7;
 	var removeInscriptionSignature7 = $formulaireValeurs.find('.removeInscriptionSignature7').val();
@@ -1208,9 +1228,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionSignature8 = $formulaireValeurs.find('.valeurInscriptionSignature8').val();
 	var removeInscriptionSignature8 = $formulaireValeurs.find('.removeInscriptionSignature8').val() === 'true';
 	var setInscriptionSignature8 = removeInscriptionSignature8 ? null : $formulaireValeurs.find('.setInscriptionSignature8').val();
+	var addInscriptionSignature8 = $formulaireValeurs.find('.addInscriptionSignature8').val();
 	if(removeInscriptionSignature8 || setInscriptionSignature8 != null && setInscriptionSignature8 !== '')
 		vals['setInscriptionSignature8'] = setInscriptionSignature8;
-	var addInscriptionSignature8 = $formulaireValeurs.find('.addInscriptionSignature8').val();
 	if(addInscriptionSignature8 != null && addInscriptionSignature8 !== '')
 		vals['addInscriptionSignature8'] = addInscriptionSignature8;
 	var removeInscriptionSignature8 = $formulaireValeurs.find('.removeInscriptionSignature8').val();
@@ -1220,9 +1240,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionSignature9 = $formulaireValeurs.find('.valeurInscriptionSignature9').val();
 	var removeInscriptionSignature9 = $formulaireValeurs.find('.removeInscriptionSignature9').val() === 'true';
 	var setInscriptionSignature9 = removeInscriptionSignature9 ? null : $formulaireValeurs.find('.setInscriptionSignature9').val();
+	var addInscriptionSignature9 = $formulaireValeurs.find('.addInscriptionSignature9').val();
 	if(removeInscriptionSignature9 || setInscriptionSignature9 != null && setInscriptionSignature9 !== '')
 		vals['setInscriptionSignature9'] = setInscriptionSignature9;
-	var addInscriptionSignature9 = $formulaireValeurs.find('.addInscriptionSignature9').val();
 	if(addInscriptionSignature9 != null && addInscriptionSignature9 !== '')
 		vals['addInscriptionSignature9'] = addInscriptionSignature9;
 	var removeInscriptionSignature9 = $formulaireValeurs.find('.removeInscriptionSignature9').val();
@@ -1232,9 +1252,9 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionSignature10 = $formulaireValeurs.find('.valeurInscriptionSignature10').val();
 	var removeInscriptionSignature10 = $formulaireValeurs.find('.removeInscriptionSignature10').val() === 'true';
 	var setInscriptionSignature10 = removeInscriptionSignature10 ? null : $formulaireValeurs.find('.setInscriptionSignature10').val();
+	var addInscriptionSignature10 = $formulaireValeurs.find('.addInscriptionSignature10').val();
 	if(removeInscriptionSignature10 || setInscriptionSignature10 != null && setInscriptionSignature10 !== '')
 		vals['setInscriptionSignature10'] = setInscriptionSignature10;
-	var addInscriptionSignature10 = $formulaireValeurs.find('.addInscriptionSignature10').val();
 	if(addInscriptionSignature10 != null && addInscriptionSignature10 !== '')
 		vals['addInscriptionSignature10'] = addInscriptionSignature10;
 	var removeInscriptionSignature10 = $formulaireValeurs.find('.removeInscriptionSignature10').val();
@@ -1244,9 +1264,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionDate1 = $formulaireValeurs.find('.valeurInscriptionDate1').val();
 	var removeInscriptionDate1 = $formulaireValeurs.find('.removeInscriptionDate1').val() === 'true';
 	var setInscriptionDate1 = removeInscriptionDate1 ? null : $formulaireValeurs.find('.setInscriptionDate1').val();
+	var addInscriptionDate1 = $formulaireValeurs.find('.addInscriptionDate1').val();
+	var setMoment = setInscriptionDate1 ? moment(setInscriptionDate1, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate1 ? moment(addInscriptionDate1, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate1 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate1 = s;
+	} 
 	if(removeInscriptionDate1 || setInscriptionDate1 != null && setInscriptionDate1 !== '')
 		vals['setInscriptionDate1'] = setInscriptionDate1;
-	var addInscriptionDate1 = $formulaireValeurs.find('.addInscriptionDate1').val();
 	if(addInscriptionDate1 != null && addInscriptionDate1 !== '')
 		vals['addInscriptionDate1'] = addInscriptionDate1;
 	var removeInscriptionDate1 = $formulaireValeurs.find('.removeInscriptionDate1').val();
@@ -1256,9 +1286,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionDate2 = $formulaireValeurs.find('.valeurInscriptionDate2').val();
 	var removeInscriptionDate2 = $formulaireValeurs.find('.removeInscriptionDate2').val() === 'true';
 	var setInscriptionDate2 = removeInscriptionDate2 ? null : $formulaireValeurs.find('.setInscriptionDate2').val();
+	var addInscriptionDate2 = $formulaireValeurs.find('.addInscriptionDate2').val();
+	var setMoment = setInscriptionDate2 ? moment(setInscriptionDate2, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate2 ? moment(addInscriptionDate2, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate2 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate2 = s;
+	} 
 	if(removeInscriptionDate2 || setInscriptionDate2 != null && setInscriptionDate2 !== '')
 		vals['setInscriptionDate2'] = setInscriptionDate2;
-	var addInscriptionDate2 = $formulaireValeurs.find('.addInscriptionDate2').val();
 	if(addInscriptionDate2 != null && addInscriptionDate2 !== '')
 		vals['addInscriptionDate2'] = addInscriptionDate2;
 	var removeInscriptionDate2 = $formulaireValeurs.find('.removeInscriptionDate2').val();
@@ -1268,9 +1308,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionDate3 = $formulaireValeurs.find('.valeurInscriptionDate3').val();
 	var removeInscriptionDate3 = $formulaireValeurs.find('.removeInscriptionDate3').val() === 'true';
 	var setInscriptionDate3 = removeInscriptionDate3 ? null : $formulaireValeurs.find('.setInscriptionDate3').val();
+	var addInscriptionDate3 = $formulaireValeurs.find('.addInscriptionDate3').val();
+	var setMoment = setInscriptionDate3 ? moment(setInscriptionDate3, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate3 ? moment(addInscriptionDate3, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate3 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate3 = s;
+	} 
 	if(removeInscriptionDate3 || setInscriptionDate3 != null && setInscriptionDate3 !== '')
 		vals['setInscriptionDate3'] = setInscriptionDate3;
-	var addInscriptionDate3 = $formulaireValeurs.find('.addInscriptionDate3').val();
 	if(addInscriptionDate3 != null && addInscriptionDate3 !== '')
 		vals['addInscriptionDate3'] = addInscriptionDate3;
 	var removeInscriptionDate3 = $formulaireValeurs.find('.removeInscriptionDate3').val();
@@ -1280,9 +1330,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionDate4 = $formulaireValeurs.find('.valeurInscriptionDate4').val();
 	var removeInscriptionDate4 = $formulaireValeurs.find('.removeInscriptionDate4').val() === 'true';
 	var setInscriptionDate4 = removeInscriptionDate4 ? null : $formulaireValeurs.find('.setInscriptionDate4').val();
+	var addInscriptionDate4 = $formulaireValeurs.find('.addInscriptionDate4').val();
+	var setMoment = setInscriptionDate4 ? moment(setInscriptionDate4, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate4 ? moment(addInscriptionDate4, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate4 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate4 = s;
+	} 
 	if(removeInscriptionDate4 || setInscriptionDate4 != null && setInscriptionDate4 !== '')
 		vals['setInscriptionDate4'] = setInscriptionDate4;
-	var addInscriptionDate4 = $formulaireValeurs.find('.addInscriptionDate4').val();
 	if(addInscriptionDate4 != null && addInscriptionDate4 !== '')
 		vals['addInscriptionDate4'] = addInscriptionDate4;
 	var removeInscriptionDate4 = $formulaireValeurs.find('.removeInscriptionDate4').val();
@@ -1292,9 +1352,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionDate5 = $formulaireValeurs.find('.valeurInscriptionDate5').val();
 	var removeInscriptionDate5 = $formulaireValeurs.find('.removeInscriptionDate5').val() === 'true';
 	var setInscriptionDate5 = removeInscriptionDate5 ? null : $formulaireValeurs.find('.setInscriptionDate5').val();
+	var addInscriptionDate5 = $formulaireValeurs.find('.addInscriptionDate5').val();
+	var setMoment = setInscriptionDate5 ? moment(setInscriptionDate5, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate5 ? moment(addInscriptionDate5, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate5 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate5 = s;
+	} 
 	if(removeInscriptionDate5 || setInscriptionDate5 != null && setInscriptionDate5 !== '')
 		vals['setInscriptionDate5'] = setInscriptionDate5;
-	var addInscriptionDate5 = $formulaireValeurs.find('.addInscriptionDate5').val();
 	if(addInscriptionDate5 != null && addInscriptionDate5 !== '')
 		vals['addInscriptionDate5'] = addInscriptionDate5;
 	var removeInscriptionDate5 = $formulaireValeurs.find('.removeInscriptionDate5').val();
@@ -1304,9 +1374,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionDate6 = $formulaireValeurs.find('.valeurInscriptionDate6').val();
 	var removeInscriptionDate6 = $formulaireValeurs.find('.removeInscriptionDate6').val() === 'true';
 	var setInscriptionDate6 = removeInscriptionDate6 ? null : $formulaireValeurs.find('.setInscriptionDate6').val();
+	var addInscriptionDate6 = $formulaireValeurs.find('.addInscriptionDate6').val();
+	var setMoment = setInscriptionDate6 ? moment(setInscriptionDate6, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate6 ? moment(addInscriptionDate6, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate6 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate6 = s;
+	} 
 	if(removeInscriptionDate6 || setInscriptionDate6 != null && setInscriptionDate6 !== '')
 		vals['setInscriptionDate6'] = setInscriptionDate6;
-	var addInscriptionDate6 = $formulaireValeurs.find('.addInscriptionDate6').val();
 	if(addInscriptionDate6 != null && addInscriptionDate6 !== '')
 		vals['addInscriptionDate6'] = addInscriptionDate6;
 	var removeInscriptionDate6 = $formulaireValeurs.find('.removeInscriptionDate6').val();
@@ -1316,9 +1396,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionDate7 = $formulaireValeurs.find('.valeurInscriptionDate7').val();
 	var removeInscriptionDate7 = $formulaireValeurs.find('.removeInscriptionDate7').val() === 'true';
 	var setInscriptionDate7 = removeInscriptionDate7 ? null : $formulaireValeurs.find('.setInscriptionDate7').val();
+	var addInscriptionDate7 = $formulaireValeurs.find('.addInscriptionDate7').val();
+	var setMoment = setInscriptionDate7 ? moment(setInscriptionDate7, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate7 ? moment(addInscriptionDate7, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate7 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate7 = s;
+	} 
 	if(removeInscriptionDate7 || setInscriptionDate7 != null && setInscriptionDate7 !== '')
 		vals['setInscriptionDate7'] = setInscriptionDate7;
-	var addInscriptionDate7 = $formulaireValeurs.find('.addInscriptionDate7').val();
 	if(addInscriptionDate7 != null && addInscriptionDate7 !== '')
 		vals['addInscriptionDate7'] = addInscriptionDate7;
 	var removeInscriptionDate7 = $formulaireValeurs.find('.removeInscriptionDate7').val();
@@ -1328,9 +1418,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionDate8 = $formulaireValeurs.find('.valeurInscriptionDate8').val();
 	var removeInscriptionDate8 = $formulaireValeurs.find('.removeInscriptionDate8').val() === 'true';
 	var setInscriptionDate8 = removeInscriptionDate8 ? null : $formulaireValeurs.find('.setInscriptionDate8').val();
+	var addInscriptionDate8 = $formulaireValeurs.find('.addInscriptionDate8').val();
+	var setMoment = setInscriptionDate8 ? moment(setInscriptionDate8, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate8 ? moment(addInscriptionDate8, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate8 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate8 = s;
+	} 
 	if(removeInscriptionDate8 || setInscriptionDate8 != null && setInscriptionDate8 !== '')
 		vals['setInscriptionDate8'] = setInscriptionDate8;
-	var addInscriptionDate8 = $formulaireValeurs.find('.addInscriptionDate8').val();
 	if(addInscriptionDate8 != null && addInscriptionDate8 !== '')
 		vals['addInscriptionDate8'] = addInscriptionDate8;
 	var removeInscriptionDate8 = $formulaireValeurs.find('.removeInscriptionDate8').val();
@@ -1340,9 +1440,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionDate9 = $formulaireValeurs.find('.valeurInscriptionDate9').val();
 	var removeInscriptionDate9 = $formulaireValeurs.find('.removeInscriptionDate9').val() === 'true';
 	var setInscriptionDate9 = removeInscriptionDate9 ? null : $formulaireValeurs.find('.setInscriptionDate9').val();
+	var addInscriptionDate9 = $formulaireValeurs.find('.addInscriptionDate9').val();
+	var setMoment = setInscriptionDate9 ? moment(setInscriptionDate9, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate9 ? moment(addInscriptionDate9, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate9 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate9 = s;
+	} 
 	if(removeInscriptionDate9 || setInscriptionDate9 != null && setInscriptionDate9 !== '')
 		vals['setInscriptionDate9'] = setInscriptionDate9;
-	var addInscriptionDate9 = $formulaireValeurs.find('.addInscriptionDate9').val();
 	if(addInscriptionDate9 != null && addInscriptionDate9 !== '')
 		vals['addInscriptionDate9'] = addInscriptionDate9;
 	var removeInscriptionDate9 = $formulaireValeurs.find('.removeInscriptionDate9').val();
@@ -1352,9 +1462,19 @@ async function patchInscriptionScolaire($formulaireFiltres, $formulaireValeurs, 
 	var valeurInscriptionDate10 = $formulaireValeurs.find('.valeurInscriptionDate10').val();
 	var removeInscriptionDate10 = $formulaireValeurs.find('.removeInscriptionDate10').val() === 'true';
 	var setInscriptionDate10 = removeInscriptionDate10 ? null : $formulaireValeurs.find('.setInscriptionDate10').val();
+	var addInscriptionDate10 = $formulaireValeurs.find('.addInscriptionDate10').val();
+	var setMoment = setInscriptionDate10 ? moment(setInscriptionDate10, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate10 ? moment(addInscriptionDate10, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate10 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate10 = s;
+	} 
 	if(removeInscriptionDate10 || setInscriptionDate10 != null && setInscriptionDate10 !== '')
 		vals['setInscriptionDate10'] = setInscriptionDate10;
-	var addInscriptionDate10 = $formulaireValeurs.find('.addInscriptionDate10').val();
 	if(addInscriptionDate10 != null && addInscriptionDate10 !== '')
 		vals['addInscriptionDate10'] = addInscriptionDate10;
 	var removeInscriptionDate10 = $formulaireValeurs.find('.removeInscriptionDate10').val();
@@ -4234,9 +4354,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurPk = $formulaireValeurs.find('.valeurPk').val();
 	var removePk = $formulaireValeurs.find('.removePk').val() === 'true';
 	var setPk = removePk ? null : $formulaireValeurs.find('.setPk').val();
+	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(removePk || setPk != null && setPk !== '')
 		vals['setPk'] = setPk;
-	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(addPk != null && addPk !== '')
 		vals['addPk'] = addPk;
 	var removePk = $formulaireValeurs.find('.removePk').val();
@@ -4246,9 +4366,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurCree = $formulaireValeurs.find('.valeurCree').val();
 	var removeCree = $formulaireValeurs.find('.removeCree').val() === 'true';
 	var setCree = removeCree ? null : $formulaireValeurs.find('.setCree').val();
+	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(removeCree || setCree != null && setCree !== '')
 		vals['setCree'] = setCree;
-	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(addCree != null && addCree !== '')
 		vals['addCree'] = addCree;
 	var removeCree = $formulaireValeurs.find('.removeCree').val();
@@ -4258,9 +4378,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurModifie = $formulaireValeurs.find('.valeurModifie').val();
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val() === 'true';
 	var setModifie = removeModifie ? null : $formulaireValeurs.find('.setModifie').val();
+	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(removeModifie || setModifie != null && setModifie !== '')
 		vals['setModifie'] = setModifie;
-	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(addModifie != null && addModifie !== '')
 		vals['addModifie'] = addModifie;
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val();
@@ -4270,9 +4390,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurObjetId = $formulaireValeurs.find('.valeurObjetId').val();
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val() === 'true';
 	var setObjetId = removeObjetId ? null : $formulaireValeurs.find('.setObjetId').val();
+	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(removeObjetId || setObjetId != null && setObjetId !== '')
 		vals['setObjetId'] = setObjetId;
-	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(addObjetId != null && addObjetId !== '')
 		vals['addObjetId'] = addObjetId;
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val();
@@ -4285,10 +4405,10 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurArchive = null;
 	if(valeurArchiveSelectVal != null && valeurArchiveSelectVal !== '')
 		valeurArchive = valeurArchiveSelectVal == 'true';
-	setArchive = removeArchive ? null : valeurArchive;
+	var setArchive = removeArchive ? null : valeurArchive;
+	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(removeArchive || setArchive != null && setArchive !== '')
 		vals['setArchive'] = setArchive;
-	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(addArchive != null && addArchive !== '')
 		vals['addArchive'] = addArchive;
 	var removeArchive = $formulaireValeurs.find('.removeArchive').prop('checked');
@@ -4301,10 +4421,10 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurSupprime = null;
 	if(valeurSupprimeSelectVal != null && valeurSupprimeSelectVal !== '')
 		valeurSupprime = valeurSupprimeSelectVal == 'true';
-	setSupprime = removeSupprime ? null : valeurSupprime;
+	var setSupprime = removeSupprime ? null : valeurSupprime;
+	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(removeSupprime || setSupprime != null && setSupprime !== '')
 		vals['setSupprime'] = setSupprime;
-	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(addSupprime != null && addSupprime !== '')
 		vals['addSupprime'] = addSupprime;
 	var removeSupprime = $formulaireValeurs.find('.removeSupprime').prop('checked');
@@ -4314,9 +4434,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurPhoto = $formulaireValeurs.find('.valeurPhoto').val();
 	var removePhoto = $formulaireValeurs.find('.removePhoto').val() === 'true';
 	var setPhoto = removePhoto ? null : $formulaireValeurs.find('.setPhoto').val();
+	var addPhoto = $formulaireValeurs.find('.addPhoto').val();
 	if(removePhoto || setPhoto != null && setPhoto !== '')
 		vals['setPhoto'] = setPhoto;
-	var addPhoto = $formulaireValeurs.find('.addPhoto').val();
 	if(addPhoto != null && addPhoto !== '')
 		vals['addPhoto'] = addPhoto;
 	var removePhoto = $formulaireValeurs.find('.removePhoto').val();
@@ -4326,9 +4446,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionNomGroupe = $formulaireValeurs.find('.valeurInscriptionNomGroupe').val();
 	var removeInscriptionNomGroupe = $formulaireValeurs.find('.removeInscriptionNomGroupe').val() === 'true';
 	var setInscriptionNomGroupe = removeInscriptionNomGroupe ? null : $formulaireValeurs.find('.setInscriptionNomGroupe').val();
+	var addInscriptionNomGroupe = $formulaireValeurs.find('.addInscriptionNomGroupe').val();
 	if(removeInscriptionNomGroupe || setInscriptionNomGroupe != null && setInscriptionNomGroupe !== '')
 		vals['setInscriptionNomGroupe'] = setInscriptionNomGroupe;
-	var addInscriptionNomGroupe = $formulaireValeurs.find('.addInscriptionNomGroupe').val();
 	if(addInscriptionNomGroupe != null && addInscriptionNomGroupe !== '')
 		vals['addInscriptionNomGroupe'] = addInscriptionNomGroupe;
 	var removeInscriptionNomGroupe = $formulaireValeurs.find('.removeInscriptionNomGroupe').val();
@@ -4338,9 +4458,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurCustomerProfileId = $formulaireValeurs.find('.valeurCustomerProfileId').val();
 	var removeCustomerProfileId = $formulaireValeurs.find('.removeCustomerProfileId').val() === 'true';
 	var setCustomerProfileId = removeCustomerProfileId ? null : $formulaireValeurs.find('.setCustomerProfileId').val();
+	var addCustomerProfileId = $formulaireValeurs.find('.addCustomerProfileId').val();
 	if(removeCustomerProfileId || setCustomerProfileId != null && setCustomerProfileId !== '')
 		vals['setCustomerProfileId'] = setCustomerProfileId;
-	var addCustomerProfileId = $formulaireValeurs.find('.addCustomerProfileId').val();
 	if(addCustomerProfileId != null && addCustomerProfileId !== '')
 		vals['addCustomerProfileId'] = addCustomerProfileId;
 	var removeCustomerProfileId = $formulaireValeurs.find('.removeCustomerProfileId').val();
@@ -4353,10 +4473,10 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionPaimentComplet = null;
 	if(valeurInscriptionPaimentCompletSelectVal != null && valeurInscriptionPaimentCompletSelectVal !== '')
 		valeurInscriptionPaimentComplet = valeurInscriptionPaimentCompletSelectVal == 'true';
-	setInscriptionPaimentComplet = removeInscriptionPaimentComplet ? null : valeurInscriptionPaimentComplet;
+	var setInscriptionPaimentComplet = removeInscriptionPaimentComplet ? null : valeurInscriptionPaimentComplet;
+	var addInscriptionPaimentComplet = $formulaireValeurs.find('.addInscriptionPaimentComplet').prop('checked');
 	if(removeInscriptionPaimentComplet || setInscriptionPaimentComplet != null && setInscriptionPaimentComplet !== '')
 		vals['setInscriptionPaimentComplet'] = setInscriptionPaimentComplet;
-	var addInscriptionPaimentComplet = $formulaireValeurs.find('.addInscriptionPaimentComplet').prop('checked');
 	if(addInscriptionPaimentComplet != null && addInscriptionPaimentComplet !== '')
 		vals['addInscriptionPaimentComplet'] = addInscriptionPaimentComplet;
 	var removeInscriptionPaimentComplet = $formulaireValeurs.find('.removeInscriptionPaimentComplet').prop('checked');
@@ -4369,10 +4489,10 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurEnfantPropre = null;
 	if(valeurEnfantPropreSelectVal != null && valeurEnfantPropreSelectVal !== '')
 		valeurEnfantPropre = valeurEnfantPropreSelectVal == 'true';
-	setEnfantPropre = removeEnfantPropre ? null : valeurEnfantPropre;
+	var setEnfantPropre = removeEnfantPropre ? null : valeurEnfantPropre;
+	var addEnfantPropre = $formulaireValeurs.find('.addEnfantPropre').prop('checked');
 	if(removeEnfantPropre || setEnfantPropre != null && setEnfantPropre !== '')
 		vals['setEnfantPropre'] = setEnfantPropre;
-	var addEnfantPropre = $formulaireValeurs.find('.addEnfantPropre').prop('checked');
 	if(addEnfantPropre != null && addEnfantPropre !== '')
 		vals['addEnfantPropre'] = addEnfantPropre;
 	var removeEnfantPropre = $formulaireValeurs.find('.removeEnfantPropre').prop('checked');
@@ -4385,10 +4505,10 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionPaimentChaqueMois = null;
 	if(valeurInscriptionPaimentChaqueMoisSelectVal != null && valeurInscriptionPaimentChaqueMoisSelectVal !== '')
 		valeurInscriptionPaimentChaqueMois = valeurInscriptionPaimentChaqueMoisSelectVal == 'true';
-	setInscriptionPaimentChaqueMois = removeInscriptionPaimentChaqueMois ? null : valeurInscriptionPaimentChaqueMois;
+	var setInscriptionPaimentChaqueMois = removeInscriptionPaimentChaqueMois ? null : valeurInscriptionPaimentChaqueMois;
+	var addInscriptionPaimentChaqueMois = $formulaireValeurs.find('.addInscriptionPaimentChaqueMois').prop('checked');
 	if(removeInscriptionPaimentChaqueMois || setInscriptionPaimentChaqueMois != null && setInscriptionPaimentChaqueMois !== '')
 		vals['setInscriptionPaimentChaqueMois'] = setInscriptionPaimentChaqueMois;
-	var addInscriptionPaimentChaqueMois = $formulaireValeurs.find('.addInscriptionPaimentChaqueMois').prop('checked');
 	if(addInscriptionPaimentChaqueMois != null && addInscriptionPaimentChaqueMois !== '')
 		vals['addInscriptionPaimentChaqueMois'] = addInscriptionPaimentChaqueMois;
 	var removeInscriptionPaimentChaqueMois = $formulaireValeurs.find('.removeInscriptionPaimentChaqueMois').prop('checked');
@@ -4401,10 +4521,10 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionImmunisations = null;
 	if(valeurInscriptionImmunisationsSelectVal != null && valeurInscriptionImmunisationsSelectVal !== '')
 		valeurInscriptionImmunisations = valeurInscriptionImmunisationsSelectVal == 'true';
-	setInscriptionImmunisations = removeInscriptionImmunisations ? null : valeurInscriptionImmunisations;
+	var setInscriptionImmunisations = removeInscriptionImmunisations ? null : valeurInscriptionImmunisations;
+	var addInscriptionImmunisations = $formulaireValeurs.find('.addInscriptionImmunisations').prop('checked');
 	if(removeInscriptionImmunisations || setInscriptionImmunisations != null && setInscriptionImmunisations !== '')
 		vals['setInscriptionImmunisations'] = setInscriptionImmunisations;
-	var addInscriptionImmunisations = $formulaireValeurs.find('.addInscriptionImmunisations').prop('checked');
 	if(addInscriptionImmunisations != null && addInscriptionImmunisations !== '')
 		vals['addInscriptionImmunisations'] = addInscriptionImmunisations;
 	var removeInscriptionImmunisations = $formulaireValeurs.find('.removeInscriptionImmunisations').prop('checked');
@@ -4417,10 +4537,10 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionApprouve = null;
 	if(valeurInscriptionApprouveSelectVal != null && valeurInscriptionApprouveSelectVal !== '')
 		valeurInscriptionApprouve = valeurInscriptionApprouveSelectVal == 'true';
-	setInscriptionApprouve = removeInscriptionApprouve ? null : valeurInscriptionApprouve;
+	var setInscriptionApprouve = removeInscriptionApprouve ? null : valeurInscriptionApprouve;
+	var addInscriptionApprouve = $formulaireValeurs.find('.addInscriptionApprouve').prop('checked');
 	if(removeInscriptionApprouve || setInscriptionApprouve != null && setInscriptionApprouve !== '')
 		vals['setInscriptionApprouve'] = setInscriptionApprouve;
-	var addInscriptionApprouve = $formulaireValeurs.find('.addInscriptionApprouve').prop('checked');
 	if(addInscriptionApprouve != null && addInscriptionApprouve !== '')
 		vals['addInscriptionApprouve'] = addInscriptionApprouve;
 	var removeInscriptionApprouve = $formulaireValeurs.find('.removeInscriptionApprouve').prop('checked');
@@ -4433,10 +4553,10 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurFamilleMarie = null;
 	if(valeurFamilleMarieSelectVal != null && valeurFamilleMarieSelectVal !== '')
 		valeurFamilleMarie = valeurFamilleMarieSelectVal == 'true';
-	setFamilleMarie = removeFamilleMarie ? null : valeurFamilleMarie;
+	var setFamilleMarie = removeFamilleMarie ? null : valeurFamilleMarie;
+	var addFamilleMarie = $formulaireValeurs.find('.addFamilleMarie').prop('checked');
 	if(removeFamilleMarie || setFamilleMarie != null && setFamilleMarie !== '')
 		vals['setFamilleMarie'] = setFamilleMarie;
-	var addFamilleMarie = $formulaireValeurs.find('.addFamilleMarie').prop('checked');
 	if(addFamilleMarie != null && addFamilleMarie !== '')
 		vals['addFamilleMarie'] = addFamilleMarie;
 	var removeFamilleMarie = $formulaireValeurs.find('.removeFamilleMarie').prop('checked');
@@ -4449,10 +4569,10 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurFamilleSepare = null;
 	if(valeurFamilleSepareSelectVal != null && valeurFamilleSepareSelectVal !== '')
 		valeurFamilleSepare = valeurFamilleSepareSelectVal == 'true';
-	setFamilleSepare = removeFamilleSepare ? null : valeurFamilleSepare;
+	var setFamilleSepare = removeFamilleSepare ? null : valeurFamilleSepare;
+	var addFamilleSepare = $formulaireValeurs.find('.addFamilleSepare').prop('checked');
 	if(removeFamilleSepare || setFamilleSepare != null && setFamilleSepare !== '')
 		vals['setFamilleSepare'] = setFamilleSepare;
-	var addFamilleSepare = $formulaireValeurs.find('.addFamilleSepare').prop('checked');
 	if(addFamilleSepare != null && addFamilleSepare !== '')
 		vals['addFamilleSepare'] = addFamilleSepare;
 	var removeFamilleSepare = $formulaireValeurs.find('.removeFamilleSepare').prop('checked');
@@ -4465,10 +4585,10 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurFamilleDivorce = null;
 	if(valeurFamilleDivorceSelectVal != null && valeurFamilleDivorceSelectVal !== '')
 		valeurFamilleDivorce = valeurFamilleDivorceSelectVal == 'true';
-	setFamilleDivorce = removeFamilleDivorce ? null : valeurFamilleDivorce;
+	var setFamilleDivorce = removeFamilleDivorce ? null : valeurFamilleDivorce;
+	var addFamilleDivorce = $formulaireValeurs.find('.addFamilleDivorce').prop('checked');
 	if(removeFamilleDivorce || setFamilleDivorce != null && setFamilleDivorce !== '')
 		vals['setFamilleDivorce'] = setFamilleDivorce;
-	var addFamilleDivorce = $formulaireValeurs.find('.addFamilleDivorce').prop('checked');
 	if(addFamilleDivorce != null && addFamilleDivorce !== '')
 		vals['addFamilleDivorce'] = addFamilleDivorce;
 	var removeFamilleDivorce = $formulaireValeurs.find('.removeFamilleDivorce').prop('checked');
@@ -4478,9 +4598,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurFamilleAddresse = $formulaireValeurs.find('.valeurFamilleAddresse').val();
 	var removeFamilleAddresse = $formulaireValeurs.find('.removeFamilleAddresse').val() === 'true';
 	var setFamilleAddresse = removeFamilleAddresse ? null : $formulaireValeurs.find('.setFamilleAddresse').val();
+	var addFamilleAddresse = $formulaireValeurs.find('.addFamilleAddresse').val();
 	if(removeFamilleAddresse || setFamilleAddresse != null && setFamilleAddresse !== '')
 		vals['setFamilleAddresse'] = setFamilleAddresse;
-	var addFamilleAddresse = $formulaireValeurs.find('.addFamilleAddresse').val();
 	if(addFamilleAddresse != null && addFamilleAddresse !== '')
 		vals['addFamilleAddresse'] = addFamilleAddresse;
 	var removeFamilleAddresse = $formulaireValeurs.find('.removeFamilleAddresse').val();
@@ -4490,9 +4610,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.valeurInscriptionConsiderationsSpeciales').val();
 	var removeInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.removeInscriptionConsiderationsSpeciales').val() === 'true';
 	var setInscriptionConsiderationsSpeciales = removeInscriptionConsiderationsSpeciales ? null : $formulaireValeurs.find('.setInscriptionConsiderationsSpeciales').val();
+	var addInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.addInscriptionConsiderationsSpeciales').val();
 	if(removeInscriptionConsiderationsSpeciales || setInscriptionConsiderationsSpeciales != null && setInscriptionConsiderationsSpeciales !== '')
 		vals['setInscriptionConsiderationsSpeciales'] = setInscriptionConsiderationsSpeciales;
-	var addInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.addInscriptionConsiderationsSpeciales').val();
 	if(addInscriptionConsiderationsSpeciales != null && addInscriptionConsiderationsSpeciales !== '')
 		vals['addInscriptionConsiderationsSpeciales'] = addInscriptionConsiderationsSpeciales;
 	var removeInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.removeInscriptionConsiderationsSpeciales').val();
@@ -4502,9 +4622,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurEnfantConditionsMedicales = $formulaireValeurs.find('.valeurEnfantConditionsMedicales').val();
 	var removeEnfantConditionsMedicales = $formulaireValeurs.find('.removeEnfantConditionsMedicales').val() === 'true';
 	var setEnfantConditionsMedicales = removeEnfantConditionsMedicales ? null : $formulaireValeurs.find('.setEnfantConditionsMedicales').val();
+	var addEnfantConditionsMedicales = $formulaireValeurs.find('.addEnfantConditionsMedicales').val();
 	if(removeEnfantConditionsMedicales || setEnfantConditionsMedicales != null && setEnfantConditionsMedicales !== '')
 		vals['setEnfantConditionsMedicales'] = setEnfantConditionsMedicales;
-	var addEnfantConditionsMedicales = $formulaireValeurs.find('.addEnfantConditionsMedicales').val();
 	if(addEnfantConditionsMedicales != null && addEnfantConditionsMedicales !== '')
 		vals['addEnfantConditionsMedicales'] = addEnfantConditionsMedicales;
 	var removeEnfantConditionsMedicales = $formulaireValeurs.find('.removeEnfantConditionsMedicales').val();
@@ -4514,9 +4634,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.valeurEnfantEcolesPrecedemmentFrequentees').val();
 	var removeEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.removeEnfantEcolesPrecedemmentFrequentees').val() === 'true';
 	var setEnfantEcolesPrecedemmentFrequentees = removeEnfantEcolesPrecedemmentFrequentees ? null : $formulaireValeurs.find('.setEnfantEcolesPrecedemmentFrequentees').val();
+	var addEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.addEnfantEcolesPrecedemmentFrequentees').val();
 	if(removeEnfantEcolesPrecedemmentFrequentees || setEnfantEcolesPrecedemmentFrequentees != null && setEnfantEcolesPrecedemmentFrequentees !== '')
 		vals['setEnfantEcolesPrecedemmentFrequentees'] = setEnfantEcolesPrecedemmentFrequentees;
-	var addEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.addEnfantEcolesPrecedemmentFrequentees').val();
 	if(addEnfantEcolesPrecedemmentFrequentees != null && addEnfantEcolesPrecedemmentFrequentees !== '')
 		vals['addEnfantEcolesPrecedemmentFrequentees'] = addEnfantEcolesPrecedemmentFrequentees;
 	var removeEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.removeEnfantEcolesPrecedemmentFrequentees').val();
@@ -4526,9 +4646,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.valeurFamilleCommentVousConnaissezEcole').val();
 	var removeFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.removeFamilleCommentVousConnaissezEcole').val() === 'true';
 	var setFamilleCommentVousConnaissezEcole = removeFamilleCommentVousConnaissezEcole ? null : $formulaireValeurs.find('.setFamilleCommentVousConnaissezEcole').val();
+	var addFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.addFamilleCommentVousConnaissezEcole').val();
 	if(removeFamilleCommentVousConnaissezEcole || setFamilleCommentVousConnaissezEcole != null && setFamilleCommentVousConnaissezEcole !== '')
 		vals['setFamilleCommentVousConnaissezEcole'] = setFamilleCommentVousConnaissezEcole;
-	var addFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.addFamilleCommentVousConnaissezEcole').val();
 	if(addFamilleCommentVousConnaissezEcole != null && addFamilleCommentVousConnaissezEcole !== '')
 		vals['addFamilleCommentVousConnaissezEcole'] = addFamilleCommentVousConnaissezEcole;
 	var removeFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.removeFamilleCommentVousConnaissezEcole').val();
@@ -4538,9 +4658,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurEnfantDescription = $formulaireValeurs.find('.valeurEnfantDescription').val();
 	var removeEnfantDescription = $formulaireValeurs.find('.removeEnfantDescription').val() === 'true';
 	var setEnfantDescription = removeEnfantDescription ? null : $formulaireValeurs.find('.setEnfantDescription').val();
+	var addEnfantDescription = $formulaireValeurs.find('.addEnfantDescription').val();
 	if(removeEnfantDescription || setEnfantDescription != null && setEnfantDescription !== '')
 		vals['setEnfantDescription'] = setEnfantDescription;
-	var addEnfantDescription = $formulaireValeurs.find('.addEnfantDescription').val();
 	if(addEnfantDescription != null && addEnfantDescription !== '')
 		vals['addEnfantDescription'] = addEnfantDescription;
 	var removeEnfantDescription = $formulaireValeurs.find('.removeEnfantDescription').val();
@@ -4550,9 +4670,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurEnfantObjectifs = $formulaireValeurs.find('.valeurEnfantObjectifs').val();
 	var removeEnfantObjectifs = $formulaireValeurs.find('.removeEnfantObjectifs').val() === 'true';
 	var setEnfantObjectifs = removeEnfantObjectifs ? null : $formulaireValeurs.find('.setEnfantObjectifs').val();
+	var addEnfantObjectifs = $formulaireValeurs.find('.addEnfantObjectifs').val();
 	if(removeEnfantObjectifs || setEnfantObjectifs != null && setEnfantObjectifs !== '')
 		vals['setEnfantObjectifs'] = setEnfantObjectifs;
-	var addEnfantObjectifs = $formulaireValeurs.find('.addEnfantObjectifs').val();
 	if(addEnfantObjectifs != null && addEnfantObjectifs !== '')
 		vals['addEnfantObjectifs'] = addEnfantObjectifs;
 	var removeEnfantObjectifs = $formulaireValeurs.find('.removeEnfantObjectifs').val();
@@ -4594,9 +4714,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInheritPk = $formulaireValeurs.find('.valeurInheritPk').val();
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val() === 'true';
 	var setInheritPk = removeInheritPk ? null : $formulaireValeurs.find('.setInheritPk').val();
+	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(removeInheritPk || setInheritPk != null && setInheritPk !== '')
 		vals['setInheritPk'] = setInheritPk;
-	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(addInheritPk != null && addInheritPk !== '')
 		vals['addInheritPk'] = addInheritPk;
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val();
@@ -4606,9 +4726,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurSessionId = $formulaireValeurs.find('.valeurSessionId').val();
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val() === 'true';
 	var setSessionId = removeSessionId ? null : $formulaireValeurs.find('.setSessionId').val();
+	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(removeSessionId || setSessionId != null && setSessionId !== '')
 		vals['setSessionId'] = setSessionId;
-	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(addSessionId != null && addSessionId !== '')
 		vals['addSessionId'] = addSessionId;
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val();
@@ -4618,9 +4738,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurUtilisateurId = $formulaireValeurs.find('.valeurUtilisateurId').val();
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val() === 'true';
 	var setUtilisateurId = removeUtilisateurId ? null : $formulaireValeurs.find('.setUtilisateurId').val();
+	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(removeUtilisateurId || setUtilisateurId != null && setUtilisateurId !== '')
 		vals['setUtilisateurId'] = setUtilisateurId;
-	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(addUtilisateurId != null && addUtilisateurId !== '')
 		vals['addUtilisateurId'] = addUtilisateurId;
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val();
@@ -4630,9 +4750,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurUtilisateurCle = $formulaireValeurs.find('.valeurUtilisateurCle').val();
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val() === 'true';
 	var setUtilisateurCle = removeUtilisateurCle ? null : $formulaireValeurs.find('.setUtilisateurCle').val();
+	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(removeUtilisateurCle || setUtilisateurCle != null && setUtilisateurCle !== '')
 		vals['setUtilisateurCle'] = setUtilisateurCle;
-	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(addUtilisateurCle != null && addUtilisateurCle !== '')
 		vals['addUtilisateurCle'] = addUtilisateurCle;
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val();
@@ -4642,9 +4762,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurObjetTitre = $formulaireValeurs.find('.valeurObjetTitre').val();
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val() === 'true';
 	var setObjetTitre = removeObjetTitre ? null : $formulaireValeurs.find('.setObjetTitre').val();
+	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(removeObjetTitre || setObjetTitre != null && setObjetTitre !== '')
 		vals['setObjetTitre'] = setObjetTitre;
-	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(addObjetTitre != null && addObjetTitre !== '')
 		vals['addObjetTitre'] = addObjetTitre;
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val();
@@ -4654,9 +4774,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurEnfantNomComplet = $formulaireValeurs.find('.valeurEnfantNomComplet').val();
 	var removeEnfantNomComplet = $formulaireValeurs.find('.removeEnfantNomComplet').val() === 'true';
 	var setEnfantNomComplet = removeEnfantNomComplet ? null : $formulaireValeurs.find('.setEnfantNomComplet').val();
+	var addEnfantNomComplet = $formulaireValeurs.find('.addEnfantNomComplet').val();
 	if(removeEnfantNomComplet || setEnfantNomComplet != null && setEnfantNomComplet !== '')
 		vals['setEnfantNomComplet'] = setEnfantNomComplet;
-	var addEnfantNomComplet = $formulaireValeurs.find('.addEnfantNomComplet').val();
 	if(addEnfantNomComplet != null && addEnfantNomComplet !== '')
 		vals['addEnfantNomComplet'] = addEnfantNomComplet;
 	var removeEnfantNomComplet = $formulaireValeurs.find('.removeEnfantNomComplet').val();
@@ -4666,9 +4786,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurEnfantNomCompletPrefere = $formulaireValeurs.find('.valeurEnfantNomCompletPrefere').val();
 	var removeEnfantNomCompletPrefere = $formulaireValeurs.find('.removeEnfantNomCompletPrefere').val() === 'true';
 	var setEnfantNomCompletPrefere = removeEnfantNomCompletPrefere ? null : $formulaireValeurs.find('.setEnfantNomCompletPrefere').val();
+	var addEnfantNomCompletPrefere = $formulaireValeurs.find('.addEnfantNomCompletPrefere').val();
 	if(removeEnfantNomCompletPrefere || setEnfantNomCompletPrefere != null && setEnfantNomCompletPrefere !== '')
 		vals['setEnfantNomCompletPrefere'] = setEnfantNomCompletPrefere;
-	var addEnfantNomCompletPrefere = $formulaireValeurs.find('.addEnfantNomCompletPrefere').val();
 	if(addEnfantNomCompletPrefere != null && addEnfantNomCompletPrefere !== '')
 		vals['addEnfantNomCompletPrefere'] = addEnfantNomCompletPrefere;
 	var removeEnfantNomCompletPrefere = $formulaireValeurs.find('.removeEnfantNomCompletPrefere').val();
@@ -4678,9 +4798,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurEnfantDateNaissance = $formulaireValeurs.find('.valeurEnfantDateNaissance').val();
 	var removeEnfantDateNaissance = $formulaireValeurs.find('.removeEnfantDateNaissance').val() === 'true';
 	var setEnfantDateNaissance = removeEnfantDateNaissance ? null : $formulaireValeurs.find('.setEnfantDateNaissance').val();
+	var addEnfantDateNaissance = $formulaireValeurs.find('.addEnfantDateNaissance').val();
+	var setMoment = setEnfantDateNaissance ? moment(setEnfantDateNaissance, 'DD-MM-YYYY') : null; 
+	var addMoment = addEnfantDateNaissance ? moment(addEnfantDateNaissance, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setEnfantDateNaissance = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addEnfantDateNaissance = s;
+	} 
 	if(removeEnfantDateNaissance || setEnfantDateNaissance != null && setEnfantDateNaissance !== '')
 		vals['setEnfantDateNaissance'] = setEnfantDateNaissance;
-	var addEnfantDateNaissance = $formulaireValeurs.find('.addEnfantDateNaissance').val();
 	if(addEnfantDateNaissance != null && addEnfantDateNaissance !== '')
 		vals['addEnfantDateNaissance'] = addEnfantDateNaissance;
 	var removeEnfantDateNaissance = $formulaireValeurs.find('.removeEnfantDateNaissance').val();
@@ -4690,9 +4820,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurEcoleAddresse = $formulaireValeurs.find('.valeurEcoleAddresse').val();
 	var removeEcoleAddresse = $formulaireValeurs.find('.removeEcoleAddresse').val() === 'true';
 	var setEcoleAddresse = removeEcoleAddresse ? null : $formulaireValeurs.find('.setEcoleAddresse').val();
+	var addEcoleAddresse = $formulaireValeurs.find('.addEcoleAddresse').val();
 	if(removeEcoleAddresse || setEcoleAddresse != null && setEcoleAddresse !== '')
 		vals['setEcoleAddresse'] = setEcoleAddresse;
-	var addEcoleAddresse = $formulaireValeurs.find('.addEcoleAddresse').val();
 	if(addEcoleAddresse != null && addEcoleAddresse !== '')
 		vals['addEcoleAddresse'] = addEcoleAddresse;
 	var removeEcoleAddresse = $formulaireValeurs.find('.removeEcoleAddresse').val();
@@ -4702,9 +4832,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionDateFrais = $formulaireValeurs.find('.valeurInscriptionDateFrais').val();
 	var removeInscriptionDateFrais = $formulaireValeurs.find('.removeInscriptionDateFrais').val() === 'true';
 	var setInscriptionDateFrais = removeInscriptionDateFrais ? null : $formulaireValeurs.find('.setInscriptionDateFrais').val();
+	var addInscriptionDateFrais = $formulaireValeurs.find('.addInscriptionDateFrais').val();
+	var setMoment = setInscriptionDateFrais ? moment(setInscriptionDateFrais, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDateFrais ? moment(addInscriptionDateFrais, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDateFrais = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDateFrais = s;
+	} 
 	if(removeInscriptionDateFrais || setInscriptionDateFrais != null && setInscriptionDateFrais !== '')
 		vals['setInscriptionDateFrais'] = setInscriptionDateFrais;
-	var addInscriptionDateFrais = $formulaireValeurs.find('.addInscriptionDateFrais').val();
 	if(addInscriptionDateFrais != null && addInscriptionDateFrais !== '')
 		vals['addInscriptionDateFrais'] = addInscriptionDateFrais;
 	var removeInscriptionDateFrais = $formulaireValeurs.find('.removeInscriptionDateFrais').val();
@@ -4714,9 +4854,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionNomsParents = $formulaireValeurs.find('.valeurInscriptionNomsParents').val();
 	var removeInscriptionNomsParents = $formulaireValeurs.find('.removeInscriptionNomsParents').val() === 'true';
 	var setInscriptionNomsParents = removeInscriptionNomsParents ? null : $formulaireValeurs.find('.setInscriptionNomsParents').val();
+	var addInscriptionNomsParents = $formulaireValeurs.find('.addInscriptionNomsParents').val();
 	if(removeInscriptionNomsParents || setInscriptionNomsParents != null && setInscriptionNomsParents !== '')
 		vals['setInscriptionNomsParents'] = setInscriptionNomsParents;
-	var addInscriptionNomsParents = $formulaireValeurs.find('.addInscriptionNomsParents').val();
 	if(addInscriptionNomsParents != null && addInscriptionNomsParents !== '')
 		vals['addInscriptionNomsParents'] = addInscriptionNomsParents;
 	var removeInscriptionNomsParents = $formulaireValeurs.find('.removeInscriptionNomsParents').val();
@@ -4726,9 +4866,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionSignature1 = $formulaireValeurs.find('.valeurInscriptionSignature1').val();
 	var removeInscriptionSignature1 = $formulaireValeurs.find('.removeInscriptionSignature1').val() === 'true';
 	var setInscriptionSignature1 = removeInscriptionSignature1 ? null : $formulaireValeurs.find('.setInscriptionSignature1').val();
+	var addInscriptionSignature1 = $formulaireValeurs.find('.addInscriptionSignature1').val();
 	if(removeInscriptionSignature1 || setInscriptionSignature1 != null && setInscriptionSignature1 !== '')
 		vals['setInscriptionSignature1'] = setInscriptionSignature1;
-	var addInscriptionSignature1 = $formulaireValeurs.find('.addInscriptionSignature1').val();
 	if(addInscriptionSignature1 != null && addInscriptionSignature1 !== '')
 		vals['addInscriptionSignature1'] = addInscriptionSignature1;
 	var removeInscriptionSignature1 = $formulaireValeurs.find('.removeInscriptionSignature1').val();
@@ -4738,9 +4878,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionSignature2 = $formulaireValeurs.find('.valeurInscriptionSignature2').val();
 	var removeInscriptionSignature2 = $formulaireValeurs.find('.removeInscriptionSignature2').val() === 'true';
 	var setInscriptionSignature2 = removeInscriptionSignature2 ? null : $formulaireValeurs.find('.setInscriptionSignature2').val();
+	var addInscriptionSignature2 = $formulaireValeurs.find('.addInscriptionSignature2').val();
 	if(removeInscriptionSignature2 || setInscriptionSignature2 != null && setInscriptionSignature2 !== '')
 		vals['setInscriptionSignature2'] = setInscriptionSignature2;
-	var addInscriptionSignature2 = $formulaireValeurs.find('.addInscriptionSignature2').val();
 	if(addInscriptionSignature2 != null && addInscriptionSignature2 !== '')
 		vals['addInscriptionSignature2'] = addInscriptionSignature2;
 	var removeInscriptionSignature2 = $formulaireValeurs.find('.removeInscriptionSignature2').val();
@@ -4750,9 +4890,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionSignature3 = $formulaireValeurs.find('.valeurInscriptionSignature3').val();
 	var removeInscriptionSignature3 = $formulaireValeurs.find('.removeInscriptionSignature3').val() === 'true';
 	var setInscriptionSignature3 = removeInscriptionSignature3 ? null : $formulaireValeurs.find('.setInscriptionSignature3').val();
+	var addInscriptionSignature3 = $formulaireValeurs.find('.addInscriptionSignature3').val();
 	if(removeInscriptionSignature3 || setInscriptionSignature3 != null && setInscriptionSignature3 !== '')
 		vals['setInscriptionSignature3'] = setInscriptionSignature3;
-	var addInscriptionSignature3 = $formulaireValeurs.find('.addInscriptionSignature3').val();
 	if(addInscriptionSignature3 != null && addInscriptionSignature3 !== '')
 		vals['addInscriptionSignature3'] = addInscriptionSignature3;
 	var removeInscriptionSignature3 = $formulaireValeurs.find('.removeInscriptionSignature3').val();
@@ -4762,9 +4902,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionSignature4 = $formulaireValeurs.find('.valeurInscriptionSignature4').val();
 	var removeInscriptionSignature4 = $formulaireValeurs.find('.removeInscriptionSignature4').val() === 'true';
 	var setInscriptionSignature4 = removeInscriptionSignature4 ? null : $formulaireValeurs.find('.setInscriptionSignature4').val();
+	var addInscriptionSignature4 = $formulaireValeurs.find('.addInscriptionSignature4').val();
 	if(removeInscriptionSignature4 || setInscriptionSignature4 != null && setInscriptionSignature4 !== '')
 		vals['setInscriptionSignature4'] = setInscriptionSignature4;
-	var addInscriptionSignature4 = $formulaireValeurs.find('.addInscriptionSignature4').val();
 	if(addInscriptionSignature4 != null && addInscriptionSignature4 !== '')
 		vals['addInscriptionSignature4'] = addInscriptionSignature4;
 	var removeInscriptionSignature4 = $formulaireValeurs.find('.removeInscriptionSignature4').val();
@@ -4774,9 +4914,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionSignature5 = $formulaireValeurs.find('.valeurInscriptionSignature5').val();
 	var removeInscriptionSignature5 = $formulaireValeurs.find('.removeInscriptionSignature5').val() === 'true';
 	var setInscriptionSignature5 = removeInscriptionSignature5 ? null : $formulaireValeurs.find('.setInscriptionSignature5').val();
+	var addInscriptionSignature5 = $formulaireValeurs.find('.addInscriptionSignature5').val();
 	if(removeInscriptionSignature5 || setInscriptionSignature5 != null && setInscriptionSignature5 !== '')
 		vals['setInscriptionSignature5'] = setInscriptionSignature5;
-	var addInscriptionSignature5 = $formulaireValeurs.find('.addInscriptionSignature5').val();
 	if(addInscriptionSignature5 != null && addInscriptionSignature5 !== '')
 		vals['addInscriptionSignature5'] = addInscriptionSignature5;
 	var removeInscriptionSignature5 = $formulaireValeurs.find('.removeInscriptionSignature5').val();
@@ -4786,9 +4926,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionSignature6 = $formulaireValeurs.find('.valeurInscriptionSignature6').val();
 	var removeInscriptionSignature6 = $formulaireValeurs.find('.removeInscriptionSignature6').val() === 'true';
 	var setInscriptionSignature6 = removeInscriptionSignature6 ? null : $formulaireValeurs.find('.setInscriptionSignature6').val();
+	var addInscriptionSignature6 = $formulaireValeurs.find('.addInscriptionSignature6').val();
 	if(removeInscriptionSignature6 || setInscriptionSignature6 != null && setInscriptionSignature6 !== '')
 		vals['setInscriptionSignature6'] = setInscriptionSignature6;
-	var addInscriptionSignature6 = $formulaireValeurs.find('.addInscriptionSignature6').val();
 	if(addInscriptionSignature6 != null && addInscriptionSignature6 !== '')
 		vals['addInscriptionSignature6'] = addInscriptionSignature6;
 	var removeInscriptionSignature6 = $formulaireValeurs.find('.removeInscriptionSignature6').val();
@@ -4798,9 +4938,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionSignature7 = $formulaireValeurs.find('.valeurInscriptionSignature7').val();
 	var removeInscriptionSignature7 = $formulaireValeurs.find('.removeInscriptionSignature7').val() === 'true';
 	var setInscriptionSignature7 = removeInscriptionSignature7 ? null : $formulaireValeurs.find('.setInscriptionSignature7').val();
+	var addInscriptionSignature7 = $formulaireValeurs.find('.addInscriptionSignature7').val();
 	if(removeInscriptionSignature7 || setInscriptionSignature7 != null && setInscriptionSignature7 !== '')
 		vals['setInscriptionSignature7'] = setInscriptionSignature7;
-	var addInscriptionSignature7 = $formulaireValeurs.find('.addInscriptionSignature7').val();
 	if(addInscriptionSignature7 != null && addInscriptionSignature7 !== '')
 		vals['addInscriptionSignature7'] = addInscriptionSignature7;
 	var removeInscriptionSignature7 = $formulaireValeurs.find('.removeInscriptionSignature7').val();
@@ -4810,9 +4950,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionSignature8 = $formulaireValeurs.find('.valeurInscriptionSignature8').val();
 	var removeInscriptionSignature8 = $formulaireValeurs.find('.removeInscriptionSignature8').val() === 'true';
 	var setInscriptionSignature8 = removeInscriptionSignature8 ? null : $formulaireValeurs.find('.setInscriptionSignature8').val();
+	var addInscriptionSignature8 = $formulaireValeurs.find('.addInscriptionSignature8').val();
 	if(removeInscriptionSignature8 || setInscriptionSignature8 != null && setInscriptionSignature8 !== '')
 		vals['setInscriptionSignature8'] = setInscriptionSignature8;
-	var addInscriptionSignature8 = $formulaireValeurs.find('.addInscriptionSignature8').val();
 	if(addInscriptionSignature8 != null && addInscriptionSignature8 !== '')
 		vals['addInscriptionSignature8'] = addInscriptionSignature8;
 	var removeInscriptionSignature8 = $formulaireValeurs.find('.removeInscriptionSignature8').val();
@@ -4822,9 +4962,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionSignature9 = $formulaireValeurs.find('.valeurInscriptionSignature9').val();
 	var removeInscriptionSignature9 = $formulaireValeurs.find('.removeInscriptionSignature9').val() === 'true';
 	var setInscriptionSignature9 = removeInscriptionSignature9 ? null : $formulaireValeurs.find('.setInscriptionSignature9').val();
+	var addInscriptionSignature9 = $formulaireValeurs.find('.addInscriptionSignature9').val();
 	if(removeInscriptionSignature9 || setInscriptionSignature9 != null && setInscriptionSignature9 !== '')
 		vals['setInscriptionSignature9'] = setInscriptionSignature9;
-	var addInscriptionSignature9 = $formulaireValeurs.find('.addInscriptionSignature9').val();
 	if(addInscriptionSignature9 != null && addInscriptionSignature9 !== '')
 		vals['addInscriptionSignature9'] = addInscriptionSignature9;
 	var removeInscriptionSignature9 = $formulaireValeurs.find('.removeInscriptionSignature9').val();
@@ -4834,9 +4974,9 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionSignature10 = $formulaireValeurs.find('.valeurInscriptionSignature10').val();
 	var removeInscriptionSignature10 = $formulaireValeurs.find('.removeInscriptionSignature10').val() === 'true';
 	var setInscriptionSignature10 = removeInscriptionSignature10 ? null : $formulaireValeurs.find('.setInscriptionSignature10').val();
+	var addInscriptionSignature10 = $formulaireValeurs.find('.addInscriptionSignature10').val();
 	if(removeInscriptionSignature10 || setInscriptionSignature10 != null && setInscriptionSignature10 !== '')
 		vals['setInscriptionSignature10'] = setInscriptionSignature10;
-	var addInscriptionSignature10 = $formulaireValeurs.find('.addInscriptionSignature10').val();
 	if(addInscriptionSignature10 != null && addInscriptionSignature10 !== '')
 		vals['addInscriptionSignature10'] = addInscriptionSignature10;
 	var removeInscriptionSignature10 = $formulaireValeurs.find('.removeInscriptionSignature10').val();
@@ -4846,9 +4986,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionDate1 = $formulaireValeurs.find('.valeurInscriptionDate1').val();
 	var removeInscriptionDate1 = $formulaireValeurs.find('.removeInscriptionDate1').val() === 'true';
 	var setInscriptionDate1 = removeInscriptionDate1 ? null : $formulaireValeurs.find('.setInscriptionDate1').val();
+	var addInscriptionDate1 = $formulaireValeurs.find('.addInscriptionDate1').val();
+	var setMoment = setInscriptionDate1 ? moment(setInscriptionDate1, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate1 ? moment(addInscriptionDate1, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate1 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate1 = s;
+	} 
 	if(removeInscriptionDate1 || setInscriptionDate1 != null && setInscriptionDate1 !== '')
 		vals['setInscriptionDate1'] = setInscriptionDate1;
-	var addInscriptionDate1 = $formulaireValeurs.find('.addInscriptionDate1').val();
 	if(addInscriptionDate1 != null && addInscriptionDate1 !== '')
 		vals['addInscriptionDate1'] = addInscriptionDate1;
 	var removeInscriptionDate1 = $formulaireValeurs.find('.removeInscriptionDate1').val();
@@ -4858,9 +5008,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionDate2 = $formulaireValeurs.find('.valeurInscriptionDate2').val();
 	var removeInscriptionDate2 = $formulaireValeurs.find('.removeInscriptionDate2').val() === 'true';
 	var setInscriptionDate2 = removeInscriptionDate2 ? null : $formulaireValeurs.find('.setInscriptionDate2').val();
+	var addInscriptionDate2 = $formulaireValeurs.find('.addInscriptionDate2').val();
+	var setMoment = setInscriptionDate2 ? moment(setInscriptionDate2, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate2 ? moment(addInscriptionDate2, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate2 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate2 = s;
+	} 
 	if(removeInscriptionDate2 || setInscriptionDate2 != null && setInscriptionDate2 !== '')
 		vals['setInscriptionDate2'] = setInscriptionDate2;
-	var addInscriptionDate2 = $formulaireValeurs.find('.addInscriptionDate2').val();
 	if(addInscriptionDate2 != null && addInscriptionDate2 !== '')
 		vals['addInscriptionDate2'] = addInscriptionDate2;
 	var removeInscriptionDate2 = $formulaireValeurs.find('.removeInscriptionDate2').val();
@@ -4870,9 +5030,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionDate3 = $formulaireValeurs.find('.valeurInscriptionDate3').val();
 	var removeInscriptionDate3 = $formulaireValeurs.find('.removeInscriptionDate3').val() === 'true';
 	var setInscriptionDate3 = removeInscriptionDate3 ? null : $formulaireValeurs.find('.setInscriptionDate3').val();
+	var addInscriptionDate3 = $formulaireValeurs.find('.addInscriptionDate3').val();
+	var setMoment = setInscriptionDate3 ? moment(setInscriptionDate3, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate3 ? moment(addInscriptionDate3, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate3 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate3 = s;
+	} 
 	if(removeInscriptionDate3 || setInscriptionDate3 != null && setInscriptionDate3 !== '')
 		vals['setInscriptionDate3'] = setInscriptionDate3;
-	var addInscriptionDate3 = $formulaireValeurs.find('.addInscriptionDate3').val();
 	if(addInscriptionDate3 != null && addInscriptionDate3 !== '')
 		vals['addInscriptionDate3'] = addInscriptionDate3;
 	var removeInscriptionDate3 = $formulaireValeurs.find('.removeInscriptionDate3').val();
@@ -4882,9 +5052,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionDate4 = $formulaireValeurs.find('.valeurInscriptionDate4').val();
 	var removeInscriptionDate4 = $formulaireValeurs.find('.removeInscriptionDate4').val() === 'true';
 	var setInscriptionDate4 = removeInscriptionDate4 ? null : $formulaireValeurs.find('.setInscriptionDate4').val();
+	var addInscriptionDate4 = $formulaireValeurs.find('.addInscriptionDate4').val();
+	var setMoment = setInscriptionDate4 ? moment(setInscriptionDate4, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate4 ? moment(addInscriptionDate4, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate4 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate4 = s;
+	} 
 	if(removeInscriptionDate4 || setInscriptionDate4 != null && setInscriptionDate4 !== '')
 		vals['setInscriptionDate4'] = setInscriptionDate4;
-	var addInscriptionDate4 = $formulaireValeurs.find('.addInscriptionDate4').val();
 	if(addInscriptionDate4 != null && addInscriptionDate4 !== '')
 		vals['addInscriptionDate4'] = addInscriptionDate4;
 	var removeInscriptionDate4 = $formulaireValeurs.find('.removeInscriptionDate4').val();
@@ -4894,9 +5074,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionDate5 = $formulaireValeurs.find('.valeurInscriptionDate5').val();
 	var removeInscriptionDate5 = $formulaireValeurs.find('.removeInscriptionDate5').val() === 'true';
 	var setInscriptionDate5 = removeInscriptionDate5 ? null : $formulaireValeurs.find('.setInscriptionDate5').val();
+	var addInscriptionDate5 = $formulaireValeurs.find('.addInscriptionDate5').val();
+	var setMoment = setInscriptionDate5 ? moment(setInscriptionDate5, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate5 ? moment(addInscriptionDate5, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate5 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate5 = s;
+	} 
 	if(removeInscriptionDate5 || setInscriptionDate5 != null && setInscriptionDate5 !== '')
 		vals['setInscriptionDate5'] = setInscriptionDate5;
-	var addInscriptionDate5 = $formulaireValeurs.find('.addInscriptionDate5').val();
 	if(addInscriptionDate5 != null && addInscriptionDate5 !== '')
 		vals['addInscriptionDate5'] = addInscriptionDate5;
 	var removeInscriptionDate5 = $formulaireValeurs.find('.removeInscriptionDate5').val();
@@ -4906,9 +5096,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionDate6 = $formulaireValeurs.find('.valeurInscriptionDate6').val();
 	var removeInscriptionDate6 = $formulaireValeurs.find('.removeInscriptionDate6').val() === 'true';
 	var setInscriptionDate6 = removeInscriptionDate6 ? null : $formulaireValeurs.find('.setInscriptionDate6').val();
+	var addInscriptionDate6 = $formulaireValeurs.find('.addInscriptionDate6').val();
+	var setMoment = setInscriptionDate6 ? moment(setInscriptionDate6, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate6 ? moment(addInscriptionDate6, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate6 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate6 = s;
+	} 
 	if(removeInscriptionDate6 || setInscriptionDate6 != null && setInscriptionDate6 !== '')
 		vals['setInscriptionDate6'] = setInscriptionDate6;
-	var addInscriptionDate6 = $formulaireValeurs.find('.addInscriptionDate6').val();
 	if(addInscriptionDate6 != null && addInscriptionDate6 !== '')
 		vals['addInscriptionDate6'] = addInscriptionDate6;
 	var removeInscriptionDate6 = $formulaireValeurs.find('.removeInscriptionDate6').val();
@@ -4918,9 +5118,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionDate7 = $formulaireValeurs.find('.valeurInscriptionDate7').val();
 	var removeInscriptionDate7 = $formulaireValeurs.find('.removeInscriptionDate7').val() === 'true';
 	var setInscriptionDate7 = removeInscriptionDate7 ? null : $formulaireValeurs.find('.setInscriptionDate7').val();
+	var addInscriptionDate7 = $formulaireValeurs.find('.addInscriptionDate7').val();
+	var setMoment = setInscriptionDate7 ? moment(setInscriptionDate7, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate7 ? moment(addInscriptionDate7, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate7 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate7 = s;
+	} 
 	if(removeInscriptionDate7 || setInscriptionDate7 != null && setInscriptionDate7 !== '')
 		vals['setInscriptionDate7'] = setInscriptionDate7;
-	var addInscriptionDate7 = $formulaireValeurs.find('.addInscriptionDate7').val();
 	if(addInscriptionDate7 != null && addInscriptionDate7 !== '')
 		vals['addInscriptionDate7'] = addInscriptionDate7;
 	var removeInscriptionDate7 = $formulaireValeurs.find('.removeInscriptionDate7').val();
@@ -4930,9 +5140,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionDate8 = $formulaireValeurs.find('.valeurInscriptionDate8').val();
 	var removeInscriptionDate8 = $formulaireValeurs.find('.removeInscriptionDate8').val() === 'true';
 	var setInscriptionDate8 = removeInscriptionDate8 ? null : $formulaireValeurs.find('.setInscriptionDate8').val();
+	var addInscriptionDate8 = $formulaireValeurs.find('.addInscriptionDate8').val();
+	var setMoment = setInscriptionDate8 ? moment(setInscriptionDate8, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate8 ? moment(addInscriptionDate8, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate8 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate8 = s;
+	} 
 	if(removeInscriptionDate8 || setInscriptionDate8 != null && setInscriptionDate8 !== '')
 		vals['setInscriptionDate8'] = setInscriptionDate8;
-	var addInscriptionDate8 = $formulaireValeurs.find('.addInscriptionDate8').val();
 	if(addInscriptionDate8 != null && addInscriptionDate8 !== '')
 		vals['addInscriptionDate8'] = addInscriptionDate8;
 	var removeInscriptionDate8 = $formulaireValeurs.find('.removeInscriptionDate8').val();
@@ -4942,9 +5162,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionDate9 = $formulaireValeurs.find('.valeurInscriptionDate9').val();
 	var removeInscriptionDate9 = $formulaireValeurs.find('.removeInscriptionDate9').val() === 'true';
 	var setInscriptionDate9 = removeInscriptionDate9 ? null : $formulaireValeurs.find('.setInscriptionDate9').val();
+	var addInscriptionDate9 = $formulaireValeurs.find('.addInscriptionDate9').val();
+	var setMoment = setInscriptionDate9 ? moment(setInscriptionDate9, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate9 ? moment(addInscriptionDate9, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate9 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate9 = s;
+	} 
 	if(removeInscriptionDate9 || setInscriptionDate9 != null && setInscriptionDate9 !== '')
 		vals['setInscriptionDate9'] = setInscriptionDate9;
-	var addInscriptionDate9 = $formulaireValeurs.find('.addInscriptionDate9').val();
 	if(addInscriptionDate9 != null && addInscriptionDate9 !== '')
 		vals['addInscriptionDate9'] = addInscriptionDate9;
 	var removeInscriptionDate9 = $formulaireValeurs.find('.removeInscriptionDate9').val();
@@ -4954,9 +5184,19 @@ async function patchadminInscriptionScolaire($formulaireFiltres, $formulaireVale
 	var valeurInscriptionDate10 = $formulaireValeurs.find('.valeurInscriptionDate10').val();
 	var removeInscriptionDate10 = $formulaireValeurs.find('.removeInscriptionDate10').val() === 'true';
 	var setInscriptionDate10 = removeInscriptionDate10 ? null : $formulaireValeurs.find('.setInscriptionDate10').val();
+	var addInscriptionDate10 = $formulaireValeurs.find('.addInscriptionDate10').val();
+	var setMoment = setInscriptionDate10 ? moment(setInscriptionDate10, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate10 ? moment(addInscriptionDate10, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate10 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate10 = s;
+	} 
 	if(removeInscriptionDate10 || setInscriptionDate10 != null && setInscriptionDate10 !== '')
 		vals['setInscriptionDate10'] = setInscriptionDate10;
-	var addInscriptionDate10 = $formulaireValeurs.find('.addInscriptionDate10').val();
 	if(addInscriptionDate10 != null && addInscriptionDate10 !== '')
 		vals['addInscriptionDate10'] = addInscriptionDate10;
 	var removeInscriptionDate10 = $formulaireValeurs.find('.removeInscriptionDate10').val();
@@ -5717,9 +5957,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurPk = $formulaireValeurs.find('.valeurPk').val();
 	var removePk = $formulaireValeurs.find('.removePk').val() === 'true';
 	var setPk = removePk ? null : $formulaireValeurs.find('.setPk').val();
+	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(removePk || setPk != null && setPk !== '')
 		vals['setPk'] = setPk;
-	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(addPk != null && addPk !== '')
 		vals['addPk'] = addPk;
 	var removePk = $formulaireValeurs.find('.removePk').val();
@@ -5729,9 +5969,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurCree = $formulaireValeurs.find('.valeurCree').val();
 	var removeCree = $formulaireValeurs.find('.removeCree').val() === 'true';
 	var setCree = removeCree ? null : $formulaireValeurs.find('.setCree').val();
+	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(removeCree || setCree != null && setCree !== '')
 		vals['setCree'] = setCree;
-	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(addCree != null && addCree !== '')
 		vals['addCree'] = addCree;
 	var removeCree = $formulaireValeurs.find('.removeCree').val();
@@ -5741,9 +5981,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurModifie = $formulaireValeurs.find('.valeurModifie').val();
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val() === 'true';
 	var setModifie = removeModifie ? null : $formulaireValeurs.find('.setModifie').val();
+	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(removeModifie || setModifie != null && setModifie !== '')
 		vals['setModifie'] = setModifie;
-	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(addModifie != null && addModifie !== '')
 		vals['addModifie'] = addModifie;
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val();
@@ -5753,9 +5993,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurObjetId = $formulaireValeurs.find('.valeurObjetId').val();
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val() === 'true';
 	var setObjetId = removeObjetId ? null : $formulaireValeurs.find('.setObjetId').val();
+	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(removeObjetId || setObjetId != null && setObjetId !== '')
 		vals['setObjetId'] = setObjetId;
-	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(addObjetId != null && addObjetId !== '')
 		vals['addObjetId'] = addObjetId;
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val();
@@ -5768,10 +6008,10 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurArchive = null;
 	if(valeurArchiveSelectVal != null && valeurArchiveSelectVal !== '')
 		valeurArchive = valeurArchiveSelectVal == 'true';
-	setArchive = removeArchive ? null : valeurArchive;
+	var setArchive = removeArchive ? null : valeurArchive;
+	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(removeArchive || setArchive != null && setArchive !== '')
 		vals['setArchive'] = setArchive;
-	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(addArchive != null && addArchive !== '')
 		vals['addArchive'] = addArchive;
 	var removeArchive = $formulaireValeurs.find('.removeArchive').prop('checked');
@@ -5784,10 +6024,10 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurSupprime = null;
 	if(valeurSupprimeSelectVal != null && valeurSupprimeSelectVal !== '')
 		valeurSupprime = valeurSupprimeSelectVal == 'true';
-	setSupprime = removeSupprime ? null : valeurSupprime;
+	var setSupprime = removeSupprime ? null : valeurSupprime;
+	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(removeSupprime || setSupprime != null && setSupprime !== '')
 		vals['setSupprime'] = setSupprime;
-	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(addSupprime != null && addSupprime !== '')
 		vals['addSupprime'] = addSupprime;
 	var removeSupprime = $formulaireValeurs.find('.removeSupprime').prop('checked');
@@ -5797,9 +6037,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurPhoto = $formulaireValeurs.find('.valeurPhoto').val();
 	var removePhoto = $formulaireValeurs.find('.removePhoto').val() === 'true';
 	var setPhoto = removePhoto ? null : $formulaireValeurs.find('.setPhoto').val();
+	var addPhoto = $formulaireValeurs.find('.addPhoto').val();
 	if(removePhoto || setPhoto != null && setPhoto !== '')
 		vals['setPhoto'] = setPhoto;
-	var addPhoto = $formulaireValeurs.find('.addPhoto').val();
 	if(addPhoto != null && addPhoto !== '')
 		vals['addPhoto'] = addPhoto;
 	var removePhoto = $formulaireValeurs.find('.removePhoto').val();
@@ -5809,9 +6049,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionNomGroupe = $formulaireValeurs.find('.valeurInscriptionNomGroupe').val();
 	var removeInscriptionNomGroupe = $formulaireValeurs.find('.removeInscriptionNomGroupe').val() === 'true';
 	var setInscriptionNomGroupe = removeInscriptionNomGroupe ? null : $formulaireValeurs.find('.setInscriptionNomGroupe').val();
+	var addInscriptionNomGroupe = $formulaireValeurs.find('.addInscriptionNomGroupe').val();
 	if(removeInscriptionNomGroupe || setInscriptionNomGroupe != null && setInscriptionNomGroupe !== '')
 		vals['setInscriptionNomGroupe'] = setInscriptionNomGroupe;
-	var addInscriptionNomGroupe = $formulaireValeurs.find('.addInscriptionNomGroupe').val();
 	if(addInscriptionNomGroupe != null && addInscriptionNomGroupe !== '')
 		vals['addInscriptionNomGroupe'] = addInscriptionNomGroupe;
 	var removeInscriptionNomGroupe = $formulaireValeurs.find('.removeInscriptionNomGroupe').val();
@@ -5821,9 +6061,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurCustomerProfileId = $formulaireValeurs.find('.valeurCustomerProfileId').val();
 	var removeCustomerProfileId = $formulaireValeurs.find('.removeCustomerProfileId').val() === 'true';
 	var setCustomerProfileId = removeCustomerProfileId ? null : $formulaireValeurs.find('.setCustomerProfileId').val();
+	var addCustomerProfileId = $formulaireValeurs.find('.addCustomerProfileId').val();
 	if(removeCustomerProfileId || setCustomerProfileId != null && setCustomerProfileId !== '')
 		vals['setCustomerProfileId'] = setCustomerProfileId;
-	var addCustomerProfileId = $formulaireValeurs.find('.addCustomerProfileId').val();
 	if(addCustomerProfileId != null && addCustomerProfileId !== '')
 		vals['addCustomerProfileId'] = addCustomerProfileId;
 	var removeCustomerProfileId = $formulaireValeurs.find('.removeCustomerProfileId').val();
@@ -5836,10 +6076,10 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionPaimentComplet = null;
 	if(valeurInscriptionPaimentCompletSelectVal != null && valeurInscriptionPaimentCompletSelectVal !== '')
 		valeurInscriptionPaimentComplet = valeurInscriptionPaimentCompletSelectVal == 'true';
-	setInscriptionPaimentComplet = removeInscriptionPaimentComplet ? null : valeurInscriptionPaimentComplet;
+	var setInscriptionPaimentComplet = removeInscriptionPaimentComplet ? null : valeurInscriptionPaimentComplet;
+	var addInscriptionPaimentComplet = $formulaireValeurs.find('.addInscriptionPaimentComplet').prop('checked');
 	if(removeInscriptionPaimentComplet || setInscriptionPaimentComplet != null && setInscriptionPaimentComplet !== '')
 		vals['setInscriptionPaimentComplet'] = setInscriptionPaimentComplet;
-	var addInscriptionPaimentComplet = $formulaireValeurs.find('.addInscriptionPaimentComplet').prop('checked');
 	if(addInscriptionPaimentComplet != null && addInscriptionPaimentComplet !== '')
 		vals['addInscriptionPaimentComplet'] = addInscriptionPaimentComplet;
 	var removeInscriptionPaimentComplet = $formulaireValeurs.find('.removeInscriptionPaimentComplet').prop('checked');
@@ -5852,10 +6092,10 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurEnfantPropre = null;
 	if(valeurEnfantPropreSelectVal != null && valeurEnfantPropreSelectVal !== '')
 		valeurEnfantPropre = valeurEnfantPropreSelectVal == 'true';
-	setEnfantPropre = removeEnfantPropre ? null : valeurEnfantPropre;
+	var setEnfantPropre = removeEnfantPropre ? null : valeurEnfantPropre;
+	var addEnfantPropre = $formulaireValeurs.find('.addEnfantPropre').prop('checked');
 	if(removeEnfantPropre || setEnfantPropre != null && setEnfantPropre !== '')
 		vals['setEnfantPropre'] = setEnfantPropre;
-	var addEnfantPropre = $formulaireValeurs.find('.addEnfantPropre').prop('checked');
 	if(addEnfantPropre != null && addEnfantPropre !== '')
 		vals['addEnfantPropre'] = addEnfantPropre;
 	var removeEnfantPropre = $formulaireValeurs.find('.removeEnfantPropre').prop('checked');
@@ -5868,10 +6108,10 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionPaimentChaqueMois = null;
 	if(valeurInscriptionPaimentChaqueMoisSelectVal != null && valeurInscriptionPaimentChaqueMoisSelectVal !== '')
 		valeurInscriptionPaimentChaqueMois = valeurInscriptionPaimentChaqueMoisSelectVal == 'true';
-	setInscriptionPaimentChaqueMois = removeInscriptionPaimentChaqueMois ? null : valeurInscriptionPaimentChaqueMois;
+	var setInscriptionPaimentChaqueMois = removeInscriptionPaimentChaqueMois ? null : valeurInscriptionPaimentChaqueMois;
+	var addInscriptionPaimentChaqueMois = $formulaireValeurs.find('.addInscriptionPaimentChaqueMois').prop('checked');
 	if(removeInscriptionPaimentChaqueMois || setInscriptionPaimentChaqueMois != null && setInscriptionPaimentChaqueMois !== '')
 		vals['setInscriptionPaimentChaqueMois'] = setInscriptionPaimentChaqueMois;
-	var addInscriptionPaimentChaqueMois = $formulaireValeurs.find('.addInscriptionPaimentChaqueMois').prop('checked');
 	if(addInscriptionPaimentChaqueMois != null && addInscriptionPaimentChaqueMois !== '')
 		vals['addInscriptionPaimentChaqueMois'] = addInscriptionPaimentChaqueMois;
 	var removeInscriptionPaimentChaqueMois = $formulaireValeurs.find('.removeInscriptionPaimentChaqueMois').prop('checked');
@@ -5884,10 +6124,10 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionImmunisations = null;
 	if(valeurInscriptionImmunisationsSelectVal != null && valeurInscriptionImmunisationsSelectVal !== '')
 		valeurInscriptionImmunisations = valeurInscriptionImmunisationsSelectVal == 'true';
-	setInscriptionImmunisations = removeInscriptionImmunisations ? null : valeurInscriptionImmunisations;
+	var setInscriptionImmunisations = removeInscriptionImmunisations ? null : valeurInscriptionImmunisations;
+	var addInscriptionImmunisations = $formulaireValeurs.find('.addInscriptionImmunisations').prop('checked');
 	if(removeInscriptionImmunisations || setInscriptionImmunisations != null && setInscriptionImmunisations !== '')
 		vals['setInscriptionImmunisations'] = setInscriptionImmunisations;
-	var addInscriptionImmunisations = $formulaireValeurs.find('.addInscriptionImmunisations').prop('checked');
 	if(addInscriptionImmunisations != null && addInscriptionImmunisations !== '')
 		vals['addInscriptionImmunisations'] = addInscriptionImmunisations;
 	var removeInscriptionImmunisations = $formulaireValeurs.find('.removeInscriptionImmunisations').prop('checked');
@@ -5900,10 +6140,10 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionApprouve = null;
 	if(valeurInscriptionApprouveSelectVal != null && valeurInscriptionApprouveSelectVal !== '')
 		valeurInscriptionApprouve = valeurInscriptionApprouveSelectVal == 'true';
-	setInscriptionApprouve = removeInscriptionApprouve ? null : valeurInscriptionApprouve;
+	var setInscriptionApprouve = removeInscriptionApprouve ? null : valeurInscriptionApprouve;
+	var addInscriptionApprouve = $formulaireValeurs.find('.addInscriptionApprouve').prop('checked');
 	if(removeInscriptionApprouve || setInscriptionApprouve != null && setInscriptionApprouve !== '')
 		vals['setInscriptionApprouve'] = setInscriptionApprouve;
-	var addInscriptionApprouve = $formulaireValeurs.find('.addInscriptionApprouve').prop('checked');
 	if(addInscriptionApprouve != null && addInscriptionApprouve !== '')
 		vals['addInscriptionApprouve'] = addInscriptionApprouve;
 	var removeInscriptionApprouve = $formulaireValeurs.find('.removeInscriptionApprouve').prop('checked');
@@ -5916,10 +6156,10 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurFamilleMarie = null;
 	if(valeurFamilleMarieSelectVal != null && valeurFamilleMarieSelectVal !== '')
 		valeurFamilleMarie = valeurFamilleMarieSelectVal == 'true';
-	setFamilleMarie = removeFamilleMarie ? null : valeurFamilleMarie;
+	var setFamilleMarie = removeFamilleMarie ? null : valeurFamilleMarie;
+	var addFamilleMarie = $formulaireValeurs.find('.addFamilleMarie').prop('checked');
 	if(removeFamilleMarie || setFamilleMarie != null && setFamilleMarie !== '')
 		vals['setFamilleMarie'] = setFamilleMarie;
-	var addFamilleMarie = $formulaireValeurs.find('.addFamilleMarie').prop('checked');
 	if(addFamilleMarie != null && addFamilleMarie !== '')
 		vals['addFamilleMarie'] = addFamilleMarie;
 	var removeFamilleMarie = $formulaireValeurs.find('.removeFamilleMarie').prop('checked');
@@ -5932,10 +6172,10 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurFamilleSepare = null;
 	if(valeurFamilleSepareSelectVal != null && valeurFamilleSepareSelectVal !== '')
 		valeurFamilleSepare = valeurFamilleSepareSelectVal == 'true';
-	setFamilleSepare = removeFamilleSepare ? null : valeurFamilleSepare;
+	var setFamilleSepare = removeFamilleSepare ? null : valeurFamilleSepare;
+	var addFamilleSepare = $formulaireValeurs.find('.addFamilleSepare').prop('checked');
 	if(removeFamilleSepare || setFamilleSepare != null && setFamilleSepare !== '')
 		vals['setFamilleSepare'] = setFamilleSepare;
-	var addFamilleSepare = $formulaireValeurs.find('.addFamilleSepare').prop('checked');
 	if(addFamilleSepare != null && addFamilleSepare !== '')
 		vals['addFamilleSepare'] = addFamilleSepare;
 	var removeFamilleSepare = $formulaireValeurs.find('.removeFamilleSepare').prop('checked');
@@ -5948,10 +6188,10 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurFamilleDivorce = null;
 	if(valeurFamilleDivorceSelectVal != null && valeurFamilleDivorceSelectVal !== '')
 		valeurFamilleDivorce = valeurFamilleDivorceSelectVal == 'true';
-	setFamilleDivorce = removeFamilleDivorce ? null : valeurFamilleDivorce;
+	var setFamilleDivorce = removeFamilleDivorce ? null : valeurFamilleDivorce;
+	var addFamilleDivorce = $formulaireValeurs.find('.addFamilleDivorce').prop('checked');
 	if(removeFamilleDivorce || setFamilleDivorce != null && setFamilleDivorce !== '')
 		vals['setFamilleDivorce'] = setFamilleDivorce;
-	var addFamilleDivorce = $formulaireValeurs.find('.addFamilleDivorce').prop('checked');
 	if(addFamilleDivorce != null && addFamilleDivorce !== '')
 		vals['addFamilleDivorce'] = addFamilleDivorce;
 	var removeFamilleDivorce = $formulaireValeurs.find('.removeFamilleDivorce').prop('checked');
@@ -5961,9 +6201,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurFamilleAddresse = $formulaireValeurs.find('.valeurFamilleAddresse').val();
 	var removeFamilleAddresse = $formulaireValeurs.find('.removeFamilleAddresse').val() === 'true';
 	var setFamilleAddresse = removeFamilleAddresse ? null : $formulaireValeurs.find('.setFamilleAddresse').val();
+	var addFamilleAddresse = $formulaireValeurs.find('.addFamilleAddresse').val();
 	if(removeFamilleAddresse || setFamilleAddresse != null && setFamilleAddresse !== '')
 		vals['setFamilleAddresse'] = setFamilleAddresse;
-	var addFamilleAddresse = $formulaireValeurs.find('.addFamilleAddresse').val();
 	if(addFamilleAddresse != null && addFamilleAddresse !== '')
 		vals['addFamilleAddresse'] = addFamilleAddresse;
 	var removeFamilleAddresse = $formulaireValeurs.find('.removeFamilleAddresse').val();
@@ -5973,9 +6213,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.valeurInscriptionConsiderationsSpeciales').val();
 	var removeInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.removeInscriptionConsiderationsSpeciales').val() === 'true';
 	var setInscriptionConsiderationsSpeciales = removeInscriptionConsiderationsSpeciales ? null : $formulaireValeurs.find('.setInscriptionConsiderationsSpeciales').val();
+	var addInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.addInscriptionConsiderationsSpeciales').val();
 	if(removeInscriptionConsiderationsSpeciales || setInscriptionConsiderationsSpeciales != null && setInscriptionConsiderationsSpeciales !== '')
 		vals['setInscriptionConsiderationsSpeciales'] = setInscriptionConsiderationsSpeciales;
-	var addInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.addInscriptionConsiderationsSpeciales').val();
 	if(addInscriptionConsiderationsSpeciales != null && addInscriptionConsiderationsSpeciales !== '')
 		vals['addInscriptionConsiderationsSpeciales'] = addInscriptionConsiderationsSpeciales;
 	var removeInscriptionConsiderationsSpeciales = $formulaireValeurs.find('.removeInscriptionConsiderationsSpeciales').val();
@@ -5985,9 +6225,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurEnfantConditionsMedicales = $formulaireValeurs.find('.valeurEnfantConditionsMedicales').val();
 	var removeEnfantConditionsMedicales = $formulaireValeurs.find('.removeEnfantConditionsMedicales').val() === 'true';
 	var setEnfantConditionsMedicales = removeEnfantConditionsMedicales ? null : $formulaireValeurs.find('.setEnfantConditionsMedicales').val();
+	var addEnfantConditionsMedicales = $formulaireValeurs.find('.addEnfantConditionsMedicales').val();
 	if(removeEnfantConditionsMedicales || setEnfantConditionsMedicales != null && setEnfantConditionsMedicales !== '')
 		vals['setEnfantConditionsMedicales'] = setEnfantConditionsMedicales;
-	var addEnfantConditionsMedicales = $formulaireValeurs.find('.addEnfantConditionsMedicales').val();
 	if(addEnfantConditionsMedicales != null && addEnfantConditionsMedicales !== '')
 		vals['addEnfantConditionsMedicales'] = addEnfantConditionsMedicales;
 	var removeEnfantConditionsMedicales = $formulaireValeurs.find('.removeEnfantConditionsMedicales').val();
@@ -5997,9 +6237,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.valeurEnfantEcolesPrecedemmentFrequentees').val();
 	var removeEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.removeEnfantEcolesPrecedemmentFrequentees').val() === 'true';
 	var setEnfantEcolesPrecedemmentFrequentees = removeEnfantEcolesPrecedemmentFrequentees ? null : $formulaireValeurs.find('.setEnfantEcolesPrecedemmentFrequentees').val();
+	var addEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.addEnfantEcolesPrecedemmentFrequentees').val();
 	if(removeEnfantEcolesPrecedemmentFrequentees || setEnfantEcolesPrecedemmentFrequentees != null && setEnfantEcolesPrecedemmentFrequentees !== '')
 		vals['setEnfantEcolesPrecedemmentFrequentees'] = setEnfantEcolesPrecedemmentFrequentees;
-	var addEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.addEnfantEcolesPrecedemmentFrequentees').val();
 	if(addEnfantEcolesPrecedemmentFrequentees != null && addEnfantEcolesPrecedemmentFrequentees !== '')
 		vals['addEnfantEcolesPrecedemmentFrequentees'] = addEnfantEcolesPrecedemmentFrequentees;
 	var removeEnfantEcolesPrecedemmentFrequentees = $formulaireValeurs.find('.removeEnfantEcolesPrecedemmentFrequentees').val();
@@ -6009,9 +6249,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.valeurFamilleCommentVousConnaissezEcole').val();
 	var removeFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.removeFamilleCommentVousConnaissezEcole').val() === 'true';
 	var setFamilleCommentVousConnaissezEcole = removeFamilleCommentVousConnaissezEcole ? null : $formulaireValeurs.find('.setFamilleCommentVousConnaissezEcole').val();
+	var addFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.addFamilleCommentVousConnaissezEcole').val();
 	if(removeFamilleCommentVousConnaissezEcole || setFamilleCommentVousConnaissezEcole != null && setFamilleCommentVousConnaissezEcole !== '')
 		vals['setFamilleCommentVousConnaissezEcole'] = setFamilleCommentVousConnaissezEcole;
-	var addFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.addFamilleCommentVousConnaissezEcole').val();
 	if(addFamilleCommentVousConnaissezEcole != null && addFamilleCommentVousConnaissezEcole !== '')
 		vals['addFamilleCommentVousConnaissezEcole'] = addFamilleCommentVousConnaissezEcole;
 	var removeFamilleCommentVousConnaissezEcole = $formulaireValeurs.find('.removeFamilleCommentVousConnaissezEcole').val();
@@ -6021,9 +6261,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurEnfantDescription = $formulaireValeurs.find('.valeurEnfantDescription').val();
 	var removeEnfantDescription = $formulaireValeurs.find('.removeEnfantDescription').val() === 'true';
 	var setEnfantDescription = removeEnfantDescription ? null : $formulaireValeurs.find('.setEnfantDescription').val();
+	var addEnfantDescription = $formulaireValeurs.find('.addEnfantDescription').val();
 	if(removeEnfantDescription || setEnfantDescription != null && setEnfantDescription !== '')
 		vals['setEnfantDescription'] = setEnfantDescription;
-	var addEnfantDescription = $formulaireValeurs.find('.addEnfantDescription').val();
 	if(addEnfantDescription != null && addEnfantDescription !== '')
 		vals['addEnfantDescription'] = addEnfantDescription;
 	var removeEnfantDescription = $formulaireValeurs.find('.removeEnfantDescription').val();
@@ -6033,9 +6273,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurEnfantObjectifs = $formulaireValeurs.find('.valeurEnfantObjectifs').val();
 	var removeEnfantObjectifs = $formulaireValeurs.find('.removeEnfantObjectifs').val() === 'true';
 	var setEnfantObjectifs = removeEnfantObjectifs ? null : $formulaireValeurs.find('.setEnfantObjectifs').val();
+	var addEnfantObjectifs = $formulaireValeurs.find('.addEnfantObjectifs').val();
 	if(removeEnfantObjectifs || setEnfantObjectifs != null && setEnfantObjectifs !== '')
 		vals['setEnfantObjectifs'] = setEnfantObjectifs;
-	var addEnfantObjectifs = $formulaireValeurs.find('.addEnfantObjectifs').val();
 	if(addEnfantObjectifs != null && addEnfantObjectifs !== '')
 		vals['addEnfantObjectifs'] = addEnfantObjectifs;
 	var removeEnfantObjectifs = $formulaireValeurs.find('.removeEnfantObjectifs').val();
@@ -6077,9 +6317,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInheritPk = $formulaireValeurs.find('.valeurInheritPk').val();
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val() === 'true';
 	var setInheritPk = removeInheritPk ? null : $formulaireValeurs.find('.setInheritPk').val();
+	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(removeInheritPk || setInheritPk != null && setInheritPk !== '')
 		vals['setInheritPk'] = setInheritPk;
-	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(addInheritPk != null && addInheritPk !== '')
 		vals['addInheritPk'] = addInheritPk;
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val();
@@ -6089,9 +6329,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurSessionId = $formulaireValeurs.find('.valeurSessionId').val();
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val() === 'true';
 	var setSessionId = removeSessionId ? null : $formulaireValeurs.find('.setSessionId').val();
+	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(removeSessionId || setSessionId != null && setSessionId !== '')
 		vals['setSessionId'] = setSessionId;
-	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(addSessionId != null && addSessionId !== '')
 		vals['addSessionId'] = addSessionId;
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val();
@@ -6101,9 +6341,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurUtilisateurId = $formulaireValeurs.find('.valeurUtilisateurId').val();
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val() === 'true';
 	var setUtilisateurId = removeUtilisateurId ? null : $formulaireValeurs.find('.setUtilisateurId').val();
+	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(removeUtilisateurId || setUtilisateurId != null && setUtilisateurId !== '')
 		vals['setUtilisateurId'] = setUtilisateurId;
-	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(addUtilisateurId != null && addUtilisateurId !== '')
 		vals['addUtilisateurId'] = addUtilisateurId;
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val();
@@ -6113,9 +6353,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurUtilisateurCle = $formulaireValeurs.find('.valeurUtilisateurCle').val();
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val() === 'true';
 	var setUtilisateurCle = removeUtilisateurCle ? null : $formulaireValeurs.find('.setUtilisateurCle').val();
+	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(removeUtilisateurCle || setUtilisateurCle != null && setUtilisateurCle !== '')
 		vals['setUtilisateurCle'] = setUtilisateurCle;
-	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(addUtilisateurCle != null && addUtilisateurCle !== '')
 		vals['addUtilisateurCle'] = addUtilisateurCle;
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val();
@@ -6125,9 +6365,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurObjetTitre = $formulaireValeurs.find('.valeurObjetTitre').val();
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val() === 'true';
 	var setObjetTitre = removeObjetTitre ? null : $formulaireValeurs.find('.setObjetTitre').val();
+	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(removeObjetTitre || setObjetTitre != null && setObjetTitre !== '')
 		vals['setObjetTitre'] = setObjetTitre;
-	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(addObjetTitre != null && addObjetTitre !== '')
 		vals['addObjetTitre'] = addObjetTitre;
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val();
@@ -6137,9 +6377,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurEnfantNomComplet = $formulaireValeurs.find('.valeurEnfantNomComplet').val();
 	var removeEnfantNomComplet = $formulaireValeurs.find('.removeEnfantNomComplet').val() === 'true';
 	var setEnfantNomComplet = removeEnfantNomComplet ? null : $formulaireValeurs.find('.setEnfantNomComplet').val();
+	var addEnfantNomComplet = $formulaireValeurs.find('.addEnfantNomComplet').val();
 	if(removeEnfantNomComplet || setEnfantNomComplet != null && setEnfantNomComplet !== '')
 		vals['setEnfantNomComplet'] = setEnfantNomComplet;
-	var addEnfantNomComplet = $formulaireValeurs.find('.addEnfantNomComplet').val();
 	if(addEnfantNomComplet != null && addEnfantNomComplet !== '')
 		vals['addEnfantNomComplet'] = addEnfantNomComplet;
 	var removeEnfantNomComplet = $formulaireValeurs.find('.removeEnfantNomComplet').val();
@@ -6149,9 +6389,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurEnfantNomCompletPrefere = $formulaireValeurs.find('.valeurEnfantNomCompletPrefere').val();
 	var removeEnfantNomCompletPrefere = $formulaireValeurs.find('.removeEnfantNomCompletPrefere').val() === 'true';
 	var setEnfantNomCompletPrefere = removeEnfantNomCompletPrefere ? null : $formulaireValeurs.find('.setEnfantNomCompletPrefere').val();
+	var addEnfantNomCompletPrefere = $formulaireValeurs.find('.addEnfantNomCompletPrefere').val();
 	if(removeEnfantNomCompletPrefere || setEnfantNomCompletPrefere != null && setEnfantNomCompletPrefere !== '')
 		vals['setEnfantNomCompletPrefere'] = setEnfantNomCompletPrefere;
-	var addEnfantNomCompletPrefere = $formulaireValeurs.find('.addEnfantNomCompletPrefere').val();
 	if(addEnfantNomCompletPrefere != null && addEnfantNomCompletPrefere !== '')
 		vals['addEnfantNomCompletPrefere'] = addEnfantNomCompletPrefere;
 	var removeEnfantNomCompletPrefere = $formulaireValeurs.find('.removeEnfantNomCompletPrefere').val();
@@ -6161,9 +6401,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurEnfantDateNaissance = $formulaireValeurs.find('.valeurEnfantDateNaissance').val();
 	var removeEnfantDateNaissance = $formulaireValeurs.find('.removeEnfantDateNaissance').val() === 'true';
 	var setEnfantDateNaissance = removeEnfantDateNaissance ? null : $formulaireValeurs.find('.setEnfantDateNaissance').val();
+	var addEnfantDateNaissance = $formulaireValeurs.find('.addEnfantDateNaissance').val();
+	var setMoment = setEnfantDateNaissance ? moment(setEnfantDateNaissance, 'DD-MM-YYYY') : null; 
+	var addMoment = addEnfantDateNaissance ? moment(addEnfantDateNaissance, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setEnfantDateNaissance = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addEnfantDateNaissance = s;
+	} 
 	if(removeEnfantDateNaissance || setEnfantDateNaissance != null && setEnfantDateNaissance !== '')
 		vals['setEnfantDateNaissance'] = setEnfantDateNaissance;
-	var addEnfantDateNaissance = $formulaireValeurs.find('.addEnfantDateNaissance').val();
 	if(addEnfantDateNaissance != null && addEnfantDateNaissance !== '')
 		vals['addEnfantDateNaissance'] = addEnfantDateNaissance;
 	var removeEnfantDateNaissance = $formulaireValeurs.find('.removeEnfantDateNaissance').val();
@@ -6173,9 +6423,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurEcoleAddresse = $formulaireValeurs.find('.valeurEcoleAddresse').val();
 	var removeEcoleAddresse = $formulaireValeurs.find('.removeEcoleAddresse').val() === 'true';
 	var setEcoleAddresse = removeEcoleAddresse ? null : $formulaireValeurs.find('.setEcoleAddresse').val();
+	var addEcoleAddresse = $formulaireValeurs.find('.addEcoleAddresse').val();
 	if(removeEcoleAddresse || setEcoleAddresse != null && setEcoleAddresse !== '')
 		vals['setEcoleAddresse'] = setEcoleAddresse;
-	var addEcoleAddresse = $formulaireValeurs.find('.addEcoleAddresse').val();
 	if(addEcoleAddresse != null && addEcoleAddresse !== '')
 		vals['addEcoleAddresse'] = addEcoleAddresse;
 	var removeEcoleAddresse = $formulaireValeurs.find('.removeEcoleAddresse').val();
@@ -6185,9 +6435,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionDateFrais = $formulaireValeurs.find('.valeurInscriptionDateFrais').val();
 	var removeInscriptionDateFrais = $formulaireValeurs.find('.removeInscriptionDateFrais').val() === 'true';
 	var setInscriptionDateFrais = removeInscriptionDateFrais ? null : $formulaireValeurs.find('.setInscriptionDateFrais').val();
+	var addInscriptionDateFrais = $formulaireValeurs.find('.addInscriptionDateFrais').val();
+	var setMoment = setInscriptionDateFrais ? moment(setInscriptionDateFrais, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDateFrais ? moment(addInscriptionDateFrais, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDateFrais = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDateFrais = s;
+	} 
 	if(removeInscriptionDateFrais || setInscriptionDateFrais != null && setInscriptionDateFrais !== '')
 		vals['setInscriptionDateFrais'] = setInscriptionDateFrais;
-	var addInscriptionDateFrais = $formulaireValeurs.find('.addInscriptionDateFrais').val();
 	if(addInscriptionDateFrais != null && addInscriptionDateFrais !== '')
 		vals['addInscriptionDateFrais'] = addInscriptionDateFrais;
 	var removeInscriptionDateFrais = $formulaireValeurs.find('.removeInscriptionDateFrais').val();
@@ -6197,9 +6457,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionNomsParents = $formulaireValeurs.find('.valeurInscriptionNomsParents').val();
 	var removeInscriptionNomsParents = $formulaireValeurs.find('.removeInscriptionNomsParents').val() === 'true';
 	var setInscriptionNomsParents = removeInscriptionNomsParents ? null : $formulaireValeurs.find('.setInscriptionNomsParents').val();
+	var addInscriptionNomsParents = $formulaireValeurs.find('.addInscriptionNomsParents').val();
 	if(removeInscriptionNomsParents || setInscriptionNomsParents != null && setInscriptionNomsParents !== '')
 		vals['setInscriptionNomsParents'] = setInscriptionNomsParents;
-	var addInscriptionNomsParents = $formulaireValeurs.find('.addInscriptionNomsParents').val();
 	if(addInscriptionNomsParents != null && addInscriptionNomsParents !== '')
 		vals['addInscriptionNomsParents'] = addInscriptionNomsParents;
 	var removeInscriptionNomsParents = $formulaireValeurs.find('.removeInscriptionNomsParents').val();
@@ -6209,9 +6469,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionSignature1 = $formulaireValeurs.find('.valeurInscriptionSignature1').val();
 	var removeInscriptionSignature1 = $formulaireValeurs.find('.removeInscriptionSignature1').val() === 'true';
 	var setInscriptionSignature1 = removeInscriptionSignature1 ? null : $formulaireValeurs.find('.setInscriptionSignature1').val();
+	var addInscriptionSignature1 = $formulaireValeurs.find('.addInscriptionSignature1').val();
 	if(removeInscriptionSignature1 || setInscriptionSignature1 != null && setInscriptionSignature1 !== '')
 		vals['setInscriptionSignature1'] = setInscriptionSignature1;
-	var addInscriptionSignature1 = $formulaireValeurs.find('.addInscriptionSignature1').val();
 	if(addInscriptionSignature1 != null && addInscriptionSignature1 !== '')
 		vals['addInscriptionSignature1'] = addInscriptionSignature1;
 	var removeInscriptionSignature1 = $formulaireValeurs.find('.removeInscriptionSignature1').val();
@@ -6221,9 +6481,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionSignature2 = $formulaireValeurs.find('.valeurInscriptionSignature2').val();
 	var removeInscriptionSignature2 = $formulaireValeurs.find('.removeInscriptionSignature2').val() === 'true';
 	var setInscriptionSignature2 = removeInscriptionSignature2 ? null : $formulaireValeurs.find('.setInscriptionSignature2').val();
+	var addInscriptionSignature2 = $formulaireValeurs.find('.addInscriptionSignature2').val();
 	if(removeInscriptionSignature2 || setInscriptionSignature2 != null && setInscriptionSignature2 !== '')
 		vals['setInscriptionSignature2'] = setInscriptionSignature2;
-	var addInscriptionSignature2 = $formulaireValeurs.find('.addInscriptionSignature2').val();
 	if(addInscriptionSignature2 != null && addInscriptionSignature2 !== '')
 		vals['addInscriptionSignature2'] = addInscriptionSignature2;
 	var removeInscriptionSignature2 = $formulaireValeurs.find('.removeInscriptionSignature2').val();
@@ -6233,9 +6493,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionSignature3 = $formulaireValeurs.find('.valeurInscriptionSignature3').val();
 	var removeInscriptionSignature3 = $formulaireValeurs.find('.removeInscriptionSignature3').val() === 'true';
 	var setInscriptionSignature3 = removeInscriptionSignature3 ? null : $formulaireValeurs.find('.setInscriptionSignature3').val();
+	var addInscriptionSignature3 = $formulaireValeurs.find('.addInscriptionSignature3').val();
 	if(removeInscriptionSignature3 || setInscriptionSignature3 != null && setInscriptionSignature3 !== '')
 		vals['setInscriptionSignature3'] = setInscriptionSignature3;
-	var addInscriptionSignature3 = $formulaireValeurs.find('.addInscriptionSignature3').val();
 	if(addInscriptionSignature3 != null && addInscriptionSignature3 !== '')
 		vals['addInscriptionSignature3'] = addInscriptionSignature3;
 	var removeInscriptionSignature3 = $formulaireValeurs.find('.removeInscriptionSignature3').val();
@@ -6245,9 +6505,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionSignature4 = $formulaireValeurs.find('.valeurInscriptionSignature4').val();
 	var removeInscriptionSignature4 = $formulaireValeurs.find('.removeInscriptionSignature4').val() === 'true';
 	var setInscriptionSignature4 = removeInscriptionSignature4 ? null : $formulaireValeurs.find('.setInscriptionSignature4').val();
+	var addInscriptionSignature4 = $formulaireValeurs.find('.addInscriptionSignature4').val();
 	if(removeInscriptionSignature4 || setInscriptionSignature4 != null && setInscriptionSignature4 !== '')
 		vals['setInscriptionSignature4'] = setInscriptionSignature4;
-	var addInscriptionSignature4 = $formulaireValeurs.find('.addInscriptionSignature4').val();
 	if(addInscriptionSignature4 != null && addInscriptionSignature4 !== '')
 		vals['addInscriptionSignature4'] = addInscriptionSignature4;
 	var removeInscriptionSignature4 = $formulaireValeurs.find('.removeInscriptionSignature4').val();
@@ -6257,9 +6517,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionSignature5 = $formulaireValeurs.find('.valeurInscriptionSignature5').val();
 	var removeInscriptionSignature5 = $formulaireValeurs.find('.removeInscriptionSignature5').val() === 'true';
 	var setInscriptionSignature5 = removeInscriptionSignature5 ? null : $formulaireValeurs.find('.setInscriptionSignature5').val();
+	var addInscriptionSignature5 = $formulaireValeurs.find('.addInscriptionSignature5').val();
 	if(removeInscriptionSignature5 || setInscriptionSignature5 != null && setInscriptionSignature5 !== '')
 		vals['setInscriptionSignature5'] = setInscriptionSignature5;
-	var addInscriptionSignature5 = $formulaireValeurs.find('.addInscriptionSignature5').val();
 	if(addInscriptionSignature5 != null && addInscriptionSignature5 !== '')
 		vals['addInscriptionSignature5'] = addInscriptionSignature5;
 	var removeInscriptionSignature5 = $formulaireValeurs.find('.removeInscriptionSignature5').val();
@@ -6269,9 +6529,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionSignature6 = $formulaireValeurs.find('.valeurInscriptionSignature6').val();
 	var removeInscriptionSignature6 = $formulaireValeurs.find('.removeInscriptionSignature6').val() === 'true';
 	var setInscriptionSignature6 = removeInscriptionSignature6 ? null : $formulaireValeurs.find('.setInscriptionSignature6').val();
+	var addInscriptionSignature6 = $formulaireValeurs.find('.addInscriptionSignature6').val();
 	if(removeInscriptionSignature6 || setInscriptionSignature6 != null && setInscriptionSignature6 !== '')
 		vals['setInscriptionSignature6'] = setInscriptionSignature6;
-	var addInscriptionSignature6 = $formulaireValeurs.find('.addInscriptionSignature6').val();
 	if(addInscriptionSignature6 != null && addInscriptionSignature6 !== '')
 		vals['addInscriptionSignature6'] = addInscriptionSignature6;
 	var removeInscriptionSignature6 = $formulaireValeurs.find('.removeInscriptionSignature6').val();
@@ -6281,9 +6541,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionSignature7 = $formulaireValeurs.find('.valeurInscriptionSignature7').val();
 	var removeInscriptionSignature7 = $formulaireValeurs.find('.removeInscriptionSignature7').val() === 'true';
 	var setInscriptionSignature7 = removeInscriptionSignature7 ? null : $formulaireValeurs.find('.setInscriptionSignature7').val();
+	var addInscriptionSignature7 = $formulaireValeurs.find('.addInscriptionSignature7').val();
 	if(removeInscriptionSignature7 || setInscriptionSignature7 != null && setInscriptionSignature7 !== '')
 		vals['setInscriptionSignature7'] = setInscriptionSignature7;
-	var addInscriptionSignature7 = $formulaireValeurs.find('.addInscriptionSignature7').val();
 	if(addInscriptionSignature7 != null && addInscriptionSignature7 !== '')
 		vals['addInscriptionSignature7'] = addInscriptionSignature7;
 	var removeInscriptionSignature7 = $formulaireValeurs.find('.removeInscriptionSignature7').val();
@@ -6293,9 +6553,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionSignature8 = $formulaireValeurs.find('.valeurInscriptionSignature8').val();
 	var removeInscriptionSignature8 = $formulaireValeurs.find('.removeInscriptionSignature8').val() === 'true';
 	var setInscriptionSignature8 = removeInscriptionSignature8 ? null : $formulaireValeurs.find('.setInscriptionSignature8').val();
+	var addInscriptionSignature8 = $formulaireValeurs.find('.addInscriptionSignature8').val();
 	if(removeInscriptionSignature8 || setInscriptionSignature8 != null && setInscriptionSignature8 !== '')
 		vals['setInscriptionSignature8'] = setInscriptionSignature8;
-	var addInscriptionSignature8 = $formulaireValeurs.find('.addInscriptionSignature8').val();
 	if(addInscriptionSignature8 != null && addInscriptionSignature8 !== '')
 		vals['addInscriptionSignature8'] = addInscriptionSignature8;
 	var removeInscriptionSignature8 = $formulaireValeurs.find('.removeInscriptionSignature8').val();
@@ -6305,9 +6565,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionSignature9 = $formulaireValeurs.find('.valeurInscriptionSignature9').val();
 	var removeInscriptionSignature9 = $formulaireValeurs.find('.removeInscriptionSignature9').val() === 'true';
 	var setInscriptionSignature9 = removeInscriptionSignature9 ? null : $formulaireValeurs.find('.setInscriptionSignature9').val();
+	var addInscriptionSignature9 = $formulaireValeurs.find('.addInscriptionSignature9').val();
 	if(removeInscriptionSignature9 || setInscriptionSignature9 != null && setInscriptionSignature9 !== '')
 		vals['setInscriptionSignature9'] = setInscriptionSignature9;
-	var addInscriptionSignature9 = $formulaireValeurs.find('.addInscriptionSignature9').val();
 	if(addInscriptionSignature9 != null && addInscriptionSignature9 !== '')
 		vals['addInscriptionSignature9'] = addInscriptionSignature9;
 	var removeInscriptionSignature9 = $formulaireValeurs.find('.removeInscriptionSignature9').val();
@@ -6317,9 +6577,9 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionSignature10 = $formulaireValeurs.find('.valeurInscriptionSignature10').val();
 	var removeInscriptionSignature10 = $formulaireValeurs.find('.removeInscriptionSignature10').val() === 'true';
 	var setInscriptionSignature10 = removeInscriptionSignature10 ? null : $formulaireValeurs.find('.setInscriptionSignature10').val();
+	var addInscriptionSignature10 = $formulaireValeurs.find('.addInscriptionSignature10').val();
 	if(removeInscriptionSignature10 || setInscriptionSignature10 != null && setInscriptionSignature10 !== '')
 		vals['setInscriptionSignature10'] = setInscriptionSignature10;
-	var addInscriptionSignature10 = $formulaireValeurs.find('.addInscriptionSignature10').val();
 	if(addInscriptionSignature10 != null && addInscriptionSignature10 !== '')
 		vals['addInscriptionSignature10'] = addInscriptionSignature10;
 	var removeInscriptionSignature10 = $formulaireValeurs.find('.removeInscriptionSignature10').val();
@@ -6329,9 +6589,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionDate1 = $formulaireValeurs.find('.valeurInscriptionDate1').val();
 	var removeInscriptionDate1 = $formulaireValeurs.find('.removeInscriptionDate1').val() === 'true';
 	var setInscriptionDate1 = removeInscriptionDate1 ? null : $formulaireValeurs.find('.setInscriptionDate1').val();
+	var addInscriptionDate1 = $formulaireValeurs.find('.addInscriptionDate1').val();
+	var setMoment = setInscriptionDate1 ? moment(setInscriptionDate1, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate1 ? moment(addInscriptionDate1, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate1 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate1 = s;
+	} 
 	if(removeInscriptionDate1 || setInscriptionDate1 != null && setInscriptionDate1 !== '')
 		vals['setInscriptionDate1'] = setInscriptionDate1;
-	var addInscriptionDate1 = $formulaireValeurs.find('.addInscriptionDate1').val();
 	if(addInscriptionDate1 != null && addInscriptionDate1 !== '')
 		vals['addInscriptionDate1'] = addInscriptionDate1;
 	var removeInscriptionDate1 = $formulaireValeurs.find('.removeInscriptionDate1').val();
@@ -6341,9 +6611,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionDate2 = $formulaireValeurs.find('.valeurInscriptionDate2').val();
 	var removeInscriptionDate2 = $formulaireValeurs.find('.removeInscriptionDate2').val() === 'true';
 	var setInscriptionDate2 = removeInscriptionDate2 ? null : $formulaireValeurs.find('.setInscriptionDate2').val();
+	var addInscriptionDate2 = $formulaireValeurs.find('.addInscriptionDate2').val();
+	var setMoment = setInscriptionDate2 ? moment(setInscriptionDate2, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate2 ? moment(addInscriptionDate2, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate2 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate2 = s;
+	} 
 	if(removeInscriptionDate2 || setInscriptionDate2 != null && setInscriptionDate2 !== '')
 		vals['setInscriptionDate2'] = setInscriptionDate2;
-	var addInscriptionDate2 = $formulaireValeurs.find('.addInscriptionDate2').val();
 	if(addInscriptionDate2 != null && addInscriptionDate2 !== '')
 		vals['addInscriptionDate2'] = addInscriptionDate2;
 	var removeInscriptionDate2 = $formulaireValeurs.find('.removeInscriptionDate2').val();
@@ -6353,9 +6633,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionDate3 = $formulaireValeurs.find('.valeurInscriptionDate3').val();
 	var removeInscriptionDate3 = $formulaireValeurs.find('.removeInscriptionDate3').val() === 'true';
 	var setInscriptionDate3 = removeInscriptionDate3 ? null : $formulaireValeurs.find('.setInscriptionDate3').val();
+	var addInscriptionDate3 = $formulaireValeurs.find('.addInscriptionDate3').val();
+	var setMoment = setInscriptionDate3 ? moment(setInscriptionDate3, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate3 ? moment(addInscriptionDate3, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate3 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate3 = s;
+	} 
 	if(removeInscriptionDate3 || setInscriptionDate3 != null && setInscriptionDate3 !== '')
 		vals['setInscriptionDate3'] = setInscriptionDate3;
-	var addInscriptionDate3 = $formulaireValeurs.find('.addInscriptionDate3').val();
 	if(addInscriptionDate3 != null && addInscriptionDate3 !== '')
 		vals['addInscriptionDate3'] = addInscriptionDate3;
 	var removeInscriptionDate3 = $formulaireValeurs.find('.removeInscriptionDate3').val();
@@ -6365,9 +6655,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionDate4 = $formulaireValeurs.find('.valeurInscriptionDate4').val();
 	var removeInscriptionDate4 = $formulaireValeurs.find('.removeInscriptionDate4').val() === 'true';
 	var setInscriptionDate4 = removeInscriptionDate4 ? null : $formulaireValeurs.find('.setInscriptionDate4').val();
+	var addInscriptionDate4 = $formulaireValeurs.find('.addInscriptionDate4').val();
+	var setMoment = setInscriptionDate4 ? moment(setInscriptionDate4, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate4 ? moment(addInscriptionDate4, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate4 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate4 = s;
+	} 
 	if(removeInscriptionDate4 || setInscriptionDate4 != null && setInscriptionDate4 !== '')
 		vals['setInscriptionDate4'] = setInscriptionDate4;
-	var addInscriptionDate4 = $formulaireValeurs.find('.addInscriptionDate4').val();
 	if(addInscriptionDate4 != null && addInscriptionDate4 !== '')
 		vals['addInscriptionDate4'] = addInscriptionDate4;
 	var removeInscriptionDate4 = $formulaireValeurs.find('.removeInscriptionDate4').val();
@@ -6377,9 +6677,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionDate5 = $formulaireValeurs.find('.valeurInscriptionDate5').val();
 	var removeInscriptionDate5 = $formulaireValeurs.find('.removeInscriptionDate5').val() === 'true';
 	var setInscriptionDate5 = removeInscriptionDate5 ? null : $formulaireValeurs.find('.setInscriptionDate5').val();
+	var addInscriptionDate5 = $formulaireValeurs.find('.addInscriptionDate5').val();
+	var setMoment = setInscriptionDate5 ? moment(setInscriptionDate5, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate5 ? moment(addInscriptionDate5, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate5 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate5 = s;
+	} 
 	if(removeInscriptionDate5 || setInscriptionDate5 != null && setInscriptionDate5 !== '')
 		vals['setInscriptionDate5'] = setInscriptionDate5;
-	var addInscriptionDate5 = $formulaireValeurs.find('.addInscriptionDate5').val();
 	if(addInscriptionDate5 != null && addInscriptionDate5 !== '')
 		vals['addInscriptionDate5'] = addInscriptionDate5;
 	var removeInscriptionDate5 = $formulaireValeurs.find('.removeInscriptionDate5').val();
@@ -6389,9 +6699,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionDate6 = $formulaireValeurs.find('.valeurInscriptionDate6').val();
 	var removeInscriptionDate6 = $formulaireValeurs.find('.removeInscriptionDate6').val() === 'true';
 	var setInscriptionDate6 = removeInscriptionDate6 ? null : $formulaireValeurs.find('.setInscriptionDate6').val();
+	var addInscriptionDate6 = $formulaireValeurs.find('.addInscriptionDate6').val();
+	var setMoment = setInscriptionDate6 ? moment(setInscriptionDate6, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate6 ? moment(addInscriptionDate6, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate6 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate6 = s;
+	} 
 	if(removeInscriptionDate6 || setInscriptionDate6 != null && setInscriptionDate6 !== '')
 		vals['setInscriptionDate6'] = setInscriptionDate6;
-	var addInscriptionDate6 = $formulaireValeurs.find('.addInscriptionDate6').val();
 	if(addInscriptionDate6 != null && addInscriptionDate6 !== '')
 		vals['addInscriptionDate6'] = addInscriptionDate6;
 	var removeInscriptionDate6 = $formulaireValeurs.find('.removeInscriptionDate6').val();
@@ -6401,9 +6721,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionDate7 = $formulaireValeurs.find('.valeurInscriptionDate7').val();
 	var removeInscriptionDate7 = $formulaireValeurs.find('.removeInscriptionDate7').val() === 'true';
 	var setInscriptionDate7 = removeInscriptionDate7 ? null : $formulaireValeurs.find('.setInscriptionDate7').val();
+	var addInscriptionDate7 = $formulaireValeurs.find('.addInscriptionDate7').val();
+	var setMoment = setInscriptionDate7 ? moment(setInscriptionDate7, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate7 ? moment(addInscriptionDate7, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate7 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate7 = s;
+	} 
 	if(removeInscriptionDate7 || setInscriptionDate7 != null && setInscriptionDate7 !== '')
 		vals['setInscriptionDate7'] = setInscriptionDate7;
-	var addInscriptionDate7 = $formulaireValeurs.find('.addInscriptionDate7').val();
 	if(addInscriptionDate7 != null && addInscriptionDate7 !== '')
 		vals['addInscriptionDate7'] = addInscriptionDate7;
 	var removeInscriptionDate7 = $formulaireValeurs.find('.removeInscriptionDate7').val();
@@ -6413,9 +6743,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionDate8 = $formulaireValeurs.find('.valeurInscriptionDate8').val();
 	var removeInscriptionDate8 = $formulaireValeurs.find('.removeInscriptionDate8').val() === 'true';
 	var setInscriptionDate8 = removeInscriptionDate8 ? null : $formulaireValeurs.find('.setInscriptionDate8').val();
+	var addInscriptionDate8 = $formulaireValeurs.find('.addInscriptionDate8').val();
+	var setMoment = setInscriptionDate8 ? moment(setInscriptionDate8, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate8 ? moment(addInscriptionDate8, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate8 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate8 = s;
+	} 
 	if(removeInscriptionDate8 || setInscriptionDate8 != null && setInscriptionDate8 !== '')
 		vals['setInscriptionDate8'] = setInscriptionDate8;
-	var addInscriptionDate8 = $formulaireValeurs.find('.addInscriptionDate8').val();
 	if(addInscriptionDate8 != null && addInscriptionDate8 !== '')
 		vals['addInscriptionDate8'] = addInscriptionDate8;
 	var removeInscriptionDate8 = $formulaireValeurs.find('.removeInscriptionDate8').val();
@@ -6425,9 +6765,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionDate9 = $formulaireValeurs.find('.valeurInscriptionDate9').val();
 	var removeInscriptionDate9 = $formulaireValeurs.find('.removeInscriptionDate9').val() === 'true';
 	var setInscriptionDate9 = removeInscriptionDate9 ? null : $formulaireValeurs.find('.setInscriptionDate9').val();
+	var addInscriptionDate9 = $formulaireValeurs.find('.addInscriptionDate9').val();
+	var setMoment = setInscriptionDate9 ? moment(setInscriptionDate9, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate9 ? moment(addInscriptionDate9, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate9 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate9 = s;
+	} 
 	if(removeInscriptionDate9 || setInscriptionDate9 != null && setInscriptionDate9 !== '')
 		vals['setInscriptionDate9'] = setInscriptionDate9;
-	var addInscriptionDate9 = $formulaireValeurs.find('.addInscriptionDate9').val();
 	if(addInscriptionDate9 != null && addInscriptionDate9 !== '')
 		vals['addInscriptionDate9'] = addInscriptionDate9;
 	var removeInscriptionDate9 = $formulaireValeurs.find('.removeInscriptionDate9').val();
@@ -6437,9 +6787,19 @@ async function patchpaiementsInscriptionScolaire($formulaireFiltres, $formulaire
 	var valeurInscriptionDate10 = $formulaireValeurs.find('.valeurInscriptionDate10').val();
 	var removeInscriptionDate10 = $formulaireValeurs.find('.removeInscriptionDate10').val() === 'true';
 	var setInscriptionDate10 = removeInscriptionDate10 ? null : $formulaireValeurs.find('.setInscriptionDate10').val();
+	var addInscriptionDate10 = $formulaireValeurs.find('.addInscriptionDate10').val();
+	var setMoment = setInscriptionDate10 ? moment(setInscriptionDate10, 'DD-MM-YYYY') : null; 
+	var addMoment = addInscriptionDate10 ? moment(addInscriptionDate10, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setInscriptionDate10 = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addInscriptionDate10 = s;
+	} 
 	if(removeInscriptionDate10 || setInscriptionDate10 != null && setInscriptionDate10 !== '')
 		vals['setInscriptionDate10'] = setInscriptionDate10;
-	var addInscriptionDate10 = $formulaireValeurs.find('.addInscriptionDate10').val();
 	if(addInscriptionDate10 != null && addInscriptionDate10 !== '')
 		vals['addInscriptionDate10'] = addInscriptionDate10;
 	var removeInscriptionDate10 = $formulaireValeurs.find('.removeInscriptionDate10').val();
@@ -7200,10 +7560,10 @@ async function websocketInscriptionScolaire(success) {
 			var pkPage = $('#InscriptionScolaireForm :input[name=pk]').val();
 			var pks = json['pks'];
 			var empty = json['empty'];
-			var numFound = json['numFound'];
-			var numPATCH = json['numPATCH'];
+			var numFound = parseInt(json['numFound']);
+			var numPATCH = parseInt(json['numPATCH']);
 			var percent = Math.floor( numPATCH / numFound * 100 ) + '%';
-			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id);
+			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id).attr('data-numPATCH', numPATCH);
 			var $margin = $('<div>').attr('class', 'w3-margin ').attr('id', 'margin-' + id);
 			var $card = $('<div>').attr('class', 'w3-card w3-white ').attr('id', 'card-' + id);
 			var $header = $('<div>').attr('class', 'w3-container fa-blue-gray ').attr('id', 'header-' + id);
@@ -7222,10 +7582,18 @@ async function websocketInscriptionScolaire(success) {
 			$card.append($body);
 			$box.append($margin);
 			$margin.append($card);
-			$('.box-' + id).remove();
-			if(numPATCH < numFound)
-			$('.top-box').append($box);
-			if(pk && pkPage && pk == pkPage) {;
+			if(numPATCH < numFound) {
+				var $old_box = $('.box-' + id);
+				if(!$old_box.size()) {
+					$('.top-box').append($box);
+				} else if($old_box && $old_box.attr('data-numPATCH') < numFound) {
+					$('.box-' + id).remove();
+					$('.top-box').append($box);
+				}
+			} else {
+				$('.box-' + id).remove();
+			}
+			if(pk && pkPage && pk == pkPage) {
 				if(success)
 					success(json);
 			}

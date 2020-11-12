@@ -265,9 +265,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurPk = $formulaireValeurs.find('.valeurPk').val();
 	var removePk = $formulaireValeurs.find('.removePk').val() === 'true';
 	var setPk = removePk ? null : $formulaireValeurs.find('.setPk').val();
+	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(removePk || setPk != null && setPk !== '')
 		vals['setPk'] = setPk;
-	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(addPk != null && addPk !== '')
 		vals['addPk'] = addPk;
 	var removePk = $formulaireValeurs.find('.removePk').val();
@@ -277,9 +277,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurCree = $formulaireValeurs.find('.valeurCree').val();
 	var removeCree = $formulaireValeurs.find('.removeCree').val() === 'true';
 	var setCree = removeCree ? null : $formulaireValeurs.find('.setCree').val();
+	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(removeCree || setCree != null && setCree !== '')
 		vals['setCree'] = setCree;
-	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(addCree != null && addCree !== '')
 		vals['addCree'] = addCree;
 	var removeCree = $formulaireValeurs.find('.removeCree').val();
@@ -289,9 +289,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurModifie = $formulaireValeurs.find('.valeurModifie').val();
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val() === 'true';
 	var setModifie = removeModifie ? null : $formulaireValeurs.find('.setModifie').val();
+	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(removeModifie || setModifie != null && setModifie !== '')
 		vals['setModifie'] = setModifie;
-	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(addModifie != null && addModifie !== '')
 		vals['addModifie'] = addModifie;
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val();
@@ -301,9 +301,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurObjetId = $formulaireValeurs.find('.valeurObjetId').val();
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val() === 'true';
 	var setObjetId = removeObjetId ? null : $formulaireValeurs.find('.setObjetId').val();
+	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(removeObjetId || setObjetId != null && setObjetId !== '')
 		vals['setObjetId'] = setObjetId;
-	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(addObjetId != null && addObjetId !== '')
 		vals['addObjetId'] = addObjetId;
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val();
@@ -316,10 +316,10 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurArchive = null;
 	if(valeurArchiveSelectVal != null && valeurArchiveSelectVal !== '')
 		valeurArchive = valeurArchiveSelectVal == 'true';
-	setArchive = removeArchive ? null : valeurArchive;
+	var setArchive = removeArchive ? null : valeurArchive;
+	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(removeArchive || setArchive != null && setArchive !== '')
 		vals['setArchive'] = setArchive;
-	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(addArchive != null && addArchive !== '')
 		vals['addArchive'] = addArchive;
 	var removeArchive = $formulaireValeurs.find('.removeArchive').prop('checked');
@@ -332,10 +332,10 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurSupprime = null;
 	if(valeurSupprimeSelectVal != null && valeurSupprimeSelectVal !== '')
 		valeurSupprime = valeurSupprimeSelectVal == 'true';
-	setSupprime = removeSupprime ? null : valeurSupprime;
+	var setSupprime = removeSupprime ? null : valeurSupprime;
+	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(removeSupprime || setSupprime != null && setSupprime !== '')
 		vals['setSupprime'] = setSupprime;
-	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(addSupprime != null && addSupprime !== '')
 		vals['addSupprime'] = addSupprime;
 	var removeSupprime = $formulaireValeurs.find('.removeSupprime').prop('checked');
@@ -345,9 +345,19 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurSessionDateDebut = $formulaireValeurs.find('.valeurSessionDateDebut').val();
 	var removeSessionDateDebut = $formulaireValeurs.find('.removeSessionDateDebut').val() === 'true';
 	var setSessionDateDebut = removeSessionDateDebut ? null : $formulaireValeurs.find('.setSessionDateDebut').val();
+	var addSessionDateDebut = $formulaireValeurs.find('.addSessionDateDebut').val();
+	var setMoment = setSessionDateDebut ? moment(setSessionDateDebut, 'DD-MM-YYYY') : null; 
+	var addMoment = addSessionDateDebut ? moment(addSessionDateDebut, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setSessionDateDebut = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addSessionDateDebut = s;
+	} 
 	if(removeSessionDateDebut || setSessionDateDebut != null && setSessionDateDebut !== '')
 		vals['setSessionDateDebut'] = setSessionDateDebut;
-	var addSessionDateDebut = $formulaireValeurs.find('.addSessionDateDebut').val();
 	if(addSessionDateDebut != null && addSessionDateDebut !== '')
 		vals['addSessionDateDebut'] = addSessionDateDebut;
 	var removeSessionDateDebut = $formulaireValeurs.find('.removeSessionDateDebut').val();
@@ -357,9 +367,19 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurSessionDateFin = $formulaireValeurs.find('.valeurSessionDateFin').val();
 	var removeSessionDateFin = $formulaireValeurs.find('.removeSessionDateFin').val() === 'true';
 	var setSessionDateFin = removeSessionDateFin ? null : $formulaireValeurs.find('.setSessionDateFin').val();
+	var addSessionDateFin = $formulaireValeurs.find('.addSessionDateFin').val();
+	var setMoment = setSessionDateFin ? moment(setSessionDateFin, 'DD-MM-YYYY') : null; 
+	var addMoment = addSessionDateFin ? moment(addSessionDateFin, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setSessionDateFin = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addSessionDateFin = s;
+	} 
 	if(removeSessionDateFin || setSessionDateFin != null && setSessionDateFin !== '')
 		vals['setSessionDateFin'] = setSessionDateFin;
-	var addSessionDateFin = $formulaireValeurs.find('.addSessionDateFin').val();
 	if(addSessionDateFin != null && addSessionDateFin !== '')
 		vals['addSessionDateFin'] = addSessionDateFin;
 	var removeSessionDateFin = $formulaireValeurs.find('.removeSessionDateFin').val();
@@ -369,9 +389,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurAnneeFraisInscription = $formulaireValeurs.find('.valeurAnneeFraisInscription').val();
 	var removeAnneeFraisInscription = $formulaireValeurs.find('.removeAnneeFraisInscription').val() === 'true';
 	var setAnneeFraisInscription = removeAnneeFraisInscription ? null : $formulaireValeurs.find('.setAnneeFraisInscription').val();
+	var addAnneeFraisInscription = $formulaireValeurs.find('.addAnneeFraisInscription').val();
 	if(removeAnneeFraisInscription || setAnneeFraisInscription != null && setAnneeFraisInscription !== '')
 		vals['setAnneeFraisInscription'] = setAnneeFraisInscription;
-	var addAnneeFraisInscription = $formulaireValeurs.find('.addAnneeFraisInscription').val();
 	if(addAnneeFraisInscription != null && addAnneeFraisInscription !== '')
 		vals['addAnneeFraisInscription'] = addAnneeFraisInscription;
 	var removeAnneeFraisInscription = $formulaireValeurs.find('.removeAnneeFraisInscription').val();
@@ -389,9 +409,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurInheritPk = $formulaireValeurs.find('.valeurInheritPk').val();
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val() === 'true';
 	var setInheritPk = removeInheritPk ? null : $formulaireValeurs.find('.setInheritPk').val();
+	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(removeInheritPk || setInheritPk != null && setInheritPk !== '')
 		vals['setInheritPk'] = setInheritPk;
-	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(addInheritPk != null && addInheritPk !== '')
 		vals['addInheritPk'] = addInheritPk;
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val();
@@ -401,9 +421,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurSessionId = $formulaireValeurs.find('.valeurSessionId').val();
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val() === 'true';
 	var setSessionId = removeSessionId ? null : $formulaireValeurs.find('.setSessionId').val();
+	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(removeSessionId || setSessionId != null && setSessionId !== '')
 		vals['setSessionId'] = setSessionId;
-	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(addSessionId != null && addSessionId !== '')
 		vals['addSessionId'] = addSessionId;
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val();
@@ -413,9 +433,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurUtilisateurId = $formulaireValeurs.find('.valeurUtilisateurId').val();
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val() === 'true';
 	var setUtilisateurId = removeUtilisateurId ? null : $formulaireValeurs.find('.setUtilisateurId').val();
+	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(removeUtilisateurId || setUtilisateurId != null && setUtilisateurId !== '')
 		vals['setUtilisateurId'] = setUtilisateurId;
-	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(addUtilisateurId != null && addUtilisateurId !== '')
 		vals['addUtilisateurId'] = addUtilisateurId;
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val();
@@ -425,9 +445,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurUtilisateurCle = $formulaireValeurs.find('.valeurUtilisateurCle').val();
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val() === 'true';
 	var setUtilisateurCle = removeUtilisateurCle ? null : $formulaireValeurs.find('.setUtilisateurCle').val();
+	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(removeUtilisateurCle || setUtilisateurCle != null && setUtilisateurCle !== '')
 		vals['setUtilisateurCle'] = setUtilisateurCle;
-	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(addUtilisateurCle != null && addUtilisateurCle !== '')
 		vals['addUtilisateurCle'] = addUtilisateurCle;
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val();
@@ -437,9 +457,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurObjetTitre = $formulaireValeurs.find('.valeurObjetTitre').val();
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val() === 'true';
 	var setObjetTitre = removeObjetTitre ? null : $formulaireValeurs.find('.setObjetTitre').val();
+	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(removeObjetTitre || setObjetTitre != null && setObjetTitre !== '')
 		vals['setObjetTitre'] = setObjetTitre;
-	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(addObjetTitre != null && addObjetTitre !== '')
 		vals['addObjetTitre'] = addObjetTitre;
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val();
@@ -449,9 +469,19 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurSaisonDateDebut = $formulaireValeurs.find('.valeurSaisonDateDebut').val();
 	var removeSaisonDateDebut = $formulaireValeurs.find('.removeSaisonDateDebut').val() === 'true';
 	var setSaisonDateDebut = removeSaisonDateDebut ? null : $formulaireValeurs.find('.setSaisonDateDebut').val();
+	var addSaisonDateDebut = $formulaireValeurs.find('.addSaisonDateDebut').val();
+	var setMoment = setSaisonDateDebut ? moment(setSaisonDateDebut, 'DD-MM-YYYY') : null; 
+	var addMoment = addSaisonDateDebut ? moment(addSaisonDateDebut, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setSaisonDateDebut = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addSaisonDateDebut = s;
+	} 
 	if(removeSaisonDateDebut || setSaisonDateDebut != null && setSaisonDateDebut !== '')
 		vals['setSaisonDateDebut'] = setSaisonDateDebut;
-	var addSaisonDateDebut = $formulaireValeurs.find('.addSaisonDateDebut').val();
 	if(addSaisonDateDebut != null && addSaisonDateDebut !== '')
 		vals['addSaisonDateDebut'] = addSaisonDateDebut;
 	var removeSaisonDateDebut = $formulaireValeurs.find('.removeSaisonDateDebut').val();
@@ -461,9 +491,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurAnneeDebut = $formulaireValeurs.find('.valeurAnneeDebut').val();
 	var removeAnneeDebut = $formulaireValeurs.find('.removeAnneeDebut').val() === 'true';
 	var setAnneeDebut = removeAnneeDebut ? null : $formulaireValeurs.find('.setAnneeDebut').val();
+	var addAnneeDebut = $formulaireValeurs.find('.addAnneeDebut').val();
 	if(removeAnneeDebut || setAnneeDebut != null && setAnneeDebut !== '')
 		vals['setAnneeDebut'] = setAnneeDebut;
-	var addAnneeDebut = $formulaireValeurs.find('.addAnneeDebut').val();
 	if(addAnneeDebut != null && addAnneeDebut !== '')
 		vals['addAnneeDebut'] = addAnneeDebut;
 	var removeAnneeDebut = $formulaireValeurs.find('.removeAnneeDebut').val();
@@ -473,9 +503,9 @@ async function patchAnneeScolaire($formulaireFiltres, $formulaireValeurs, pk, su
 	var valeurAnneeFin = $formulaireValeurs.find('.valeurAnneeFin').val();
 	var removeAnneeFin = $formulaireValeurs.find('.removeAnneeFin').val() === 'true';
 	var setAnneeFin = removeAnneeFin ? null : $formulaireValeurs.find('.setAnneeFin').val();
+	var addAnneeFin = $formulaireValeurs.find('.addAnneeFin').val();
 	if(removeAnneeFin || setAnneeFin != null && setAnneeFin !== '')
 		vals['setAnneeFin'] = setAnneeFin;
-	var addAnneeFin = $formulaireValeurs.find('.addAnneeFin').val();
 	if(addAnneeFin != null && addAnneeFin !== '')
 		vals['addAnneeFin'] = addAnneeFin;
 	var removeAnneeFin = $formulaireValeurs.find('.removeAnneeFin').val();
@@ -1117,10 +1147,10 @@ async function websocketAnneeScolaire(success) {
 			var pkPage = $('#AnneeScolaireForm :input[name=pk]').val();
 			var pks = json['pks'];
 			var empty = json['empty'];
-			var numFound = json['numFound'];
-			var numPATCH = json['numPATCH'];
+			var numFound = parseInt(json['numFound']);
+			var numPATCH = parseInt(json['numPATCH']);
 			var percent = Math.floor( numPATCH / numFound * 100 ) + '%';
-			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id);
+			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id).attr('data-numPATCH', numPATCH);
 			var $margin = $('<div>').attr('class', 'w3-margin ').attr('id', 'margin-' + id);
 			var $card = $('<div>').attr('class', 'w3-card w3-white ').attr('id', 'card-' + id);
 			var $header = $('<div>').attr('class', 'w3-container fa-orange ').attr('id', 'header-' + id);
@@ -1139,10 +1169,18 @@ async function websocketAnneeScolaire(success) {
 			$card.append($body);
 			$box.append($margin);
 			$margin.append($card);
-			$('.box-' + id).remove();
-			if(numPATCH < numFound)
-			$('.top-box').append($box);
-			if(pk && pkPage && pk == pkPage) {;
+			if(numPATCH < numFound) {
+				var $old_box = $('.box-' + id);
+				if(!$old_box.size()) {
+					$('.top-box').append($box);
+				} else if($old_box && $old_box.attr('data-numPATCH') < numFound) {
+					$('.box-' + id).remove();
+					$('.top-box').append($box);
+				}
+			} else {
+				$('.box-' + id).remove();
+			}
+			if(pk && pkPage && pk == pkPage) {
 				if(success)
 					success(json);
 			}

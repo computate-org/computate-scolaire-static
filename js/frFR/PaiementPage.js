@@ -117,6 +117,10 @@ async function postPaiementScolaire($formulaireValeurs, success, error) {
 	if(valeurInscriptionCle != null && valeurInscriptionCle !== '')
 		vals['inscriptionCle'] = valeurInscriptionCle;
 
+	var valeurFraisRetardDate = $formulaireValeurs.find('.valeurFraisRetardDate').val();
+	if(valeurFraisRetardDate != null && valeurFraisRetardDate !== '')
+		vals['fraisRetardDate'] = valeurFraisRetardDate;
+
 	var valeurInheritPk = $formulaireValeurs.find('.valeurInheritPk').val();
 	if(valeurInheritPk != null && valeurInheritPk !== '')
 		vals['inheritPk'] = valeurInheritPk;
@@ -136,38 +140,6 @@ async function postPaiementScolaire($formulaireValeurs, success, error) {
 	var valeurObjetTitre = $formulaireValeurs.find('.valeurObjetTitre').val();
 	if(valeurObjetTitre != null && valeurObjetTitre !== '')
 		vals['objetTitre'] = valeurObjetTitre;
-
-	var valeurEnfantNomCompletPrefere = $formulaireValeurs.find('.valeurEnfantNomCompletPrefere').val();
-	if(valeurEnfantNomCompletPrefere != null && valeurEnfantNomCompletPrefere !== '')
-		vals['enfantNomCompletPrefere'] = valeurEnfantNomCompletPrefere;
-
-	var valeurEnfantDateNaissance = $formulaireValeurs.find('.valeurEnfantDateNaissance').val();
-	if(valeurEnfantDateNaissance != null && valeurEnfantDateNaissance !== '')
-		vals['enfantDateNaissance'] = valeurEnfantDateNaissance;
-
-	var valeurMereNomCompletPrefere = $formulaireValeurs.find('.valeurMereNomCompletPrefere').val();
-	if(valeurMereNomCompletPrefere != null && valeurMereNomCompletPrefere !== '')
-		vals['mereNomCompletPrefere'] = valeurMereNomCompletPrefere;
-
-	var valeurPereNomCompletPrefere = $formulaireValeurs.find('.valeurPereNomCompletPrefere').val();
-	if(valeurPereNomCompletPrefere != null && valeurPereNomCompletPrefere !== '')
-		vals['pereNomCompletPrefere'] = valeurPereNomCompletPrefere;
-
-	var valeurFraisMontantDu = $formulaireValeurs.find('.valeurFraisMontantDu').val();
-	if(valeurFraisMontantDu != null && valeurFraisMontantDu !== '')
-		vals['fraisMontantDu'] = valeurFraisMontantDu;
-
-	var valeurFraisMontantPasse = $formulaireValeurs.find('.valeurFraisMontantPasse').val();
-	if(valeurFraisMontantPasse != null && valeurFraisMontantPasse !== '')
-		vals['fraisMontantPasse'] = valeurFraisMontantPasse;
-
-	var valeurFraisMontantNonPasse = $formulaireValeurs.find('.valeurFraisMontantNonPasse').val();
-	if(valeurFraisMontantNonPasse != null && valeurFraisMontantNonPasse !== '')
-		vals['fraisMontantNonPasse'] = valeurFraisMontantNonPasse;
-
-	var valeurFraisMontantFuture = $formulaireValeurs.find('.valeurFraisMontantFuture').val();
-	if(valeurFraisMontantFuture != null && valeurFraisMontantFuture !== '')
-		vals['fraisMontantFuture'] = valeurFraisMontantFuture;
 
 	var valeurPaiementNomCourt = $formulaireValeurs.find('.valeurPaiementNomCourt').val();
 	if(valeurPaiementNomCourt != null && valeurPaiementNomCourt !== '')
@@ -341,6 +313,10 @@ async function putcopiePaiementScolaire($formulaireValeurs, pk, success, error) 
 	if(valeurInscriptionCle != null && valeurInscriptionCle !== '')
 		vals['inscriptionCle'] = valeurInscriptionCle;
 
+	var valeurFraisRetardDate = $formulaireValeurs.find('.valeurFraisRetardDate').val();
+	if(valeurFraisRetardDate != null && valeurFraisRetardDate !== '')
+		vals['fraisRetardDate'] = valeurFraisRetardDate;
+
 	var valeurInheritPk = $formulaireValeurs.find('.valeurInheritPk').val();
 	if(valeurInheritPk != null && valeurInheritPk !== '')
 		vals['inheritPk'] = valeurInheritPk;
@@ -360,38 +336,6 @@ async function putcopiePaiementScolaire($formulaireValeurs, pk, success, error) 
 	var valeurObjetTitre = $formulaireValeurs.find('.valeurObjetTitre').val();
 	if(valeurObjetTitre != null && valeurObjetTitre !== '')
 		vals['objetTitre'] = valeurObjetTitre;
-
-	var valeurEnfantNomCompletPrefere = $formulaireValeurs.find('.valeurEnfantNomCompletPrefere').val();
-	if(valeurEnfantNomCompletPrefere != null && valeurEnfantNomCompletPrefere !== '')
-		vals['enfantNomCompletPrefere'] = valeurEnfantNomCompletPrefere;
-
-	var valeurEnfantDateNaissance = $formulaireValeurs.find('.valeurEnfantDateNaissance').val();
-	if(valeurEnfantDateNaissance != null && valeurEnfantDateNaissance !== '')
-		vals['enfantDateNaissance'] = valeurEnfantDateNaissance;
-
-	var valeurMereNomCompletPrefere = $formulaireValeurs.find('.valeurMereNomCompletPrefere').val();
-	if(valeurMereNomCompletPrefere != null && valeurMereNomCompletPrefere !== '')
-		vals['mereNomCompletPrefere'] = valeurMereNomCompletPrefere;
-
-	var valeurPereNomCompletPrefere = $formulaireValeurs.find('.valeurPereNomCompletPrefere').val();
-	if(valeurPereNomCompletPrefere != null && valeurPereNomCompletPrefere !== '')
-		vals['pereNomCompletPrefere'] = valeurPereNomCompletPrefere;
-
-	var valeurFraisMontantDu = $formulaireValeurs.find('.valeurFraisMontantDu').val();
-	if(valeurFraisMontantDu != null && valeurFraisMontantDu !== '')
-		vals['fraisMontantDu'] = valeurFraisMontantDu;
-
-	var valeurFraisMontantPasse = $formulaireValeurs.find('.valeurFraisMontantPasse').val();
-	if(valeurFraisMontantPasse != null && valeurFraisMontantPasse !== '')
-		vals['fraisMontantPasse'] = valeurFraisMontantPasse;
-
-	var valeurFraisMontantNonPasse = $formulaireValeurs.find('.valeurFraisMontantNonPasse').val();
-	if(valeurFraisMontantNonPasse != null && valeurFraisMontantNonPasse !== '')
-		vals['fraisMontantNonPasse'] = valeurFraisMontantNonPasse;
-
-	var valeurFraisMontantFuture = $formulaireValeurs.find('.valeurFraisMontantFuture').val();
-	if(valeurFraisMontantFuture != null && valeurFraisMontantFuture !== '')
-		vals['fraisMontantFuture'] = valeurFraisMontantFuture;
 
 	var valeurPaiementNomCourt = $formulaireValeurs.find('.valeurPaiementNomCourt').val();
 	if(valeurPaiementNomCourt != null && valeurPaiementNomCourt !== '')
@@ -422,9 +366,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurPk = $formulaireValeurs.find('.valeurPk').val();
 	var removePk = $formulaireValeurs.find('.removePk').val() === 'true';
 	var setPk = removePk ? null : $formulaireValeurs.find('.setPk').val();
+	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(removePk || setPk != null && setPk !== '')
 		vals['setPk'] = setPk;
-	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(addPk != null && addPk !== '')
 		vals['addPk'] = addPk;
 	var removePk = $formulaireValeurs.find('.removePk').val();
@@ -434,9 +378,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurCree = $formulaireValeurs.find('.valeurCree').val();
 	var removeCree = $formulaireValeurs.find('.removeCree').val() === 'true';
 	var setCree = removeCree ? null : $formulaireValeurs.find('.setCree').val();
+	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(removeCree || setCree != null && setCree !== '')
 		vals['setCree'] = setCree;
-	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(addCree != null && addCree !== '')
 		vals['addCree'] = addCree;
 	var removeCree = $formulaireValeurs.find('.removeCree').val();
@@ -446,9 +390,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurModifie = $formulaireValeurs.find('.valeurModifie').val();
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val() === 'true';
 	var setModifie = removeModifie ? null : $formulaireValeurs.find('.setModifie').val();
+	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(removeModifie || setModifie != null && setModifie !== '')
 		vals['setModifie'] = setModifie;
-	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(addModifie != null && addModifie !== '')
 		vals['addModifie'] = addModifie;
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val();
@@ -458,9 +402,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurObjetId = $formulaireValeurs.find('.valeurObjetId').val();
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val() === 'true';
 	var setObjetId = removeObjetId ? null : $formulaireValeurs.find('.setObjetId').val();
+	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(removeObjetId || setObjetId != null && setObjetId !== '')
 		vals['setObjetId'] = setObjetId;
-	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(addObjetId != null && addObjetId !== '')
 		vals['addObjetId'] = addObjetId;
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val();
@@ -473,10 +417,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurArchive = null;
 	if(valeurArchiveSelectVal != null && valeurArchiveSelectVal !== '')
 		valeurArchive = valeurArchiveSelectVal == 'true';
-	setArchive = removeArchive ? null : valeurArchive;
+	var setArchive = removeArchive ? null : valeurArchive;
+	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(removeArchive || setArchive != null && setArchive !== '')
 		vals['setArchive'] = setArchive;
-	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(addArchive != null && addArchive !== '')
 		vals['addArchive'] = addArchive;
 	var removeArchive = $formulaireValeurs.find('.removeArchive').prop('checked');
@@ -489,10 +433,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurSupprime = null;
 	if(valeurSupprimeSelectVal != null && valeurSupprimeSelectVal !== '')
 		valeurSupprime = valeurSupprimeSelectVal == 'true';
-	setSupprime = removeSupprime ? null : valeurSupprime;
+	var setSupprime = removeSupprime ? null : valeurSupprime;
+	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(removeSupprime || setSupprime != null && setSupprime !== '')
 		vals['setSupprime'] = setSupprime;
-	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(addSupprime != null && addSupprime !== '')
 		vals['addSupprime'] = addSupprime;
 	var removeSupprime = $formulaireValeurs.find('.removeSupprime').prop('checked');
@@ -502,9 +446,19 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurPaiementDate = $formulaireValeurs.find('.valeurPaiementDate').val();
 	var removePaiementDate = $formulaireValeurs.find('.removePaiementDate').val() === 'true';
 	var setPaiementDate = removePaiementDate ? null : $formulaireValeurs.find('.setPaiementDate').val();
+	var addPaiementDate = $formulaireValeurs.find('.addPaiementDate').val();
+	var setMoment = setPaiementDate ? moment(setPaiementDate, 'DD-MM-YYYY') : null; 
+	var addMoment = addPaiementDate ? moment(addPaiementDate, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setPaiementDate = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addPaiementDate = s;
+	} 
 	if(removePaiementDate || setPaiementDate != null && setPaiementDate !== '')
 		vals['setPaiementDate'] = setPaiementDate;
-	var addPaiementDate = $formulaireValeurs.find('.addPaiementDate').val();
 	if(addPaiementDate != null && addPaiementDate !== '')
 		vals['addPaiementDate'] = addPaiementDate;
 	var removePaiementDate = $formulaireValeurs.find('.removePaiementDate').val();
@@ -514,9 +468,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurPaiementMontant = $formulaireValeurs.find('.valeurPaiementMontant').val();
 	var removePaiementMontant = $formulaireValeurs.find('.removePaiementMontant').val() === 'true';
 	var setPaiementMontant = removePaiementMontant ? null : $formulaireValeurs.find('.setPaiementMontant').val();
+	var addPaiementMontant = $formulaireValeurs.find('.addPaiementMontant').val();
 	if(removePaiementMontant || setPaiementMontant != null && setPaiementMontant !== '')
 		vals['setPaiementMontant'] = setPaiementMontant;
-	var addPaiementMontant = $formulaireValeurs.find('.addPaiementMontant').val();
 	if(addPaiementMontant != null && addPaiementMontant !== '')
 		vals['addPaiementMontant'] = addPaiementMontant;
 	var removePaiementMontant = $formulaireValeurs.find('.removePaiementMontant').val();
@@ -529,10 +483,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurPaiementEspeces = null;
 	if(valeurPaiementEspecesSelectVal != null && valeurPaiementEspecesSelectVal !== '')
 		valeurPaiementEspeces = valeurPaiementEspecesSelectVal == 'true';
-	setPaiementEspeces = removePaiementEspeces ? null : valeurPaiementEspeces;
+	var setPaiementEspeces = removePaiementEspeces ? null : valeurPaiementEspeces;
+	var addPaiementEspeces = $formulaireValeurs.find('.addPaiementEspeces').prop('checked');
 	if(removePaiementEspeces || setPaiementEspeces != null && setPaiementEspeces !== '')
 		vals['setPaiementEspeces'] = setPaiementEspeces;
-	var addPaiementEspeces = $formulaireValeurs.find('.addPaiementEspeces').prop('checked');
 	if(addPaiementEspeces != null && addPaiementEspeces !== '')
 		vals['addPaiementEspeces'] = addPaiementEspeces;
 	var removePaiementEspeces = $formulaireValeurs.find('.removePaiementEspeces').prop('checked');
@@ -545,10 +499,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurPaiementCheque = null;
 	if(valeurPaiementChequeSelectVal != null && valeurPaiementChequeSelectVal !== '')
 		valeurPaiementCheque = valeurPaiementChequeSelectVal == 'true';
-	setPaiementCheque = removePaiementCheque ? null : valeurPaiementCheque;
+	var setPaiementCheque = removePaiementCheque ? null : valeurPaiementCheque;
+	var addPaiementCheque = $formulaireValeurs.find('.addPaiementCheque').prop('checked');
 	if(removePaiementCheque || setPaiementCheque != null && setPaiementCheque !== '')
 		vals['setPaiementCheque'] = setPaiementCheque;
-	var addPaiementCheque = $formulaireValeurs.find('.addPaiementCheque').prop('checked');
 	if(addPaiementCheque != null && addPaiementCheque !== '')
 		vals['addPaiementCheque'] = addPaiementCheque;
 	var removePaiementCheque = $formulaireValeurs.find('.removePaiementCheque').prop('checked');
@@ -561,10 +515,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurPaiementECheck = null;
 	if(valeurPaiementECheckSelectVal != null && valeurPaiementECheckSelectVal !== '')
 		valeurPaiementECheck = valeurPaiementECheckSelectVal == 'true';
-	setPaiementECheck = removePaiementECheck ? null : valeurPaiementECheck;
+	var setPaiementECheck = removePaiementECheck ? null : valeurPaiementECheck;
+	var addPaiementECheck = $formulaireValeurs.find('.addPaiementECheck').prop('checked');
 	if(removePaiementECheck || setPaiementECheck != null && setPaiementECheck !== '')
 		vals['setPaiementECheck'] = setPaiementECheck;
-	var addPaiementECheck = $formulaireValeurs.find('.addPaiementECheck').prop('checked');
 	if(addPaiementECheck != null && addPaiementECheck !== '')
 		vals['addPaiementECheck'] = addPaiementECheck;
 	var removePaiementECheck = $formulaireValeurs.find('.removePaiementECheck').prop('checked');
@@ -577,10 +531,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurPaiementSysteme = null;
 	if(valeurPaiementSystemeSelectVal != null && valeurPaiementSystemeSelectVal !== '')
 		valeurPaiementSysteme = valeurPaiementSystemeSelectVal == 'true';
-	setPaiementSysteme = removePaiementSysteme ? null : valeurPaiementSysteme;
+	var setPaiementSysteme = removePaiementSysteme ? null : valeurPaiementSysteme;
+	var addPaiementSysteme = $formulaireValeurs.find('.addPaiementSysteme').prop('checked');
 	if(removePaiementSysteme || setPaiementSysteme != null && setPaiementSysteme !== '')
 		vals['setPaiementSysteme'] = setPaiementSysteme;
-	var addPaiementSysteme = $formulaireValeurs.find('.addPaiementSysteme').prop('checked');
 	if(addPaiementSysteme != null && addPaiementSysteme !== '')
 		vals['addPaiementSysteme'] = addPaiementSysteme;
 	var removePaiementSysteme = $formulaireValeurs.find('.removePaiementSysteme').prop('checked');
@@ -590,9 +544,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurPaiementDescription = $formulaireValeurs.find('.valeurPaiementDescription').val();
 	var removePaiementDescription = $formulaireValeurs.find('.removePaiementDescription').val() === 'true';
 	var setPaiementDescription = removePaiementDescription ? null : $formulaireValeurs.find('.setPaiementDescription').val();
+	var addPaiementDescription = $formulaireValeurs.find('.addPaiementDescription').val();
 	if(removePaiementDescription || setPaiementDescription != null && setPaiementDescription !== '')
 		vals['setPaiementDescription'] = setPaiementDescription;
-	var addPaiementDescription = $formulaireValeurs.find('.addPaiementDescription').val();
 	if(addPaiementDescription != null && addPaiementDescription !== '')
 		vals['addPaiementDescription'] = addPaiementDescription;
 	var removePaiementDescription = $formulaireValeurs.find('.removePaiementDescription').val();
@@ -602,9 +556,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurPaiementPar = $formulaireValeurs.find('.valeurPaiementPar').val();
 	var removePaiementPar = $formulaireValeurs.find('.removePaiementPar').val() === 'true';
 	var setPaiementPar = removePaiementPar ? null : $formulaireValeurs.find('.setPaiementPar').val();
+	var addPaiementPar = $formulaireValeurs.find('.addPaiementPar').val();
 	if(removePaiementPar || setPaiementPar != null && setPaiementPar !== '')
 		vals['setPaiementPar'] = setPaiementPar;
-	var addPaiementPar = $formulaireValeurs.find('.addPaiementPar').val();
 	if(addPaiementPar != null && addPaiementPar !== '')
 		vals['addPaiementPar'] = addPaiementPar;
 	var removePaiementPar = $formulaireValeurs.find('.removePaiementPar').val();
@@ -617,10 +571,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurInscriptionPaimentChaqueMois = null;
 	if(valeurInscriptionPaimentChaqueMoisSelectVal != null && valeurInscriptionPaimentChaqueMoisSelectVal !== '')
 		valeurInscriptionPaimentChaqueMois = valeurInscriptionPaimentChaqueMoisSelectVal == 'true';
-	setInscriptionPaimentChaqueMois = removeInscriptionPaimentChaqueMois ? null : valeurInscriptionPaimentChaqueMois;
+	var setInscriptionPaimentChaqueMois = removeInscriptionPaimentChaqueMois ? null : valeurInscriptionPaimentChaqueMois;
+	var addInscriptionPaimentChaqueMois = $formulaireValeurs.find('.addInscriptionPaimentChaqueMois').prop('checked');
 	if(removeInscriptionPaimentChaqueMois || setInscriptionPaimentChaqueMois != null && setInscriptionPaimentChaqueMois !== '')
 		vals['setInscriptionPaimentChaqueMois'] = setInscriptionPaimentChaqueMois;
-	var addInscriptionPaimentChaqueMois = $formulaireValeurs.find('.addInscriptionPaimentChaqueMois').prop('checked');
 	if(addInscriptionPaimentChaqueMois != null && addInscriptionPaimentChaqueMois !== '')
 		vals['addInscriptionPaimentChaqueMois'] = addInscriptionPaimentChaqueMois;
 	var removeInscriptionPaimentChaqueMois = $formulaireValeurs.find('.removeInscriptionPaimentChaqueMois').prop('checked');
@@ -630,9 +584,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurTransactionId = $formulaireValeurs.find('.valeurTransactionId').val();
 	var removeTransactionId = $formulaireValeurs.find('.removeTransactionId').val() === 'true';
 	var setTransactionId = removeTransactionId ? null : $formulaireValeurs.find('.setTransactionId').val();
+	var addTransactionId = $formulaireValeurs.find('.addTransactionId').val();
 	if(removeTransactionId || setTransactionId != null && setTransactionId !== '')
 		vals['setTransactionId'] = setTransactionId;
-	var addTransactionId = $formulaireValeurs.find('.addTransactionId').val();
 	if(addTransactionId != null && addTransactionId !== '')
 		vals['addTransactionId'] = addTransactionId;
 	var removeTransactionId = $formulaireValeurs.find('.removeTransactionId').val();
@@ -642,9 +596,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurCustomerProfileId = $formulaireValeurs.find('.valeurCustomerProfileId').val();
 	var removeCustomerProfileId = $formulaireValeurs.find('.removeCustomerProfileId').val() === 'true';
 	var setCustomerProfileId = removeCustomerProfileId ? null : $formulaireValeurs.find('.setCustomerProfileId').val();
+	var addCustomerProfileId = $formulaireValeurs.find('.addCustomerProfileId').val();
 	if(removeCustomerProfileId || setCustomerProfileId != null && setCustomerProfileId !== '')
 		vals['setCustomerProfileId'] = setCustomerProfileId;
-	var addCustomerProfileId = $formulaireValeurs.find('.addCustomerProfileId').val();
 	if(addCustomerProfileId != null && addCustomerProfileId !== '')
 		vals['addCustomerProfileId'] = addCustomerProfileId;
 	var removeCustomerProfileId = $formulaireValeurs.find('.removeCustomerProfileId').val();
@@ -654,9 +608,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurTransactionStatus = $formulaireValeurs.find('.valeurTransactionStatus').val();
 	var removeTransactionStatus = $formulaireValeurs.find('.removeTransactionStatus').val() === 'true';
 	var setTransactionStatus = removeTransactionStatus ? null : $formulaireValeurs.find('.setTransactionStatus').val();
+	var addTransactionStatus = $formulaireValeurs.find('.addTransactionStatus').val();
 	if(removeTransactionStatus || setTransactionStatus != null && setTransactionStatus !== '')
 		vals['setTransactionStatus'] = setTransactionStatus;
-	var addTransactionStatus = $formulaireValeurs.find('.addTransactionStatus').val();
 	if(addTransactionStatus != null && addTransactionStatus !== '')
 		vals['addTransactionStatus'] = addTransactionStatus;
 	var removeTransactionStatus = $formulaireValeurs.find('.removeTransactionStatus').val();
@@ -669,10 +623,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurPaiementRecu = null;
 	if(valeurPaiementRecuSelectVal != null && valeurPaiementRecuSelectVal !== '')
 		valeurPaiementRecu = valeurPaiementRecuSelectVal == 'true';
-	setPaiementRecu = removePaiementRecu ? null : valeurPaiementRecu;
+	var setPaiementRecu = removePaiementRecu ? null : valeurPaiementRecu;
+	var addPaiementRecu = $formulaireValeurs.find('.addPaiementRecu').prop('checked');
 	if(removePaiementRecu || setPaiementRecu != null && setPaiementRecu !== '')
 		vals['setPaiementRecu'] = setPaiementRecu;
-	var addPaiementRecu = $formulaireValeurs.find('.addPaiementRecu').prop('checked');
 	if(addPaiementRecu != null && addPaiementRecu !== '')
 		vals['addPaiementRecu'] = addPaiementRecu;
 	var removePaiementRecu = $formulaireValeurs.find('.removePaiementRecu').prop('checked');
@@ -682,9 +636,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurFraisMontant = $formulaireValeurs.find('.valeurFraisMontant').val();
 	var removeFraisMontant = $formulaireValeurs.find('.removeFraisMontant').val() === 'true';
 	var setFraisMontant = removeFraisMontant ? null : $formulaireValeurs.find('.setFraisMontant').val();
+	var addFraisMontant = $formulaireValeurs.find('.addFraisMontant').val();
 	if(removeFraisMontant || setFraisMontant != null && setFraisMontant !== '')
 		vals['setFraisMontant'] = setFraisMontant;
-	var addFraisMontant = $formulaireValeurs.find('.addFraisMontant').val();
 	if(addFraisMontant != null && addFraisMontant !== '')
 		vals['addFraisMontant'] = addFraisMontant;
 	var removeFraisMontant = $formulaireValeurs.find('.removeFraisMontant').val();
@@ -697,10 +651,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurFraisPremierDernier = null;
 	if(valeurFraisPremierDernierSelectVal != null && valeurFraisPremierDernierSelectVal !== '')
 		valeurFraisPremierDernier = valeurFraisPremierDernierSelectVal == 'true';
-	setFraisPremierDernier = removeFraisPremierDernier ? null : valeurFraisPremierDernier;
+	var setFraisPremierDernier = removeFraisPremierDernier ? null : valeurFraisPremierDernier;
+	var addFraisPremierDernier = $formulaireValeurs.find('.addFraisPremierDernier').prop('checked');
 	if(removeFraisPremierDernier || setFraisPremierDernier != null && setFraisPremierDernier !== '')
 		vals['setFraisPremierDernier'] = setFraisPremierDernier;
-	var addFraisPremierDernier = $formulaireValeurs.find('.addFraisPremierDernier').prop('checked');
 	if(addFraisPremierDernier != null && addFraisPremierDernier !== '')
 		vals['addFraisPremierDernier'] = addFraisPremierDernier;
 	var removeFraisPremierDernier = $formulaireValeurs.find('.removeFraisPremierDernier').prop('checked');
@@ -713,10 +667,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurFraisInscription = null;
 	if(valeurFraisInscriptionSelectVal != null && valeurFraisInscriptionSelectVal !== '')
 		valeurFraisInscription = valeurFraisInscriptionSelectVal == 'true';
-	setFraisInscription = removeFraisInscription ? null : valeurFraisInscription;
+	var setFraisInscription = removeFraisInscription ? null : valeurFraisInscription;
+	var addFraisInscription = $formulaireValeurs.find('.addFraisInscription').prop('checked');
 	if(removeFraisInscription || setFraisInscription != null && setFraisInscription !== '')
 		vals['setFraisInscription'] = setFraisInscription;
-	var addFraisInscription = $formulaireValeurs.find('.addFraisInscription').prop('checked');
 	if(addFraisInscription != null && addFraisInscription !== '')
 		vals['addFraisInscription'] = addFraisInscription;
 	var removeFraisInscription = $formulaireValeurs.find('.removeFraisInscription').prop('checked');
@@ -729,10 +683,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurFraisMois = null;
 	if(valeurFraisMoisSelectVal != null && valeurFraisMoisSelectVal !== '')
 		valeurFraisMois = valeurFraisMoisSelectVal == 'true';
-	setFraisMois = removeFraisMois ? null : valeurFraisMois;
+	var setFraisMois = removeFraisMois ? null : valeurFraisMois;
+	var addFraisMois = $formulaireValeurs.find('.addFraisMois').prop('checked');
 	if(removeFraisMois || setFraisMois != null && setFraisMois !== '')
 		vals['setFraisMois'] = setFraisMois;
-	var addFraisMois = $formulaireValeurs.find('.addFraisMois').prop('checked');
 	if(addFraisMois != null && addFraisMois !== '')
 		vals['addFraisMois'] = addFraisMois;
 	var removeFraisMois = $formulaireValeurs.find('.removeFraisMois').prop('checked');
@@ -745,10 +699,10 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurFraisRetard = null;
 	if(valeurFraisRetardSelectVal != null && valeurFraisRetardSelectVal !== '')
 		valeurFraisRetard = valeurFraisRetardSelectVal == 'true';
-	setFraisRetard = removeFraisRetard ? null : valeurFraisRetard;
+	var setFraisRetard = removeFraisRetard ? null : valeurFraisRetard;
+	var addFraisRetard = $formulaireValeurs.find('.addFraisRetard').prop('checked');
 	if(removeFraisRetard || setFraisRetard != null && setFraisRetard !== '')
 		vals['setFraisRetard'] = setFraisRetard;
-	var addFraisRetard = $formulaireValeurs.find('.addFraisRetard').prop('checked');
 	if(addFraisRetard != null && addFraisRetard !== '')
 		vals['addFraisRetard'] = addFraisRetard;
 	var removeFraisRetard = $formulaireValeurs.find('.removeFraisRetard').prop('checked');
@@ -759,12 +713,34 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	if(valeurInscriptionCle != null && valeurInscriptionCle !== '')
 		vals['setInscriptionCle'] = valeurInscriptionCle;
 
+	var valeurFraisRetardDate = $formulaireValeurs.find('.valeurFraisRetardDate').val();
+	var removeFraisRetardDate = $formulaireValeurs.find('.removeFraisRetardDate').val() === 'true';
+	var setFraisRetardDate = removeFraisRetardDate ? null : $formulaireValeurs.find('.setFraisRetardDate').val();
+	var addFraisRetardDate = $formulaireValeurs.find('.addFraisRetardDate').val();
+	var setMoment = setFraisRetardDate ? moment(setFraisRetardDate, 'DD-MM-YYYY') : null; 
+	var addMoment = addFraisRetardDate ? moment(addFraisRetardDate, 'DD-MM-YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setFraisRetardDate = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addFraisRetardDate = s;
+	} 
+	if(removeFraisRetardDate || setFraisRetardDate != null && setFraisRetardDate !== '')
+		vals['setFraisRetardDate'] = setFraisRetardDate;
+	if(addFraisRetardDate != null && addFraisRetardDate !== '')
+		vals['addFraisRetardDate'] = addFraisRetardDate;
+	var removeFraisRetardDate = $formulaireValeurs.find('.removeFraisRetardDate').val();
+	if(removeFraisRetardDate != null && removeFraisRetardDate !== '')
+		vals['removeFraisRetardDate'] = removeFraisRetardDate;
+
 	var valeurInheritPk = $formulaireValeurs.find('.valeurInheritPk').val();
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val() === 'true';
 	var setInheritPk = removeInheritPk ? null : $formulaireValeurs.find('.setInheritPk').val();
+	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(removeInheritPk || setInheritPk != null && setInheritPk !== '')
 		vals['setInheritPk'] = setInheritPk;
-	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(addInheritPk != null && addInheritPk !== '')
 		vals['addInheritPk'] = addInheritPk;
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val();
@@ -774,9 +750,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurSessionId = $formulaireValeurs.find('.valeurSessionId').val();
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val() === 'true';
 	var setSessionId = removeSessionId ? null : $formulaireValeurs.find('.setSessionId').val();
+	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(removeSessionId || setSessionId != null && setSessionId !== '')
 		vals['setSessionId'] = setSessionId;
-	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(addSessionId != null && addSessionId !== '')
 		vals['addSessionId'] = addSessionId;
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val();
@@ -786,9 +762,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurUtilisateurId = $formulaireValeurs.find('.valeurUtilisateurId').val();
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val() === 'true';
 	var setUtilisateurId = removeUtilisateurId ? null : $formulaireValeurs.find('.setUtilisateurId').val();
+	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(removeUtilisateurId || setUtilisateurId != null && setUtilisateurId !== '')
 		vals['setUtilisateurId'] = setUtilisateurId;
-	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(addUtilisateurId != null && addUtilisateurId !== '')
 		vals['addUtilisateurId'] = addUtilisateurId;
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val();
@@ -798,9 +774,9 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurUtilisateurCle = $formulaireValeurs.find('.valeurUtilisateurCle').val();
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val() === 'true';
 	var setUtilisateurCle = removeUtilisateurCle ? null : $formulaireValeurs.find('.setUtilisateurCle').val();
+	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(removeUtilisateurCle || setUtilisateurCle != null && setUtilisateurCle !== '')
 		vals['setUtilisateurCle'] = setUtilisateurCle;
-	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(addUtilisateurCle != null && addUtilisateurCle !== '')
 		vals['addUtilisateurCle'] = addUtilisateurCle;
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val();
@@ -810,117 +786,21 @@ async function patchPaiementScolaire($formulaireFiltres, $formulaireValeurs, pk,
 	var valeurObjetTitre = $formulaireValeurs.find('.valeurObjetTitre').val();
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val() === 'true';
 	var setObjetTitre = removeObjetTitre ? null : $formulaireValeurs.find('.setObjetTitre').val();
+	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(removeObjetTitre || setObjetTitre != null && setObjetTitre !== '')
 		vals['setObjetTitre'] = setObjetTitre;
-	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(addObjetTitre != null && addObjetTitre !== '')
 		vals['addObjetTitre'] = addObjetTitre;
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val();
 	if(removeObjetTitre != null && removeObjetTitre !== '')
 		vals['removeObjetTitre'] = removeObjetTitre;
 
-	var valeurEnfantNomCompletPrefere = $formulaireValeurs.find('.valeurEnfantNomCompletPrefere').val();
-	var removeEnfantNomCompletPrefere = $formulaireValeurs.find('.removeEnfantNomCompletPrefere').val() === 'true';
-	var setEnfantNomCompletPrefere = removeEnfantNomCompletPrefere ? null : $formulaireValeurs.find('.setEnfantNomCompletPrefere').val();
-	if(removeEnfantNomCompletPrefere || setEnfantNomCompletPrefere != null && setEnfantNomCompletPrefere !== '')
-		vals['setEnfantNomCompletPrefere'] = setEnfantNomCompletPrefere;
-	var addEnfantNomCompletPrefere = $formulaireValeurs.find('.addEnfantNomCompletPrefere').val();
-	if(addEnfantNomCompletPrefere != null && addEnfantNomCompletPrefere !== '')
-		vals['addEnfantNomCompletPrefere'] = addEnfantNomCompletPrefere;
-	var removeEnfantNomCompletPrefere = $formulaireValeurs.find('.removeEnfantNomCompletPrefere').val();
-	if(removeEnfantNomCompletPrefere != null && removeEnfantNomCompletPrefere !== '')
-		vals['removeEnfantNomCompletPrefere'] = removeEnfantNomCompletPrefere;
-
-	var valeurEnfantDateNaissance = $formulaireValeurs.find('.valeurEnfantDateNaissance').val();
-	var removeEnfantDateNaissance = $formulaireValeurs.find('.removeEnfantDateNaissance').val() === 'true';
-	var setEnfantDateNaissance = removeEnfantDateNaissance ? null : $formulaireValeurs.find('.setEnfantDateNaissance').val();
-	if(removeEnfantDateNaissance || setEnfantDateNaissance != null && setEnfantDateNaissance !== '')
-		vals['setEnfantDateNaissance'] = setEnfantDateNaissance;
-	var addEnfantDateNaissance = $formulaireValeurs.find('.addEnfantDateNaissance').val();
-	if(addEnfantDateNaissance != null && addEnfantDateNaissance !== '')
-		vals['addEnfantDateNaissance'] = addEnfantDateNaissance;
-	var removeEnfantDateNaissance = $formulaireValeurs.find('.removeEnfantDateNaissance').val();
-	if(removeEnfantDateNaissance != null && removeEnfantDateNaissance !== '')
-		vals['removeEnfantDateNaissance'] = removeEnfantDateNaissance;
-
-	var valeurMereNomCompletPrefere = $formulaireValeurs.find('.valeurMereNomCompletPrefere').val();
-	var removeMereNomCompletPrefere = $formulaireValeurs.find('.removeMereNomCompletPrefere').val() === 'true';
-	var setMereNomCompletPrefere = removeMereNomCompletPrefere ? null : $formulaireValeurs.find('.setMereNomCompletPrefere').val();
-	if(removeMereNomCompletPrefere || setMereNomCompletPrefere != null && setMereNomCompletPrefere !== '')
-		vals['setMereNomCompletPrefere'] = setMereNomCompletPrefere;
-	var addMereNomCompletPrefere = $formulaireValeurs.find('.addMereNomCompletPrefere').val();
-	if(addMereNomCompletPrefere != null && addMereNomCompletPrefere !== '')
-		vals['addMereNomCompletPrefere'] = addMereNomCompletPrefere;
-	var removeMereNomCompletPrefere = $formulaireValeurs.find('.removeMereNomCompletPrefere').val();
-	if(removeMereNomCompletPrefere != null && removeMereNomCompletPrefere !== '')
-		vals['removeMereNomCompletPrefere'] = removeMereNomCompletPrefere;
-
-	var valeurPereNomCompletPrefere = $formulaireValeurs.find('.valeurPereNomCompletPrefere').val();
-	var removePereNomCompletPrefere = $formulaireValeurs.find('.removePereNomCompletPrefere').val() === 'true';
-	var setPereNomCompletPrefere = removePereNomCompletPrefere ? null : $formulaireValeurs.find('.setPereNomCompletPrefere').val();
-	if(removePereNomCompletPrefere || setPereNomCompletPrefere != null && setPereNomCompletPrefere !== '')
-		vals['setPereNomCompletPrefere'] = setPereNomCompletPrefere;
-	var addPereNomCompletPrefere = $formulaireValeurs.find('.addPereNomCompletPrefere').val();
-	if(addPereNomCompletPrefere != null && addPereNomCompletPrefere !== '')
-		vals['addPereNomCompletPrefere'] = addPereNomCompletPrefere;
-	var removePereNomCompletPrefere = $formulaireValeurs.find('.removePereNomCompletPrefere').val();
-	if(removePereNomCompletPrefere != null && removePereNomCompletPrefere !== '')
-		vals['removePereNomCompletPrefere'] = removePereNomCompletPrefere;
-
-	var valeurFraisMontantDu = $formulaireValeurs.find('.valeurFraisMontantDu').val();
-	var removeFraisMontantDu = $formulaireValeurs.find('.removeFraisMontantDu').val() === 'true';
-	var setFraisMontantDu = removeFraisMontantDu ? null : $formulaireValeurs.find('.setFraisMontantDu').val();
-	if(removeFraisMontantDu || setFraisMontantDu != null && setFraisMontantDu !== '')
-		vals['setFraisMontantDu'] = setFraisMontantDu;
-	var addFraisMontantDu = $formulaireValeurs.find('.addFraisMontantDu').val();
-	if(addFraisMontantDu != null && addFraisMontantDu !== '')
-		vals['addFraisMontantDu'] = addFraisMontantDu;
-	var removeFraisMontantDu = $formulaireValeurs.find('.removeFraisMontantDu').val();
-	if(removeFraisMontantDu != null && removeFraisMontantDu !== '')
-		vals['removeFraisMontantDu'] = removeFraisMontantDu;
-
-	var valeurFraisMontantPasse = $formulaireValeurs.find('.valeurFraisMontantPasse').val();
-	var removeFraisMontantPasse = $formulaireValeurs.find('.removeFraisMontantPasse').val() === 'true';
-	var setFraisMontantPasse = removeFraisMontantPasse ? null : $formulaireValeurs.find('.setFraisMontantPasse').val();
-	if(removeFraisMontantPasse || setFraisMontantPasse != null && setFraisMontantPasse !== '')
-		vals['setFraisMontantPasse'] = setFraisMontantPasse;
-	var addFraisMontantPasse = $formulaireValeurs.find('.addFraisMontantPasse').val();
-	if(addFraisMontantPasse != null && addFraisMontantPasse !== '')
-		vals['addFraisMontantPasse'] = addFraisMontantPasse;
-	var removeFraisMontantPasse = $formulaireValeurs.find('.removeFraisMontantPasse').val();
-	if(removeFraisMontantPasse != null && removeFraisMontantPasse !== '')
-		vals['removeFraisMontantPasse'] = removeFraisMontantPasse;
-
-	var valeurFraisMontantNonPasse = $formulaireValeurs.find('.valeurFraisMontantNonPasse').val();
-	var removeFraisMontantNonPasse = $formulaireValeurs.find('.removeFraisMontantNonPasse').val() === 'true';
-	var setFraisMontantNonPasse = removeFraisMontantNonPasse ? null : $formulaireValeurs.find('.setFraisMontantNonPasse').val();
-	if(removeFraisMontantNonPasse || setFraisMontantNonPasse != null && setFraisMontantNonPasse !== '')
-		vals['setFraisMontantNonPasse'] = setFraisMontantNonPasse;
-	var addFraisMontantNonPasse = $formulaireValeurs.find('.addFraisMontantNonPasse').val();
-	if(addFraisMontantNonPasse != null && addFraisMontantNonPasse !== '')
-		vals['addFraisMontantNonPasse'] = addFraisMontantNonPasse;
-	var removeFraisMontantNonPasse = $formulaireValeurs.find('.removeFraisMontantNonPasse').val();
-	if(removeFraisMontantNonPasse != null && removeFraisMontantNonPasse !== '')
-		vals['removeFraisMontantNonPasse'] = removeFraisMontantNonPasse;
-
-	var valeurFraisMontantFuture = $formulaireValeurs.find('.valeurFraisMontantFuture').val();
-	var removeFraisMontantFuture = $formulaireValeurs.find('.removeFraisMontantFuture').val() === 'true';
-	var setFraisMontantFuture = removeFraisMontantFuture ? null : $formulaireValeurs.find('.setFraisMontantFuture').val();
-	if(removeFraisMontantFuture || setFraisMontantFuture != null && setFraisMontantFuture !== '')
-		vals['setFraisMontantFuture'] = setFraisMontantFuture;
-	var addFraisMontantFuture = $formulaireValeurs.find('.addFraisMontantFuture').val();
-	if(addFraisMontantFuture != null && addFraisMontantFuture !== '')
-		vals['addFraisMontantFuture'] = addFraisMontantFuture;
-	var removeFraisMontantFuture = $formulaireValeurs.find('.removeFraisMontantFuture').val();
-	if(removeFraisMontantFuture != null && removeFraisMontantFuture !== '')
-		vals['removeFraisMontantFuture'] = removeFraisMontantFuture;
-
 	var valeurPaiementNomCourt = $formulaireValeurs.find('.valeurPaiementNomCourt').val();
 	var removePaiementNomCourt = $formulaireValeurs.find('.removePaiementNomCourt').val() === 'true';
 	var setPaiementNomCourt = removePaiementNomCourt ? null : $formulaireValeurs.find('.setPaiementNomCourt').val();
+	var addPaiementNomCourt = $formulaireValeurs.find('.addPaiementNomCourt').val();
 	if(removePaiementNomCourt || setPaiementNomCourt != null && setPaiementNomCourt !== '')
 		vals['setPaiementNomCourt'] = setPaiementNomCourt;
-	var addPaiementNomCourt = $formulaireValeurs.find('.addPaiementNomCourt').val();
 	if(addPaiementNomCourt != null && addPaiementNomCourt !== '')
 		vals['addPaiementNomCourt'] = addPaiementNomCourt;
 	var removePaiementNomCourt = $formulaireValeurs.find('.removePaiementNomCourt').val();
@@ -1105,6 +985,10 @@ function patchPaiementScolaireFiltres($formulaireFiltres) {
 		var filtreInscriptionCle = $formulaireFiltres.find('.valeurInscriptionCle').val();
 		if(filtreInscriptionCle != null && filtreInscriptionCle !== '')
 			filtres.push({ name: 'fq', value: 'inscriptionCle:' + filtreInscriptionCle });
+
+		var filtreFraisRetardDate = $formulaireFiltres.find('.valeurFraisRetardDate').val();
+		if(filtreFraisRetardDate != null && filtreFraisRetardDate !== '')
+			filtres.push({ name: 'fq', value: 'fraisRetardDate:' + filtreFraisRetardDate });
 
 		var filtreInheritPk = $formulaireFiltres.find('.valeurInheritPk').val();
 		if(filtreInheritPk != null && filtreInheritPk !== '')
@@ -1556,6 +1440,10 @@ function recherchePaiementScolaireFiltres($formulaireFiltres) {
 		if(filtreInscriptionCle != null && filtreInscriptionCle !== '')
 			filtres.push({ name: 'fq', value: 'inscriptionCle:' + filtreInscriptionCle });
 
+		var filtreFraisRetardDate = $formulaireFiltres.find('.valeurFraisRetardDate').val();
+		if(filtreFraisRetardDate != null && filtreFraisRetardDate !== '')
+			filtres.push({ name: 'fq', value: 'fraisRetardDate:' + filtreFraisRetardDate });
+
 		var filtreInheritPk = $formulaireFiltres.find('.valeurInheritPk').val();
 		if(filtreInheritPk != null && filtreInheritPk !== '')
 			filtres.push({ name: 'fq', value: 'inheritPk:' + filtreInheritPk });
@@ -1866,10 +1754,10 @@ async function websocketPaiementScolaire(success) {
 			var pkPage = $('#PaiementScolaireForm :input[name=pk]').val();
 			var pks = json['pks'];
 			var empty = json['empty'];
-			var numFound = json['numFound'];
-			var numPATCH = json['numPATCH'];
+			var numFound = parseInt(json['numFound']);
+			var numPATCH = parseInt(json['numPATCH']);
 			var percent = Math.floor( numPATCH / numFound * 100 ) + '%';
-			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id);
+			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id).attr('data-numPATCH', numPATCH);
 			var $margin = $('<div>').attr('class', 'w3-margin ').attr('id', 'margin-' + id);
 			var $card = $('<div>').attr('class', 'w3-card w3-white ').attr('id', 'card-' + id);
 			var $header = $('<div>').attr('class', 'w3-container fa-green ').attr('id', 'header-' + id);
@@ -1888,10 +1776,18 @@ async function websocketPaiementScolaire(success) {
 			$card.append($body);
 			$box.append($margin);
 			$margin.append($card);
-			$('.box-' + id).remove();
-			if(numPATCH < numFound)
-			$('.top-box').append($box);
-			if(pk && pkPage && pk == pkPage) {;
+			if(numPATCH < numFound) {
+				var $old_box = $('.box-' + id);
+				if(!$old_box.size()) {
+					$('.top-box').append($box);
+				} else if($old_box && $old_box.attr('data-numPATCH') < numFound) {
+					$('.box-' + id).remove();
+					$('.top-box').append($box);
+				}
+			} else {
+				$('.box-' + id).remove();
+			}
+			if(pk && pkPage && pk == pkPage) {
 				if(success)
 					success(json);
 			}
@@ -2219,6 +2115,23 @@ async function websocketPaiementScolaireInner(requeteApi) {
 						$(this).text(val);
 				});
 				ajouterLueur($('.inputPaiementScolaire' + pk + 'InscriptionCle'));
+			}
+			var val = o['fraisRetardDate'];
+			if(val != null) {
+				var t = moment(val, 'YYYY-MM-DD');
+				if(t)
+					val = t.format('DD-MM-YYYY');
+			}
+			if(vars.includes('fraisRetardDate')) {
+				$('.inputPaiementScolaire' + pk + 'FraisRetardDate').each(function() {
+					if(val !== $(this).val())
+						$(this).val(val);
+				});
+				$('.varPaiementScolaire' + pk + 'FraisRetardDate').each(function() {
+					if(val !== $(this).text())
+						$(this).text(val);
+				});
+				ajouterLueur($('.inputPaiementScolaire' + pk + 'FraisRetardDate'));
 			}
 			var val = o['inheritPk'];
 			if(vars.includes('inheritPk')) {

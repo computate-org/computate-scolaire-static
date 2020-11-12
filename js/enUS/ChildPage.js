@@ -257,9 +257,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valuePk = $formValues.find('.valuePk').val();
 	var removePk = $formValues.find('.removePk').val() === 'true';
 	var setPk = removePk ? null : $formValues.find('.setPk').val();
+	var addPk = $formValues.find('.addPk').val();
 	if(removePk || setPk != null && setPk !== '')
 		vals['setPk'] = setPk;
-	var addPk = $formValues.find('.addPk').val();
 	if(addPk != null && addPk !== '')
 		vals['addPk'] = addPk;
 	var removePk = $formValues.find('.removePk').val();
@@ -269,9 +269,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valueCreated = $formValues.find('.valueCreated').val();
 	var removeCreated = $formValues.find('.removeCreated').val() === 'true';
 	var setCreated = removeCreated ? null : $formValues.find('.setCreated').val();
+	var addCreated = $formValues.find('.addCreated').val();
 	if(removeCreated || setCreated != null && setCreated !== '')
 		vals['setCreated'] = setCreated;
-	var addCreated = $formValues.find('.addCreated').val();
 	if(addCreated != null && addCreated !== '')
 		vals['addCreated'] = addCreated;
 	var removeCreated = $formValues.find('.removeCreated').val();
@@ -281,9 +281,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valueModified = $formValues.find('.valueModified').val();
 	var removeModified = $formValues.find('.removeModified').val() === 'true';
 	var setModified = removeModified ? null : $formValues.find('.setModified').val();
+	var addModified = $formValues.find('.addModified').val();
 	if(removeModified || setModified != null && setModified !== '')
 		vals['setModified'] = setModified;
-	var addModified = $formValues.find('.addModified').val();
 	if(addModified != null && addModified !== '')
 		vals['addModified'] = addModified;
 	var removeModified = $formValues.find('.removeModified').val();
@@ -293,9 +293,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valueObjectId = $formValues.find('.valueObjectId').val();
 	var removeObjectId = $formValues.find('.removeObjectId').val() === 'true';
 	var setObjectId = removeObjectId ? null : $formValues.find('.setObjectId').val();
+	var addObjectId = $formValues.find('.addObjectId').val();
 	if(removeObjectId || setObjectId != null && setObjectId !== '')
 		vals['setObjectId'] = setObjectId;
-	var addObjectId = $formValues.find('.addObjectId').val();
 	if(addObjectId != null && addObjectId !== '')
 		vals['addObjectId'] = addObjectId;
 	var removeObjectId = $formValues.find('.removeObjectId').val();
@@ -308,10 +308,10 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valueArchived = null;
 	if(valueArchivedSelectVal != null && valueArchivedSelectVal !== '')
 		valueArchived = valueArchivedSelectVal == 'true';
-	setArchived = removeArchived ? null : valueArchived;
+	var setArchived = removeArchived ? null : valueArchived;
+	var addArchived = $formValues.find('.addArchived').prop('checked');
 	if(removeArchived || setArchived != null && setArchived !== '')
 		vals['setArchived'] = setArchived;
-	var addArchived = $formValues.find('.addArchived').prop('checked');
 	if(addArchived != null && addArchived !== '')
 		vals['addArchived'] = addArchived;
 	var removeArchived = $formValues.find('.removeArchived').prop('checked');
@@ -324,10 +324,10 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valueDeleted = null;
 	if(valueDeletedSelectVal != null && valueDeletedSelectVal !== '')
 		valueDeleted = valueDeletedSelectVal == 'true';
-	setDeleted = removeDeleted ? null : valueDeleted;
+	var setDeleted = removeDeleted ? null : valueDeleted;
+	var addDeleted = $formValues.find('.addDeleted').prop('checked');
 	if(removeDeleted || setDeleted != null && setDeleted !== '')
 		vals['setDeleted'] = setDeleted;
-	var addDeleted = $formValues.find('.addDeleted').prop('checked');
 	if(addDeleted != null && addDeleted !== '')
 		vals['addDeleted'] = addDeleted;
 	var removeDeleted = $formValues.find('.removeDeleted').prop('checked');
@@ -337,9 +337,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valuePersonFirstName = $formValues.find('.valuePersonFirstName').val();
 	var removePersonFirstName = $formValues.find('.removePersonFirstName').val() === 'true';
 	var setPersonFirstName = removePersonFirstName ? null : $formValues.find('.setPersonFirstName').val();
+	var addPersonFirstName = $formValues.find('.addPersonFirstName').val();
 	if(removePersonFirstName || setPersonFirstName != null && setPersonFirstName !== '')
 		vals['setPersonFirstName'] = setPersonFirstName;
-	var addPersonFirstName = $formValues.find('.addPersonFirstName').val();
 	if(addPersonFirstName != null && addPersonFirstName !== '')
 		vals['addPersonFirstName'] = addPersonFirstName;
 	var removePersonFirstName = $formValues.find('.removePersonFirstName').val();
@@ -349,9 +349,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valueFamilyName = $formValues.find('.valueFamilyName').val();
 	var removeFamilyName = $formValues.find('.removeFamilyName').val() === 'true';
 	var setFamilyName = removeFamilyName ? null : $formValues.find('.setFamilyName').val();
+	var addFamilyName = $formValues.find('.addFamilyName').val();
 	if(removeFamilyName || setFamilyName != null && setFamilyName !== '')
 		vals['setFamilyName'] = setFamilyName;
-	var addFamilyName = $formValues.find('.addFamilyName').val();
 	if(addFamilyName != null && addFamilyName !== '')
 		vals['addFamilyName'] = addFamilyName;
 	var removeFamilyName = $formValues.find('.removeFamilyName').val();
@@ -361,9 +361,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valuePersonFirstNamePreferred = $formValues.find('.valuePersonFirstNamePreferred').val();
 	var removePersonFirstNamePreferred = $formValues.find('.removePersonFirstNamePreferred').val() === 'true';
 	var setPersonFirstNamePreferred = removePersonFirstNamePreferred ? null : $formValues.find('.setPersonFirstNamePreferred').val();
+	var addPersonFirstNamePreferred = $formValues.find('.addPersonFirstNamePreferred').val();
 	if(removePersonFirstNamePreferred || setPersonFirstNamePreferred != null && setPersonFirstNamePreferred !== '')
 		vals['setPersonFirstNamePreferred'] = setPersonFirstNamePreferred;
-	var addPersonFirstNamePreferred = $formValues.find('.addPersonFirstNamePreferred').val();
 	if(addPersonFirstNamePreferred != null && addPersonFirstNamePreferred !== '')
 		vals['addPersonFirstNamePreferred'] = addPersonFirstNamePreferred;
 	var removePersonFirstNamePreferred = $formValues.find('.removePersonFirstNamePreferred').val();
@@ -373,9 +373,19 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valuePersonBirthDate = $formValues.find('.valuePersonBirthDate').val();
 	var removePersonBirthDate = $formValues.find('.removePersonBirthDate').val() === 'true';
 	var setPersonBirthDate = removePersonBirthDate ? null : $formValues.find('.setPersonBirthDate').val();
+	var addPersonBirthDate = $formValues.find('.addPersonBirthDate').val();
+	var setMoment = setPersonBirthDate ? moment(setPersonBirthDate, 'MM/DD/YYYY') : null; 
+	var addMoment = addPersonBirthDate ? moment(addPersonBirthDate, 'MM/DD/YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setPersonBirthDate = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addPersonBirthDate = s;
+	} 
 	if(removePersonBirthDate || setPersonBirthDate != null && setPersonBirthDate !== '')
 		vals['setPersonBirthDate'] = setPersonBirthDate;
-	var addPersonBirthDate = $formValues.find('.addPersonBirthDate').val();
 	if(addPersonBirthDate != null && addPersonBirthDate !== '')
 		vals['addPersonBirthDate'] = addPersonBirthDate;
 	var removePersonBirthDate = $formValues.find('.removePersonBirthDate').val();
@@ -385,9 +395,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valuePersonAgeInSeptember = $formValues.find('.valuePersonAgeInSeptember').val();
 	var removePersonAgeInSeptember = $formValues.find('.removePersonAgeInSeptember').val() === 'true';
 	var setPersonAgeInSeptember = removePersonAgeInSeptember ? null : $formValues.find('.setPersonAgeInSeptember').val();
+	var addPersonAgeInSeptember = $formValues.find('.addPersonAgeInSeptember').val();
 	if(removePersonAgeInSeptember || setPersonAgeInSeptember != null && setPersonAgeInSeptember !== '')
 		vals['setPersonAgeInSeptember'] = setPersonAgeInSeptember;
-	var addPersonAgeInSeptember = $formValues.find('.addPersonAgeInSeptember').val();
 	if(addPersonAgeInSeptember != null && addPersonAgeInSeptember !== '')
 		vals['addPersonAgeInSeptember'] = addPersonAgeInSeptember;
 	var removePersonAgeInSeptember = $formValues.find('.removePersonAgeInSeptember').val();
@@ -397,9 +407,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valuePhoto = $formValues.find('.valuePhoto').val();
 	var removePhoto = $formValues.find('.removePhoto').val() === 'true';
 	var setPhoto = removePhoto ? null : $formValues.find('.setPhoto').val();
+	var addPhoto = $formValues.find('.addPhoto').val();
 	if(removePhoto || setPhoto != null && setPhoto !== '')
 		vals['setPhoto'] = setPhoto;
-	var addPhoto = $formValues.find('.addPhoto').val();
 	if(addPhoto != null && addPhoto !== '')
 		vals['addPhoto'] = addPhoto;
 	var removePhoto = $formValues.find('.removePhoto').val();
@@ -413,9 +423,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valueInheritPk = $formValues.find('.valueInheritPk').val();
 	var removeInheritPk = $formValues.find('.removeInheritPk').val() === 'true';
 	var setInheritPk = removeInheritPk ? null : $formValues.find('.setInheritPk').val();
+	var addInheritPk = $formValues.find('.addInheritPk').val();
 	if(removeInheritPk || setInheritPk != null && setInheritPk !== '')
 		vals['setInheritPk'] = setInheritPk;
-	var addInheritPk = $formValues.find('.addInheritPk').val();
 	if(addInheritPk != null && addInheritPk !== '')
 		vals['addInheritPk'] = addInheritPk;
 	var removeInheritPk = $formValues.find('.removeInheritPk').val();
@@ -425,9 +435,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valueSessionId = $formValues.find('.valueSessionId').val();
 	var removeSessionId = $formValues.find('.removeSessionId').val() === 'true';
 	var setSessionId = removeSessionId ? null : $formValues.find('.setSessionId').val();
+	var addSessionId = $formValues.find('.addSessionId').val();
 	if(removeSessionId || setSessionId != null && setSessionId !== '')
 		vals['setSessionId'] = setSessionId;
-	var addSessionId = $formValues.find('.addSessionId').val();
 	if(addSessionId != null && addSessionId !== '')
 		vals['addSessionId'] = addSessionId;
 	var removeSessionId = $formValues.find('.removeSessionId').val();
@@ -437,9 +447,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valueUserId = $formValues.find('.valueUserId').val();
 	var removeUserId = $formValues.find('.removeUserId').val() === 'true';
 	var setUserId = removeUserId ? null : $formValues.find('.setUserId').val();
+	var addUserId = $formValues.find('.addUserId').val();
 	if(removeUserId || setUserId != null && setUserId !== '')
 		vals['setUserId'] = setUserId;
-	var addUserId = $formValues.find('.addUserId').val();
 	if(addUserId != null && addUserId !== '')
 		vals['addUserId'] = addUserId;
 	var removeUserId = $formValues.find('.removeUserId').val();
@@ -449,9 +459,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valueUserKey = $formValues.find('.valueUserKey').val();
 	var removeUserKey = $formValues.find('.removeUserKey').val() === 'true';
 	var setUserKey = removeUserKey ? null : $formValues.find('.setUserKey').val();
+	var addUserKey = $formValues.find('.addUserKey').val();
 	if(removeUserKey || setUserKey != null && setUserKey !== '')
 		vals['setUserKey'] = setUserKey;
-	var addUserKey = $formValues.find('.addUserKey').val();
 	if(addUserKey != null && addUserKey !== '')
 		vals['addUserKey'] = addUserKey;
 	var removeUserKey = $formValues.find('.removeUserKey').val();
@@ -461,9 +471,9 @@ async function patchSchoolChild($formFilters, $formValues, pk, success, error) {
 	var valueObjectTitle = $formValues.find('.valueObjectTitle').val();
 	var removeObjectTitle = $formValues.find('.removeObjectTitle').val() === 'true';
 	var setObjectTitle = removeObjectTitle ? null : $formValues.find('.setObjectTitle').val();
+	var addObjectTitle = $formValues.find('.addObjectTitle').val();
 	if(removeObjectTitle || setObjectTitle != null && setObjectTitle !== '')
 		vals['setObjectTitle'] = setObjectTitle;
-	var addObjectTitle = $formValues.find('.addObjectTitle').val();
 	if(addObjectTitle != null && addObjectTitle !== '')
 		vals['addObjectTitle'] = addObjectTitle;
 	var removeObjectTitle = $formValues.find('.removeObjectTitle').val();
@@ -1241,10 +1251,10 @@ async function websocketSchoolChild(success) {
 			var pkPage = $('#SchoolChildForm :input[name=pk]').val();
 			var pks = json['pks'];
 			var empty = json['empty'];
-			var numFound = json['numFound'];
-			var numPATCH = json['numPATCH'];
+			var numFound = parseInt(json['numFound']);
+			var numPATCH = parseInt(json['numPATCH']);
 			var percent = Math.floor( numPATCH / numFound * 100 ) + '%';
-			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id);
+			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id).attr('data-numPATCH', numPATCH);
 			var $margin = $('<div>').attr('class', 'w3-margin ').attr('id', 'margin-' + id);
 			var $card = $('<div>').attr('class', 'w3-card w3-white ').attr('id', 'card-' + id);
 			var $header = $('<div>').attr('class', 'w3-container fa-orange ').attr('id', 'header-' + id);
@@ -1263,10 +1273,18 @@ async function websocketSchoolChild(success) {
 			$card.append($body);
 			$box.append($margin);
 			$margin.append($card);
-			$('.box-' + id).remove();
-			if(numPATCH < numFound)
-			$('.top-box').append($box);
-			if(pk && pkPage && pk == pkPage) {;
+			if(numPATCH < numFound) {
+				var $old_box = $('.box-' + id);
+				if(!$old_box.size()) {
+					$('.top-box').append($box);
+				} else if($old_box && $old_box.attr('data-numPATCH') < numFound) {
+					$('.box-' + id).remove();
+					$('.top-box').append($box);
+				}
+			} else {
+				$('.box-' + id).remove();
+			}
+			if(pk && pkPage && pk == pkPage) {
 				if(success)
 					success(json);
 			}

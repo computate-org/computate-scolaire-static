@@ -299,9 +299,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurPk = $formulaireValeurs.find('.valeurPk').val();
 	var removePk = $formulaireValeurs.find('.removePk').val() === 'true';
 	var setPk = removePk ? null : $formulaireValeurs.find('.setPk').val();
+	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(removePk || setPk != null && setPk !== '')
 		vals['setPk'] = setPk;
-	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(addPk != null && addPk !== '')
 		vals['addPk'] = addPk;
 	var removePk = $formulaireValeurs.find('.removePk').val();
@@ -311,9 +311,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurCree = $formulaireValeurs.find('.valeurCree').val();
 	var removeCree = $formulaireValeurs.find('.removeCree').val() === 'true';
 	var setCree = removeCree ? null : $formulaireValeurs.find('.setCree').val();
+	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(removeCree || setCree != null && setCree !== '')
 		vals['setCree'] = setCree;
-	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(addCree != null && addCree !== '')
 		vals['addCree'] = addCree;
 	var removeCree = $formulaireValeurs.find('.removeCree').val();
@@ -323,9 +323,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurModifie = $formulaireValeurs.find('.valeurModifie').val();
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val() === 'true';
 	var setModifie = removeModifie ? null : $formulaireValeurs.find('.setModifie').val();
+	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(removeModifie || setModifie != null && setModifie !== '')
 		vals['setModifie'] = setModifie;
-	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(addModifie != null && addModifie !== '')
 		vals['addModifie'] = addModifie;
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val();
@@ -335,9 +335,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurObjetId = $formulaireValeurs.find('.valeurObjetId').val();
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val() === 'true';
 	var setObjetId = removeObjetId ? null : $formulaireValeurs.find('.setObjetId').val();
+	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(removeObjetId || setObjetId != null && setObjetId !== '')
 		vals['setObjetId'] = setObjetId;
-	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(addObjetId != null && addObjetId !== '')
 		vals['addObjetId'] = addObjetId;
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val();
@@ -350,10 +350,10 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurArchive = null;
 	if(valeurArchiveSelectVal != null && valeurArchiveSelectVal !== '')
 		valeurArchive = valeurArchiveSelectVal == 'true';
-	setArchive = removeArchive ? null : valeurArchive;
+	var setArchive = removeArchive ? null : valeurArchive;
+	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(removeArchive || setArchive != null && setArchive !== '')
 		vals['setArchive'] = setArchive;
-	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(addArchive != null && addArchive !== '')
 		vals['addArchive'] = addArchive;
 	var removeArchive = $formulaireValeurs.find('.removeArchive').prop('checked');
@@ -366,10 +366,10 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurSupprime = null;
 	if(valeurSupprimeSelectVal != null && valeurSupprimeSelectVal !== '')
 		valeurSupprime = valeurSupprimeSelectVal == 'true';
-	setSupprime = removeSupprime ? null : valeurSupprime;
+	var setSupprime = removeSupprime ? null : valeurSupprime;
+	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(removeSupprime || setSupprime != null && setSupprime !== '')
 		vals['setSupprime'] = setSupprime;
-	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(addSupprime != null && addSupprime !== '')
 		vals['addSupprime'] = addSupprime;
 	var removeSupprime = $formulaireValeurs.find('.removeSupprime').prop('checked');
@@ -382,10 +382,10 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurUtilisateurRecevoirCourriels = null;
 	if(valeurUtilisateurRecevoirCourrielsSelectVal != null && valeurUtilisateurRecevoirCourrielsSelectVal !== '')
 		valeurUtilisateurRecevoirCourriels = valeurUtilisateurRecevoirCourrielsSelectVal == 'true';
-	setUtilisateurRecevoirCourriels = removeUtilisateurRecevoirCourriels ? null : valeurUtilisateurRecevoirCourriels;
+	var setUtilisateurRecevoirCourriels = removeUtilisateurRecevoirCourriels ? null : valeurUtilisateurRecevoirCourriels;
+	var addUtilisateurRecevoirCourriels = $formulaireValeurs.find('.addUtilisateurRecevoirCourriels').prop('checked');
 	if(removeUtilisateurRecevoirCourriels || setUtilisateurRecevoirCourriels != null && setUtilisateurRecevoirCourriels !== '')
 		vals['setUtilisateurRecevoirCourriels'] = setUtilisateurRecevoirCourriels;
-	var addUtilisateurRecevoirCourriels = $formulaireValeurs.find('.addUtilisateurRecevoirCourriels').prop('checked');
 	if(addUtilisateurRecevoirCourriels != null && addUtilisateurRecevoirCourriels !== '')
 		vals['addUtilisateurRecevoirCourriels'] = addUtilisateurRecevoirCourriels;
 	var removeUtilisateurRecevoirCourriels = $formulaireValeurs.find('.removeUtilisateurRecevoirCourriels').prop('checked');
@@ -398,10 +398,10 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurVoirArchive = null;
 	if(valeurVoirArchiveSelectVal != null && valeurVoirArchiveSelectVal !== '')
 		valeurVoirArchive = valeurVoirArchiveSelectVal == 'true';
-	setVoirArchive = removeVoirArchive ? null : valeurVoirArchive;
+	var setVoirArchive = removeVoirArchive ? null : valeurVoirArchive;
+	var addVoirArchive = $formulaireValeurs.find('.addVoirArchive').prop('checked');
 	if(removeVoirArchive || setVoirArchive != null && setVoirArchive !== '')
 		vals['setVoirArchive'] = setVoirArchive;
-	var addVoirArchive = $formulaireValeurs.find('.addVoirArchive').prop('checked');
 	if(addVoirArchive != null && addVoirArchive !== '')
 		vals['addVoirArchive'] = addVoirArchive;
 	var removeVoirArchive = $formulaireValeurs.find('.removeVoirArchive').prop('checked');
@@ -414,10 +414,10 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurVoirSupprime = null;
 	if(valeurVoirSupprimeSelectVal != null && valeurVoirSupprimeSelectVal !== '')
 		valeurVoirSupprime = valeurVoirSupprimeSelectVal == 'true';
-	setVoirSupprime = removeVoirSupprime ? null : valeurVoirSupprime;
+	var setVoirSupprime = removeVoirSupprime ? null : valeurVoirSupprime;
+	var addVoirSupprime = $formulaireValeurs.find('.addVoirSupprime').prop('checked');
 	if(removeVoirSupprime || setVoirSupprime != null && setVoirSupprime !== '')
 		vals['setVoirSupprime'] = setVoirSupprime;
-	var addVoirSupprime = $formulaireValeurs.find('.addVoirSupprime').prop('checked');
 	if(addVoirSupprime != null && addVoirSupprime !== '')
 		vals['addVoirSupprime'] = addVoirSupprime;
 	var removeVoirSupprime = $formulaireValeurs.find('.removeVoirSupprime').prop('checked');
@@ -427,9 +427,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurCustomerProfileId1 = $formulaireValeurs.find('.valeurCustomerProfileId1').val();
 	var removeCustomerProfileId1 = $formulaireValeurs.find('.removeCustomerProfileId1').val() === 'true';
 	var setCustomerProfileId1 = removeCustomerProfileId1 ? null : $formulaireValeurs.find('.setCustomerProfileId1').val();
+	var addCustomerProfileId1 = $formulaireValeurs.find('.addCustomerProfileId1').val();
 	if(removeCustomerProfileId1 || setCustomerProfileId1 != null && setCustomerProfileId1 !== '')
 		vals['setCustomerProfileId1'] = setCustomerProfileId1;
-	var addCustomerProfileId1 = $formulaireValeurs.find('.addCustomerProfileId1').val();
 	if(addCustomerProfileId1 != null && addCustomerProfileId1 !== '')
 		vals['addCustomerProfileId1'] = addCustomerProfileId1;
 	var removeCustomerProfileId1 = $formulaireValeurs.find('.removeCustomerProfileId1').val();
@@ -439,9 +439,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurCustomerProfileId2 = $formulaireValeurs.find('.valeurCustomerProfileId2').val();
 	var removeCustomerProfileId2 = $formulaireValeurs.find('.removeCustomerProfileId2').val() === 'true';
 	var setCustomerProfileId2 = removeCustomerProfileId2 ? null : $formulaireValeurs.find('.setCustomerProfileId2').val();
+	var addCustomerProfileId2 = $formulaireValeurs.find('.addCustomerProfileId2').val();
 	if(removeCustomerProfileId2 || setCustomerProfileId2 != null && setCustomerProfileId2 !== '')
 		vals['setCustomerProfileId2'] = setCustomerProfileId2;
-	var addCustomerProfileId2 = $formulaireValeurs.find('.addCustomerProfileId2').val();
 	if(addCustomerProfileId2 != null && addCustomerProfileId2 !== '')
 		vals['addCustomerProfileId2'] = addCustomerProfileId2;
 	var removeCustomerProfileId2 = $formulaireValeurs.find('.removeCustomerProfileId2').val();
@@ -459,9 +459,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurInheritPk = $formulaireValeurs.find('.valeurInheritPk').val();
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val() === 'true';
 	var setInheritPk = removeInheritPk ? null : $formulaireValeurs.find('.setInheritPk').val();
+	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(removeInheritPk || setInheritPk != null && setInheritPk !== '')
 		vals['setInheritPk'] = setInheritPk;
-	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(addInheritPk != null && addInheritPk !== '')
 		vals['addInheritPk'] = addInheritPk;
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val();
@@ -471,9 +471,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurSessionId = $formulaireValeurs.find('.valeurSessionId').val();
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val() === 'true';
 	var setSessionId = removeSessionId ? null : $formulaireValeurs.find('.setSessionId').val();
+	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(removeSessionId || setSessionId != null && setSessionId !== '')
 		vals['setSessionId'] = setSessionId;
-	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(addSessionId != null && addSessionId !== '')
 		vals['addSessionId'] = addSessionId;
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val();
@@ -483,9 +483,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurUtilisateurId = $formulaireValeurs.find('.valeurUtilisateurId').val();
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val() === 'true';
 	var setUtilisateurId = removeUtilisateurId ? null : $formulaireValeurs.find('.setUtilisateurId').val();
+	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(removeUtilisateurId || setUtilisateurId != null && setUtilisateurId !== '')
 		vals['setUtilisateurId'] = setUtilisateurId;
-	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(addUtilisateurId != null && addUtilisateurId !== '')
 		vals['addUtilisateurId'] = addUtilisateurId;
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val();
@@ -495,9 +495,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurUtilisateurCle = $formulaireValeurs.find('.valeurUtilisateurCle').val();
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val() === 'true';
 	var setUtilisateurCle = removeUtilisateurCle ? null : $formulaireValeurs.find('.setUtilisateurCle').val();
+	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(removeUtilisateurCle || setUtilisateurCle != null && setUtilisateurCle !== '')
 		vals['setUtilisateurCle'] = setUtilisateurCle;
-	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(addUtilisateurCle != null && addUtilisateurCle !== '')
 		vals['addUtilisateurCle'] = addUtilisateurCle;
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val();
@@ -507,9 +507,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurObjetTitre = $formulaireValeurs.find('.valeurObjetTitre').val();
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val() === 'true';
 	var setObjetTitre = removeObjetTitre ? null : $formulaireValeurs.find('.setObjetTitre').val();
+	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(removeObjetTitre || setObjetTitre != null && setObjetTitre !== '')
 		vals['setObjetTitre'] = setObjetTitre;
-	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(addObjetTitre != null && addObjetTitre !== '')
 		vals['addObjetTitre'] = addObjetTitre;
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val();
@@ -519,9 +519,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurUtilisateurNom = $formulaireValeurs.find('.valeurUtilisateurNom').val();
 	var removeUtilisateurNom = $formulaireValeurs.find('.removeUtilisateurNom').val() === 'true';
 	var setUtilisateurNom = removeUtilisateurNom ? null : $formulaireValeurs.find('.setUtilisateurNom').val();
+	var addUtilisateurNom = $formulaireValeurs.find('.addUtilisateurNom').val();
 	if(removeUtilisateurNom || setUtilisateurNom != null && setUtilisateurNom !== '')
 		vals['setUtilisateurNom'] = setUtilisateurNom;
-	var addUtilisateurNom = $formulaireValeurs.find('.addUtilisateurNom').val();
 	if(addUtilisateurNom != null && addUtilisateurNom !== '')
 		vals['addUtilisateurNom'] = addUtilisateurNom;
 	var removeUtilisateurNom = $formulaireValeurs.find('.removeUtilisateurNom').val();
@@ -531,9 +531,9 @@ async function patchUtilisateurSite($formulaireFiltres, $formulaireValeurs, pk, 
 	var valeurUtilisateurMail = $formulaireValeurs.find('.valeurUtilisateurMail').val();
 	var removeUtilisateurMail = $formulaireValeurs.find('.removeUtilisateurMail').val() === 'true';
 	var setUtilisateurMail = removeUtilisateurMail ? null : $formulaireValeurs.find('.setUtilisateurMail').val();
+	var addUtilisateurMail = $formulaireValeurs.find('.addUtilisateurMail').val();
 	if(removeUtilisateurMail || setUtilisateurMail != null && setUtilisateurMail !== '')
 		vals['setUtilisateurMail'] = setUtilisateurMail;
-	var addUtilisateurMail = $formulaireValeurs.find('.addUtilisateurMail').val();
 	if(addUtilisateurMail != null && addUtilisateurMail !== '')
 		vals['addUtilisateurMail'] = addUtilisateurMail;
 	var removeUtilisateurMail = $formulaireValeurs.find('.removeUtilisateurMail').val();
@@ -875,10 +875,10 @@ async function websocketUtilisateurSite(success) {
 			var pkPage = $('#UtilisateurSiteForm :input[name=pk]').val();
 			var pks = json['pks'];
 			var empty = json['empty'];
-			var numFound = json['numFound'];
-			var numPATCH = json['numPATCH'];
+			var numFound = parseInt(json['numFound']);
+			var numPATCH = parseInt(json['numPATCH']);
 			var percent = Math.floor( numPATCH / numFound * 100 ) + '%';
-			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id);
+			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id).attr('data-numPATCH', numPATCH);
 			var $margin = $('<div>').attr('class', 'w3-margin ').attr('id', 'margin-' + id);
 			var $card = $('<div>').attr('class', 'w3-card w3-white ').attr('id', 'card-' + id);
 			var $header = $('<div>').attr('class', 'w3-container fa-gray ').attr('id', 'header-' + id);
@@ -897,10 +897,18 @@ async function websocketUtilisateurSite(success) {
 			$card.append($body);
 			$box.append($margin);
 			$margin.append($card);
-			$('.box-' + id).remove();
-			if(numPATCH < numFound)
-			$('.top-box').append($box);
-			if(pk && pkPage && pk == pkPage) {;
+			if(numPATCH < numFound) {
+				var $old_box = $('.box-' + id);
+				if(!$old_box.size()) {
+					$('.top-box').append($box);
+				} else if($old_box && $old_box.attr('data-numPATCH') < numFound) {
+					$('.box-' + id).remove();
+					$('.top-box').append($box);
+				}
+			} else {
+				$('.box-' + id).remove();
+			}
+			if(pk && pkPage && pk == pkPage) {
 				if(success)
 					success(json);
 			}

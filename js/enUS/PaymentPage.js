@@ -117,6 +117,10 @@ async function postSchoolPayment($formValues, success, error) {
 	if(valueEnrollmentKey != null && valueEnrollmentKey !== '')
 		vals['enrollmentKey'] = valueEnrollmentKey;
 
+	var valueLateFeeDate = $formValues.find('.valueLateFeeDate').val();
+	if(valueLateFeeDate != null && valueLateFeeDate !== '')
+		vals['lateFeeDate'] = valueLateFeeDate;
+
 	var valueInheritPk = $formValues.find('.valueInheritPk').val();
 	if(valueInheritPk != null && valueInheritPk !== '')
 		vals['inheritPk'] = valueInheritPk;
@@ -136,38 +140,6 @@ async function postSchoolPayment($formValues, success, error) {
 	var valueObjectTitle = $formValues.find('.valueObjectTitle').val();
 	if(valueObjectTitle != null && valueObjectTitle !== '')
 		vals['objectTitle'] = valueObjectTitle;
-
-	var valueChildCompleteNamePreferred = $formValues.find('.valueChildCompleteNamePreferred').val();
-	if(valueChildCompleteNamePreferred != null && valueChildCompleteNamePreferred !== '')
-		vals['childCompleteNamePreferred'] = valueChildCompleteNamePreferred;
-
-	var valueChildBirthDate = $formValues.find('.valueChildBirthDate').val();
-	if(valueChildBirthDate != null && valueChildBirthDate !== '')
-		vals['childBirthDate'] = valueChildBirthDate;
-
-	var valueMomCompleteNamePreferred = $formValues.find('.valueMomCompleteNamePreferred').val();
-	if(valueMomCompleteNamePreferred != null && valueMomCompleteNamePreferred !== '')
-		vals['momCompleteNamePreferred'] = valueMomCompleteNamePreferred;
-
-	var valueDadCompleteNamePreferred = $formValues.find('.valueDadCompleteNamePreferred').val();
-	if(valueDadCompleteNamePreferred != null && valueDadCompleteNamePreferred !== '')
-		vals['dadCompleteNamePreferred'] = valueDadCompleteNamePreferred;
-
-	var valueChargeAmountDue = $formValues.find('.valueChargeAmountDue').val();
-	if(valueChargeAmountDue != null && valueChargeAmountDue !== '')
-		vals['chargeAmountDue'] = valueChargeAmountDue;
-
-	var valueChargeAmountPassed = $formValues.find('.valueChargeAmountPassed').val();
-	if(valueChargeAmountPassed != null && valueChargeAmountPassed !== '')
-		vals['chargeAmountPassed'] = valueChargeAmountPassed;
-
-	var valueChargeAmountNotPassed = $formValues.find('.valueChargeAmountNotPassed').val();
-	if(valueChargeAmountNotPassed != null && valueChargeAmountNotPassed !== '')
-		vals['chargeAmountNotPassed'] = valueChargeAmountNotPassed;
-
-	var valueChargeAmountFuture = $formValues.find('.valueChargeAmountFuture').val();
-	if(valueChargeAmountFuture != null && valueChargeAmountFuture !== '')
-		vals['chargeAmountFuture'] = valueChargeAmountFuture;
 
 	var valuePaymentShortName = $formValues.find('.valuePaymentShortName').val();
 	if(valuePaymentShortName != null && valuePaymentShortName !== '')
@@ -341,6 +313,10 @@ async function putcopySchoolPayment($formValues, pk, success, error) {
 	if(valueEnrollmentKey != null && valueEnrollmentKey !== '')
 		vals['enrollmentKey'] = valueEnrollmentKey;
 
+	var valueLateFeeDate = $formValues.find('.valueLateFeeDate').val();
+	if(valueLateFeeDate != null && valueLateFeeDate !== '')
+		vals['lateFeeDate'] = valueLateFeeDate;
+
 	var valueInheritPk = $formValues.find('.valueInheritPk').val();
 	if(valueInheritPk != null && valueInheritPk !== '')
 		vals['inheritPk'] = valueInheritPk;
@@ -360,38 +336,6 @@ async function putcopySchoolPayment($formValues, pk, success, error) {
 	var valueObjectTitle = $formValues.find('.valueObjectTitle').val();
 	if(valueObjectTitle != null && valueObjectTitle !== '')
 		vals['objectTitle'] = valueObjectTitle;
-
-	var valueChildCompleteNamePreferred = $formValues.find('.valueChildCompleteNamePreferred').val();
-	if(valueChildCompleteNamePreferred != null && valueChildCompleteNamePreferred !== '')
-		vals['childCompleteNamePreferred'] = valueChildCompleteNamePreferred;
-
-	var valueChildBirthDate = $formValues.find('.valueChildBirthDate').val();
-	if(valueChildBirthDate != null && valueChildBirthDate !== '')
-		vals['childBirthDate'] = valueChildBirthDate;
-
-	var valueMomCompleteNamePreferred = $formValues.find('.valueMomCompleteNamePreferred').val();
-	if(valueMomCompleteNamePreferred != null && valueMomCompleteNamePreferred !== '')
-		vals['momCompleteNamePreferred'] = valueMomCompleteNamePreferred;
-
-	var valueDadCompleteNamePreferred = $formValues.find('.valueDadCompleteNamePreferred').val();
-	if(valueDadCompleteNamePreferred != null && valueDadCompleteNamePreferred !== '')
-		vals['dadCompleteNamePreferred'] = valueDadCompleteNamePreferred;
-
-	var valueChargeAmountDue = $formValues.find('.valueChargeAmountDue').val();
-	if(valueChargeAmountDue != null && valueChargeAmountDue !== '')
-		vals['chargeAmountDue'] = valueChargeAmountDue;
-
-	var valueChargeAmountPassed = $formValues.find('.valueChargeAmountPassed').val();
-	if(valueChargeAmountPassed != null && valueChargeAmountPassed !== '')
-		vals['chargeAmountPassed'] = valueChargeAmountPassed;
-
-	var valueChargeAmountNotPassed = $formValues.find('.valueChargeAmountNotPassed').val();
-	if(valueChargeAmountNotPassed != null && valueChargeAmountNotPassed !== '')
-		vals['chargeAmountNotPassed'] = valueChargeAmountNotPassed;
-
-	var valueChargeAmountFuture = $formValues.find('.valueChargeAmountFuture').val();
-	if(valueChargeAmountFuture != null && valueChargeAmountFuture !== '')
-		vals['chargeAmountFuture'] = valueChargeAmountFuture;
 
 	var valuePaymentShortName = $formValues.find('.valuePaymentShortName').val();
 	if(valuePaymentShortName != null && valuePaymentShortName !== '')
@@ -422,9 +366,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valuePk = $formValues.find('.valuePk').val();
 	var removePk = $formValues.find('.removePk').val() === 'true';
 	var setPk = removePk ? null : $formValues.find('.setPk').val();
+	var addPk = $formValues.find('.addPk').val();
 	if(removePk || setPk != null && setPk !== '')
 		vals['setPk'] = setPk;
-	var addPk = $formValues.find('.addPk').val();
 	if(addPk != null && addPk !== '')
 		vals['addPk'] = addPk;
 	var removePk = $formValues.find('.removePk').val();
@@ -434,9 +378,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueCreated = $formValues.find('.valueCreated').val();
 	var removeCreated = $formValues.find('.removeCreated').val() === 'true';
 	var setCreated = removeCreated ? null : $formValues.find('.setCreated').val();
+	var addCreated = $formValues.find('.addCreated').val();
 	if(removeCreated || setCreated != null && setCreated !== '')
 		vals['setCreated'] = setCreated;
-	var addCreated = $formValues.find('.addCreated').val();
 	if(addCreated != null && addCreated !== '')
 		vals['addCreated'] = addCreated;
 	var removeCreated = $formValues.find('.removeCreated').val();
@@ -446,9 +390,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueModified = $formValues.find('.valueModified').val();
 	var removeModified = $formValues.find('.removeModified').val() === 'true';
 	var setModified = removeModified ? null : $formValues.find('.setModified').val();
+	var addModified = $formValues.find('.addModified').val();
 	if(removeModified || setModified != null && setModified !== '')
 		vals['setModified'] = setModified;
-	var addModified = $formValues.find('.addModified').val();
 	if(addModified != null && addModified !== '')
 		vals['addModified'] = addModified;
 	var removeModified = $formValues.find('.removeModified').val();
@@ -458,9 +402,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueObjectId = $formValues.find('.valueObjectId').val();
 	var removeObjectId = $formValues.find('.removeObjectId').val() === 'true';
 	var setObjectId = removeObjectId ? null : $formValues.find('.setObjectId').val();
+	var addObjectId = $formValues.find('.addObjectId').val();
 	if(removeObjectId || setObjectId != null && setObjectId !== '')
 		vals['setObjectId'] = setObjectId;
-	var addObjectId = $formValues.find('.addObjectId').val();
 	if(addObjectId != null && addObjectId !== '')
 		vals['addObjectId'] = addObjectId;
 	var removeObjectId = $formValues.find('.removeObjectId').val();
@@ -473,10 +417,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueArchived = null;
 	if(valueArchivedSelectVal != null && valueArchivedSelectVal !== '')
 		valueArchived = valueArchivedSelectVal == 'true';
-	setArchived = removeArchived ? null : valueArchived;
+	var setArchived = removeArchived ? null : valueArchived;
+	var addArchived = $formValues.find('.addArchived').prop('checked');
 	if(removeArchived || setArchived != null && setArchived !== '')
 		vals['setArchived'] = setArchived;
-	var addArchived = $formValues.find('.addArchived').prop('checked');
 	if(addArchived != null && addArchived !== '')
 		vals['addArchived'] = addArchived;
 	var removeArchived = $formValues.find('.removeArchived').prop('checked');
@@ -489,10 +433,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueDeleted = null;
 	if(valueDeletedSelectVal != null && valueDeletedSelectVal !== '')
 		valueDeleted = valueDeletedSelectVal == 'true';
-	setDeleted = removeDeleted ? null : valueDeleted;
+	var setDeleted = removeDeleted ? null : valueDeleted;
+	var addDeleted = $formValues.find('.addDeleted').prop('checked');
 	if(removeDeleted || setDeleted != null && setDeleted !== '')
 		vals['setDeleted'] = setDeleted;
-	var addDeleted = $formValues.find('.addDeleted').prop('checked');
 	if(addDeleted != null && addDeleted !== '')
 		vals['addDeleted'] = addDeleted;
 	var removeDeleted = $formValues.find('.removeDeleted').prop('checked');
@@ -502,9 +446,19 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valuePaymentDate = $formValues.find('.valuePaymentDate').val();
 	var removePaymentDate = $formValues.find('.removePaymentDate').val() === 'true';
 	var setPaymentDate = removePaymentDate ? null : $formValues.find('.setPaymentDate').val();
+	var addPaymentDate = $formValues.find('.addPaymentDate').val();
+	var setMoment = setPaymentDate ? moment(setPaymentDate, 'MM/DD/YYYY') : null; 
+	var addMoment = addPaymentDate ? moment(addPaymentDate, 'MM/DD/YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setPaymentDate = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addPaymentDate = s;
+	} 
 	if(removePaymentDate || setPaymentDate != null && setPaymentDate !== '')
 		vals['setPaymentDate'] = setPaymentDate;
-	var addPaymentDate = $formValues.find('.addPaymentDate').val();
 	if(addPaymentDate != null && addPaymentDate !== '')
 		vals['addPaymentDate'] = addPaymentDate;
 	var removePaymentDate = $formValues.find('.removePaymentDate').val();
@@ -514,9 +468,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valuePaymentAmount = $formValues.find('.valuePaymentAmount').val();
 	var removePaymentAmount = $formValues.find('.removePaymentAmount').val() === 'true';
 	var setPaymentAmount = removePaymentAmount ? null : $formValues.find('.setPaymentAmount').val();
+	var addPaymentAmount = $formValues.find('.addPaymentAmount').val();
 	if(removePaymentAmount || setPaymentAmount != null && setPaymentAmount !== '')
 		vals['setPaymentAmount'] = setPaymentAmount;
-	var addPaymentAmount = $formValues.find('.addPaymentAmount').val();
 	if(addPaymentAmount != null && addPaymentAmount !== '')
 		vals['addPaymentAmount'] = addPaymentAmount;
 	var removePaymentAmount = $formValues.find('.removePaymentAmount').val();
@@ -529,10 +483,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valuePaymentCash = null;
 	if(valuePaymentCashSelectVal != null && valuePaymentCashSelectVal !== '')
 		valuePaymentCash = valuePaymentCashSelectVal == 'true';
-	setPaymentCash = removePaymentCash ? null : valuePaymentCash;
+	var setPaymentCash = removePaymentCash ? null : valuePaymentCash;
+	var addPaymentCash = $formValues.find('.addPaymentCash').prop('checked');
 	if(removePaymentCash || setPaymentCash != null && setPaymentCash !== '')
 		vals['setPaymentCash'] = setPaymentCash;
-	var addPaymentCash = $formValues.find('.addPaymentCash').prop('checked');
 	if(addPaymentCash != null && addPaymentCash !== '')
 		vals['addPaymentCash'] = addPaymentCash;
 	var removePaymentCash = $formValues.find('.removePaymentCash').prop('checked');
@@ -545,10 +499,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valuePaymentCheck = null;
 	if(valuePaymentCheckSelectVal != null && valuePaymentCheckSelectVal !== '')
 		valuePaymentCheck = valuePaymentCheckSelectVal == 'true';
-	setPaymentCheck = removePaymentCheck ? null : valuePaymentCheck;
+	var setPaymentCheck = removePaymentCheck ? null : valuePaymentCheck;
+	var addPaymentCheck = $formValues.find('.addPaymentCheck').prop('checked');
 	if(removePaymentCheck || setPaymentCheck != null && setPaymentCheck !== '')
 		vals['setPaymentCheck'] = setPaymentCheck;
-	var addPaymentCheck = $formValues.find('.addPaymentCheck').prop('checked');
 	if(addPaymentCheck != null && addPaymentCheck !== '')
 		vals['addPaymentCheck'] = addPaymentCheck;
 	var removePaymentCheck = $formValues.find('.removePaymentCheck').prop('checked');
@@ -561,10 +515,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valuePaymentECheck = null;
 	if(valuePaymentECheckSelectVal != null && valuePaymentECheckSelectVal !== '')
 		valuePaymentECheck = valuePaymentECheckSelectVal == 'true';
-	setPaymentECheck = removePaymentECheck ? null : valuePaymentECheck;
+	var setPaymentECheck = removePaymentECheck ? null : valuePaymentECheck;
+	var addPaymentECheck = $formValues.find('.addPaymentECheck').prop('checked');
 	if(removePaymentECheck || setPaymentECheck != null && setPaymentECheck !== '')
 		vals['setPaymentECheck'] = setPaymentECheck;
-	var addPaymentECheck = $formValues.find('.addPaymentECheck').prop('checked');
 	if(addPaymentECheck != null && addPaymentECheck !== '')
 		vals['addPaymentECheck'] = addPaymentECheck;
 	var removePaymentECheck = $formValues.find('.removePaymentECheck').prop('checked');
@@ -577,10 +531,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valuePaymentSystem = null;
 	if(valuePaymentSystemSelectVal != null && valuePaymentSystemSelectVal !== '')
 		valuePaymentSystem = valuePaymentSystemSelectVal == 'true';
-	setPaymentSystem = removePaymentSystem ? null : valuePaymentSystem;
+	var setPaymentSystem = removePaymentSystem ? null : valuePaymentSystem;
+	var addPaymentSystem = $formValues.find('.addPaymentSystem').prop('checked');
 	if(removePaymentSystem || setPaymentSystem != null && setPaymentSystem !== '')
 		vals['setPaymentSystem'] = setPaymentSystem;
-	var addPaymentSystem = $formValues.find('.addPaymentSystem').prop('checked');
 	if(addPaymentSystem != null && addPaymentSystem !== '')
 		vals['addPaymentSystem'] = addPaymentSystem;
 	var removePaymentSystem = $formValues.find('.removePaymentSystem').prop('checked');
@@ -590,9 +544,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valuePaymentDescription = $formValues.find('.valuePaymentDescription').val();
 	var removePaymentDescription = $formValues.find('.removePaymentDescription').val() === 'true';
 	var setPaymentDescription = removePaymentDescription ? null : $formValues.find('.setPaymentDescription').val();
+	var addPaymentDescription = $formValues.find('.addPaymentDescription').val();
 	if(removePaymentDescription || setPaymentDescription != null && setPaymentDescription !== '')
 		vals['setPaymentDescription'] = setPaymentDescription;
-	var addPaymentDescription = $formValues.find('.addPaymentDescription').val();
 	if(addPaymentDescription != null && addPaymentDescription !== '')
 		vals['addPaymentDescription'] = addPaymentDescription;
 	var removePaymentDescription = $formValues.find('.removePaymentDescription').val();
@@ -602,9 +556,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valuePaymentBy = $formValues.find('.valuePaymentBy').val();
 	var removePaymentBy = $formValues.find('.removePaymentBy').val() === 'true';
 	var setPaymentBy = removePaymentBy ? null : $formValues.find('.setPaymentBy').val();
+	var addPaymentBy = $formValues.find('.addPaymentBy').val();
 	if(removePaymentBy || setPaymentBy != null && setPaymentBy !== '')
 		vals['setPaymentBy'] = setPaymentBy;
-	var addPaymentBy = $formValues.find('.addPaymentBy').val();
 	if(addPaymentBy != null && addPaymentBy !== '')
 		vals['addPaymentBy'] = addPaymentBy;
 	var removePaymentBy = $formValues.find('.removePaymentBy').val();
@@ -617,10 +571,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueEnrollmentPaymentEachMonth = null;
 	if(valueEnrollmentPaymentEachMonthSelectVal != null && valueEnrollmentPaymentEachMonthSelectVal !== '')
 		valueEnrollmentPaymentEachMonth = valueEnrollmentPaymentEachMonthSelectVal == 'true';
-	setEnrollmentPaymentEachMonth = removeEnrollmentPaymentEachMonth ? null : valueEnrollmentPaymentEachMonth;
+	var setEnrollmentPaymentEachMonth = removeEnrollmentPaymentEachMonth ? null : valueEnrollmentPaymentEachMonth;
+	var addEnrollmentPaymentEachMonth = $formValues.find('.addEnrollmentPaymentEachMonth').prop('checked');
 	if(removeEnrollmentPaymentEachMonth || setEnrollmentPaymentEachMonth != null && setEnrollmentPaymentEachMonth !== '')
 		vals['setEnrollmentPaymentEachMonth'] = setEnrollmentPaymentEachMonth;
-	var addEnrollmentPaymentEachMonth = $formValues.find('.addEnrollmentPaymentEachMonth').prop('checked');
 	if(addEnrollmentPaymentEachMonth != null && addEnrollmentPaymentEachMonth !== '')
 		vals['addEnrollmentPaymentEachMonth'] = addEnrollmentPaymentEachMonth;
 	var removeEnrollmentPaymentEachMonth = $formValues.find('.removeEnrollmentPaymentEachMonth').prop('checked');
@@ -630,9 +584,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueTransactionId = $formValues.find('.valueTransactionId').val();
 	var removeTransactionId = $formValues.find('.removeTransactionId').val() === 'true';
 	var setTransactionId = removeTransactionId ? null : $formValues.find('.setTransactionId').val();
+	var addTransactionId = $formValues.find('.addTransactionId').val();
 	if(removeTransactionId || setTransactionId != null && setTransactionId !== '')
 		vals['setTransactionId'] = setTransactionId;
-	var addTransactionId = $formValues.find('.addTransactionId').val();
 	if(addTransactionId != null && addTransactionId !== '')
 		vals['addTransactionId'] = addTransactionId;
 	var removeTransactionId = $formValues.find('.removeTransactionId').val();
@@ -642,9 +596,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueCustomerProfileId = $formValues.find('.valueCustomerProfileId').val();
 	var removeCustomerProfileId = $formValues.find('.removeCustomerProfileId').val() === 'true';
 	var setCustomerProfileId = removeCustomerProfileId ? null : $formValues.find('.setCustomerProfileId').val();
+	var addCustomerProfileId = $formValues.find('.addCustomerProfileId').val();
 	if(removeCustomerProfileId || setCustomerProfileId != null && setCustomerProfileId !== '')
 		vals['setCustomerProfileId'] = setCustomerProfileId;
-	var addCustomerProfileId = $formValues.find('.addCustomerProfileId').val();
 	if(addCustomerProfileId != null && addCustomerProfileId !== '')
 		vals['addCustomerProfileId'] = addCustomerProfileId;
 	var removeCustomerProfileId = $formValues.find('.removeCustomerProfileId').val();
@@ -654,9 +608,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueTransactionStatus = $formValues.find('.valueTransactionStatus').val();
 	var removeTransactionStatus = $formValues.find('.removeTransactionStatus').val() === 'true';
 	var setTransactionStatus = removeTransactionStatus ? null : $formValues.find('.setTransactionStatus').val();
+	var addTransactionStatus = $formValues.find('.addTransactionStatus').val();
 	if(removeTransactionStatus || setTransactionStatus != null && setTransactionStatus !== '')
 		vals['setTransactionStatus'] = setTransactionStatus;
-	var addTransactionStatus = $formValues.find('.addTransactionStatus').val();
 	if(addTransactionStatus != null && addTransactionStatus !== '')
 		vals['addTransactionStatus'] = addTransactionStatus;
 	var removeTransactionStatus = $formValues.find('.removeTransactionStatus').val();
@@ -669,10 +623,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valuePaymentRecieved = null;
 	if(valuePaymentRecievedSelectVal != null && valuePaymentRecievedSelectVal !== '')
 		valuePaymentRecieved = valuePaymentRecievedSelectVal == 'true';
-	setPaymentRecieved = removePaymentRecieved ? null : valuePaymentRecieved;
+	var setPaymentRecieved = removePaymentRecieved ? null : valuePaymentRecieved;
+	var addPaymentRecieved = $formValues.find('.addPaymentRecieved').prop('checked');
 	if(removePaymentRecieved || setPaymentRecieved != null && setPaymentRecieved !== '')
 		vals['setPaymentRecieved'] = setPaymentRecieved;
-	var addPaymentRecieved = $formValues.find('.addPaymentRecieved').prop('checked');
 	if(addPaymentRecieved != null && addPaymentRecieved !== '')
 		vals['addPaymentRecieved'] = addPaymentRecieved;
 	var removePaymentRecieved = $formValues.find('.removePaymentRecieved').prop('checked');
@@ -682,9 +636,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueChargeAmount = $formValues.find('.valueChargeAmount').val();
 	var removeChargeAmount = $formValues.find('.removeChargeAmount').val() === 'true';
 	var setChargeAmount = removeChargeAmount ? null : $formValues.find('.setChargeAmount').val();
+	var addChargeAmount = $formValues.find('.addChargeAmount').val();
 	if(removeChargeAmount || setChargeAmount != null && setChargeAmount !== '')
 		vals['setChargeAmount'] = setChargeAmount;
-	var addChargeAmount = $formValues.find('.addChargeAmount').val();
 	if(addChargeAmount != null && addChargeAmount !== '')
 		vals['addChargeAmount'] = addChargeAmount;
 	var removeChargeAmount = $formValues.find('.removeChargeAmount').val();
@@ -697,10 +651,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueChargeFirstLast = null;
 	if(valueChargeFirstLastSelectVal != null && valueChargeFirstLastSelectVal !== '')
 		valueChargeFirstLast = valueChargeFirstLastSelectVal == 'true';
-	setChargeFirstLast = removeChargeFirstLast ? null : valueChargeFirstLast;
+	var setChargeFirstLast = removeChargeFirstLast ? null : valueChargeFirstLast;
+	var addChargeFirstLast = $formValues.find('.addChargeFirstLast').prop('checked');
 	if(removeChargeFirstLast || setChargeFirstLast != null && setChargeFirstLast !== '')
 		vals['setChargeFirstLast'] = setChargeFirstLast;
-	var addChargeFirstLast = $formValues.find('.addChargeFirstLast').prop('checked');
 	if(addChargeFirstLast != null && addChargeFirstLast !== '')
 		vals['addChargeFirstLast'] = addChargeFirstLast;
 	var removeChargeFirstLast = $formValues.find('.removeChargeFirstLast').prop('checked');
@@ -713,10 +667,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueChargeEnrollment = null;
 	if(valueChargeEnrollmentSelectVal != null && valueChargeEnrollmentSelectVal !== '')
 		valueChargeEnrollment = valueChargeEnrollmentSelectVal == 'true';
-	setChargeEnrollment = removeChargeEnrollment ? null : valueChargeEnrollment;
+	var setChargeEnrollment = removeChargeEnrollment ? null : valueChargeEnrollment;
+	var addChargeEnrollment = $formValues.find('.addChargeEnrollment').prop('checked');
 	if(removeChargeEnrollment || setChargeEnrollment != null && setChargeEnrollment !== '')
 		vals['setChargeEnrollment'] = setChargeEnrollment;
-	var addChargeEnrollment = $formValues.find('.addChargeEnrollment').prop('checked');
 	if(addChargeEnrollment != null && addChargeEnrollment !== '')
 		vals['addChargeEnrollment'] = addChargeEnrollment;
 	var removeChargeEnrollment = $formValues.find('.removeChargeEnrollment').prop('checked');
@@ -729,10 +683,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueChargeMonth = null;
 	if(valueChargeMonthSelectVal != null && valueChargeMonthSelectVal !== '')
 		valueChargeMonth = valueChargeMonthSelectVal == 'true';
-	setChargeMonth = removeChargeMonth ? null : valueChargeMonth;
+	var setChargeMonth = removeChargeMonth ? null : valueChargeMonth;
+	var addChargeMonth = $formValues.find('.addChargeMonth').prop('checked');
 	if(removeChargeMonth || setChargeMonth != null && setChargeMonth !== '')
 		vals['setChargeMonth'] = setChargeMonth;
-	var addChargeMonth = $formValues.find('.addChargeMonth').prop('checked');
 	if(addChargeMonth != null && addChargeMonth !== '')
 		vals['addChargeMonth'] = addChargeMonth;
 	var removeChargeMonth = $formValues.find('.removeChargeMonth').prop('checked');
@@ -745,10 +699,10 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueChargeLateFee = null;
 	if(valueChargeLateFeeSelectVal != null && valueChargeLateFeeSelectVal !== '')
 		valueChargeLateFee = valueChargeLateFeeSelectVal == 'true';
-	setChargeLateFee = removeChargeLateFee ? null : valueChargeLateFee;
+	var setChargeLateFee = removeChargeLateFee ? null : valueChargeLateFee;
+	var addChargeLateFee = $formValues.find('.addChargeLateFee').prop('checked');
 	if(removeChargeLateFee || setChargeLateFee != null && setChargeLateFee !== '')
 		vals['setChargeLateFee'] = setChargeLateFee;
-	var addChargeLateFee = $formValues.find('.addChargeLateFee').prop('checked');
 	if(addChargeLateFee != null && addChargeLateFee !== '')
 		vals['addChargeLateFee'] = addChargeLateFee;
 	var removeChargeLateFee = $formValues.find('.removeChargeLateFee').prop('checked');
@@ -759,12 +713,34 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	if(valueEnrollmentKey != null && valueEnrollmentKey !== '')
 		vals['setEnrollmentKey'] = valueEnrollmentKey;
 
+	var valueLateFeeDate = $formValues.find('.valueLateFeeDate').val();
+	var removeLateFeeDate = $formValues.find('.removeLateFeeDate').val() === 'true';
+	var setLateFeeDate = removeLateFeeDate ? null : $formValues.find('.setLateFeeDate').val();
+	var addLateFeeDate = $formValues.find('.addLateFeeDate').val();
+	var setMoment = setLateFeeDate ? moment(setLateFeeDate, 'MM/DD/YYYY') : null; 
+	var addMoment = addLateFeeDate ? moment(addLateFeeDate, 'MM/DD/YYYY') : null; 
+	if(setMoment) { 
+		var s = setMoment.format('YYYY-MM-DD'); 
+		setLateFeeDate = s;
+	} 
+	if(addMoment) { 
+		var s = addMoment.format('YYYY-MM-DD'); 
+		addLateFeeDate = s;
+	} 
+	if(removeLateFeeDate || setLateFeeDate != null && setLateFeeDate !== '')
+		vals['setLateFeeDate'] = setLateFeeDate;
+	if(addLateFeeDate != null && addLateFeeDate !== '')
+		vals['addLateFeeDate'] = addLateFeeDate;
+	var removeLateFeeDate = $formValues.find('.removeLateFeeDate').val();
+	if(removeLateFeeDate != null && removeLateFeeDate !== '')
+		vals['removeLateFeeDate'] = removeLateFeeDate;
+
 	var valueInheritPk = $formValues.find('.valueInheritPk').val();
 	var removeInheritPk = $formValues.find('.removeInheritPk').val() === 'true';
 	var setInheritPk = removeInheritPk ? null : $formValues.find('.setInheritPk').val();
+	var addInheritPk = $formValues.find('.addInheritPk').val();
 	if(removeInheritPk || setInheritPk != null && setInheritPk !== '')
 		vals['setInheritPk'] = setInheritPk;
-	var addInheritPk = $formValues.find('.addInheritPk').val();
 	if(addInheritPk != null && addInheritPk !== '')
 		vals['addInheritPk'] = addInheritPk;
 	var removeInheritPk = $formValues.find('.removeInheritPk').val();
@@ -774,9 +750,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueSessionId = $formValues.find('.valueSessionId').val();
 	var removeSessionId = $formValues.find('.removeSessionId').val() === 'true';
 	var setSessionId = removeSessionId ? null : $formValues.find('.setSessionId').val();
+	var addSessionId = $formValues.find('.addSessionId').val();
 	if(removeSessionId || setSessionId != null && setSessionId !== '')
 		vals['setSessionId'] = setSessionId;
-	var addSessionId = $formValues.find('.addSessionId').val();
 	if(addSessionId != null && addSessionId !== '')
 		vals['addSessionId'] = addSessionId;
 	var removeSessionId = $formValues.find('.removeSessionId').val();
@@ -786,9 +762,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueUserId = $formValues.find('.valueUserId').val();
 	var removeUserId = $formValues.find('.removeUserId').val() === 'true';
 	var setUserId = removeUserId ? null : $formValues.find('.setUserId').val();
+	var addUserId = $formValues.find('.addUserId').val();
 	if(removeUserId || setUserId != null && setUserId !== '')
 		vals['setUserId'] = setUserId;
-	var addUserId = $formValues.find('.addUserId').val();
 	if(addUserId != null && addUserId !== '')
 		vals['addUserId'] = addUserId;
 	var removeUserId = $formValues.find('.removeUserId').val();
@@ -798,9 +774,9 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueUserKey = $formValues.find('.valueUserKey').val();
 	var removeUserKey = $formValues.find('.removeUserKey').val() === 'true';
 	var setUserKey = removeUserKey ? null : $formValues.find('.setUserKey').val();
+	var addUserKey = $formValues.find('.addUserKey').val();
 	if(removeUserKey || setUserKey != null && setUserKey !== '')
 		vals['setUserKey'] = setUserKey;
-	var addUserKey = $formValues.find('.addUserKey').val();
 	if(addUserKey != null && addUserKey !== '')
 		vals['addUserKey'] = addUserKey;
 	var removeUserKey = $formValues.find('.removeUserKey').val();
@@ -810,117 +786,21 @@ async function patchSchoolPayment($formFilters, $formValues, pk, success, error)
 	var valueObjectTitle = $formValues.find('.valueObjectTitle').val();
 	var removeObjectTitle = $formValues.find('.removeObjectTitle').val() === 'true';
 	var setObjectTitle = removeObjectTitle ? null : $formValues.find('.setObjectTitle').val();
+	var addObjectTitle = $formValues.find('.addObjectTitle').val();
 	if(removeObjectTitle || setObjectTitle != null && setObjectTitle !== '')
 		vals['setObjectTitle'] = setObjectTitle;
-	var addObjectTitle = $formValues.find('.addObjectTitle').val();
 	if(addObjectTitle != null && addObjectTitle !== '')
 		vals['addObjectTitle'] = addObjectTitle;
 	var removeObjectTitle = $formValues.find('.removeObjectTitle').val();
 	if(removeObjectTitle != null && removeObjectTitle !== '')
 		vals['removeObjectTitle'] = removeObjectTitle;
 
-	var valueChildCompleteNamePreferred = $formValues.find('.valueChildCompleteNamePreferred').val();
-	var removeChildCompleteNamePreferred = $formValues.find('.removeChildCompleteNamePreferred').val() === 'true';
-	var setChildCompleteNamePreferred = removeChildCompleteNamePreferred ? null : $formValues.find('.setChildCompleteNamePreferred').val();
-	if(removeChildCompleteNamePreferred || setChildCompleteNamePreferred != null && setChildCompleteNamePreferred !== '')
-		vals['setChildCompleteNamePreferred'] = setChildCompleteNamePreferred;
-	var addChildCompleteNamePreferred = $formValues.find('.addChildCompleteNamePreferred').val();
-	if(addChildCompleteNamePreferred != null && addChildCompleteNamePreferred !== '')
-		vals['addChildCompleteNamePreferred'] = addChildCompleteNamePreferred;
-	var removeChildCompleteNamePreferred = $formValues.find('.removeChildCompleteNamePreferred').val();
-	if(removeChildCompleteNamePreferred != null && removeChildCompleteNamePreferred !== '')
-		vals['removeChildCompleteNamePreferred'] = removeChildCompleteNamePreferred;
-
-	var valueChildBirthDate = $formValues.find('.valueChildBirthDate').val();
-	var removeChildBirthDate = $formValues.find('.removeChildBirthDate').val() === 'true';
-	var setChildBirthDate = removeChildBirthDate ? null : $formValues.find('.setChildBirthDate').val();
-	if(removeChildBirthDate || setChildBirthDate != null && setChildBirthDate !== '')
-		vals['setChildBirthDate'] = setChildBirthDate;
-	var addChildBirthDate = $formValues.find('.addChildBirthDate').val();
-	if(addChildBirthDate != null && addChildBirthDate !== '')
-		vals['addChildBirthDate'] = addChildBirthDate;
-	var removeChildBirthDate = $formValues.find('.removeChildBirthDate').val();
-	if(removeChildBirthDate != null && removeChildBirthDate !== '')
-		vals['removeChildBirthDate'] = removeChildBirthDate;
-
-	var valueMomCompleteNamePreferred = $formValues.find('.valueMomCompleteNamePreferred').val();
-	var removeMomCompleteNamePreferred = $formValues.find('.removeMomCompleteNamePreferred').val() === 'true';
-	var setMomCompleteNamePreferred = removeMomCompleteNamePreferred ? null : $formValues.find('.setMomCompleteNamePreferred').val();
-	if(removeMomCompleteNamePreferred || setMomCompleteNamePreferred != null && setMomCompleteNamePreferred !== '')
-		vals['setMomCompleteNamePreferred'] = setMomCompleteNamePreferred;
-	var addMomCompleteNamePreferred = $formValues.find('.addMomCompleteNamePreferred').val();
-	if(addMomCompleteNamePreferred != null && addMomCompleteNamePreferred !== '')
-		vals['addMomCompleteNamePreferred'] = addMomCompleteNamePreferred;
-	var removeMomCompleteNamePreferred = $formValues.find('.removeMomCompleteNamePreferred').val();
-	if(removeMomCompleteNamePreferred != null && removeMomCompleteNamePreferred !== '')
-		vals['removeMomCompleteNamePreferred'] = removeMomCompleteNamePreferred;
-
-	var valueDadCompleteNamePreferred = $formValues.find('.valueDadCompleteNamePreferred').val();
-	var removeDadCompleteNamePreferred = $formValues.find('.removeDadCompleteNamePreferred').val() === 'true';
-	var setDadCompleteNamePreferred = removeDadCompleteNamePreferred ? null : $formValues.find('.setDadCompleteNamePreferred').val();
-	if(removeDadCompleteNamePreferred || setDadCompleteNamePreferred != null && setDadCompleteNamePreferred !== '')
-		vals['setDadCompleteNamePreferred'] = setDadCompleteNamePreferred;
-	var addDadCompleteNamePreferred = $formValues.find('.addDadCompleteNamePreferred').val();
-	if(addDadCompleteNamePreferred != null && addDadCompleteNamePreferred !== '')
-		vals['addDadCompleteNamePreferred'] = addDadCompleteNamePreferred;
-	var removeDadCompleteNamePreferred = $formValues.find('.removeDadCompleteNamePreferred').val();
-	if(removeDadCompleteNamePreferred != null && removeDadCompleteNamePreferred !== '')
-		vals['removeDadCompleteNamePreferred'] = removeDadCompleteNamePreferred;
-
-	var valueChargeAmountDue = $formValues.find('.valueChargeAmountDue').val();
-	var removeChargeAmountDue = $formValues.find('.removeChargeAmountDue').val() === 'true';
-	var setChargeAmountDue = removeChargeAmountDue ? null : $formValues.find('.setChargeAmountDue').val();
-	if(removeChargeAmountDue || setChargeAmountDue != null && setChargeAmountDue !== '')
-		vals['setChargeAmountDue'] = setChargeAmountDue;
-	var addChargeAmountDue = $formValues.find('.addChargeAmountDue').val();
-	if(addChargeAmountDue != null && addChargeAmountDue !== '')
-		vals['addChargeAmountDue'] = addChargeAmountDue;
-	var removeChargeAmountDue = $formValues.find('.removeChargeAmountDue').val();
-	if(removeChargeAmountDue != null && removeChargeAmountDue !== '')
-		vals['removeChargeAmountDue'] = removeChargeAmountDue;
-
-	var valueChargeAmountPassed = $formValues.find('.valueChargeAmountPassed').val();
-	var removeChargeAmountPassed = $formValues.find('.removeChargeAmountPassed').val() === 'true';
-	var setChargeAmountPassed = removeChargeAmountPassed ? null : $formValues.find('.setChargeAmountPassed').val();
-	if(removeChargeAmountPassed || setChargeAmountPassed != null && setChargeAmountPassed !== '')
-		vals['setChargeAmountPassed'] = setChargeAmountPassed;
-	var addChargeAmountPassed = $formValues.find('.addChargeAmountPassed').val();
-	if(addChargeAmountPassed != null && addChargeAmountPassed !== '')
-		vals['addChargeAmountPassed'] = addChargeAmountPassed;
-	var removeChargeAmountPassed = $formValues.find('.removeChargeAmountPassed').val();
-	if(removeChargeAmountPassed != null && removeChargeAmountPassed !== '')
-		vals['removeChargeAmountPassed'] = removeChargeAmountPassed;
-
-	var valueChargeAmountNotPassed = $formValues.find('.valueChargeAmountNotPassed').val();
-	var removeChargeAmountNotPassed = $formValues.find('.removeChargeAmountNotPassed').val() === 'true';
-	var setChargeAmountNotPassed = removeChargeAmountNotPassed ? null : $formValues.find('.setChargeAmountNotPassed').val();
-	if(removeChargeAmountNotPassed || setChargeAmountNotPassed != null && setChargeAmountNotPassed !== '')
-		vals['setChargeAmountNotPassed'] = setChargeAmountNotPassed;
-	var addChargeAmountNotPassed = $formValues.find('.addChargeAmountNotPassed').val();
-	if(addChargeAmountNotPassed != null && addChargeAmountNotPassed !== '')
-		vals['addChargeAmountNotPassed'] = addChargeAmountNotPassed;
-	var removeChargeAmountNotPassed = $formValues.find('.removeChargeAmountNotPassed').val();
-	if(removeChargeAmountNotPassed != null && removeChargeAmountNotPassed !== '')
-		vals['removeChargeAmountNotPassed'] = removeChargeAmountNotPassed;
-
-	var valueChargeAmountFuture = $formValues.find('.valueChargeAmountFuture').val();
-	var removeChargeAmountFuture = $formValues.find('.removeChargeAmountFuture').val() === 'true';
-	var setChargeAmountFuture = removeChargeAmountFuture ? null : $formValues.find('.setChargeAmountFuture').val();
-	if(removeChargeAmountFuture || setChargeAmountFuture != null && setChargeAmountFuture !== '')
-		vals['setChargeAmountFuture'] = setChargeAmountFuture;
-	var addChargeAmountFuture = $formValues.find('.addChargeAmountFuture').val();
-	if(addChargeAmountFuture != null && addChargeAmountFuture !== '')
-		vals['addChargeAmountFuture'] = addChargeAmountFuture;
-	var removeChargeAmountFuture = $formValues.find('.removeChargeAmountFuture').val();
-	if(removeChargeAmountFuture != null && removeChargeAmountFuture !== '')
-		vals['removeChargeAmountFuture'] = removeChargeAmountFuture;
-
 	var valuePaymentShortName = $formValues.find('.valuePaymentShortName').val();
 	var removePaymentShortName = $formValues.find('.removePaymentShortName').val() === 'true';
 	var setPaymentShortName = removePaymentShortName ? null : $formValues.find('.setPaymentShortName').val();
+	var addPaymentShortName = $formValues.find('.addPaymentShortName').val();
 	if(removePaymentShortName || setPaymentShortName != null && setPaymentShortName !== '')
 		vals['setPaymentShortName'] = setPaymentShortName;
-	var addPaymentShortName = $formValues.find('.addPaymentShortName').val();
 	if(addPaymentShortName != null && addPaymentShortName !== '')
 		vals['addPaymentShortName'] = addPaymentShortName;
 	var removePaymentShortName = $formValues.find('.removePaymentShortName').val();
@@ -1105,6 +985,10 @@ function patchSchoolPaymentFilters($formFilters) {
 		var filterEnrollmentKey = $formFilters.find('.valueEnrollmentKey').val();
 		if(filterEnrollmentKey != null && filterEnrollmentKey !== '')
 			filters.push({ name: 'fq', value: 'enrollmentKey:' + filterEnrollmentKey });
+
+		var filterLateFeeDate = $formFilters.find('.valueLateFeeDate').val();
+		if(filterLateFeeDate != null && filterLateFeeDate !== '')
+			filters.push({ name: 'fq', value: 'lateFeeDate:' + filterLateFeeDate });
 
 		var filterInheritPk = $formFilters.find('.valueInheritPk').val();
 		if(filterInheritPk != null && filterInheritPk !== '')
@@ -1556,6 +1440,10 @@ function searchSchoolPaymentFilters($formFilters) {
 		if(filterEnrollmentKey != null && filterEnrollmentKey !== '')
 			filters.push({ name: 'fq', value: 'enrollmentKey:' + filterEnrollmentKey });
 
+		var filterLateFeeDate = $formFilters.find('.valueLateFeeDate').val();
+		if(filterLateFeeDate != null && filterLateFeeDate !== '')
+			filters.push({ name: 'fq', value: 'lateFeeDate:' + filterLateFeeDate });
+
 		var filterInheritPk = $formFilters.find('.valueInheritPk').val();
 		if(filterInheritPk != null && filterInheritPk !== '')
 			filters.push({ name: 'fq', value: 'inheritPk:' + filterInheritPk });
@@ -1866,10 +1754,10 @@ async function websocketSchoolPayment(success) {
 			var pkPage = $('#SchoolPaymentForm :input[name=pk]').val();
 			var pks = json['pks'];
 			var empty = json['empty'];
-			var numFound = json['numFound'];
-			var numPATCH = json['numPATCH'];
+			var numFound = parseInt(json['numFound']);
+			var numPATCH = parseInt(json['numPATCH']);
 			var percent = Math.floor( numPATCH / numFound * 100 ) + '%';
-			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id);
+			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id).attr('data-numPATCH', numPATCH);
 			var $margin = $('<div>').attr('class', 'w3-margin ').attr('id', 'margin-' + id);
 			var $card = $('<div>').attr('class', 'w3-card w3-white ').attr('id', 'card-' + id);
 			var $header = $('<div>').attr('class', 'w3-container fa-green ').attr('id', 'header-' + id);
@@ -1888,10 +1776,18 @@ async function websocketSchoolPayment(success) {
 			$card.append($body);
 			$box.append($margin);
 			$margin.append($card);
-			$('.box-' + id).remove();
-			if(numPATCH < numFound)
-			$('.top-box').append($box);
-			if(pk && pkPage && pk == pkPage) {;
+			if(numPATCH < numFound) {
+				var $old_box = $('.box-' + id);
+				if(!$old_box.size()) {
+					$('.top-box').append($box);
+				} else if($old_box && $old_box.attr('data-numPATCH') < numFound) {
+					$('.box-' + id).remove();
+					$('.top-box').append($box);
+				}
+			} else {
+				$('.box-' + id).remove();
+			}
+			if(pk && pkPage && pk == pkPage) {
 				if(success)
 					success(json);
 			}
@@ -2219,6 +2115,23 @@ async function websocketSchoolPaymentInner(apiRequest) {
 						$(this).text(val);
 				});
 				addGlow($('.inputSchoolPayment' + pk + 'EnrollmentKey'));
+			}
+			var val = o['lateFeeDate'];
+			if(val != null) {
+				var t = moment(val, 'YYYY-MM-DD');
+				if(t)
+					val = t.format('MM/DD/YYYY');
+			}
+			if(vars.includes('lateFeeDate')) {
+				$('.inputSchoolPayment' + pk + 'LateFeeDate').each(function() {
+					if(val !== $(this).val())
+						$(this).val(val);
+				});
+				$('.varSchoolPayment' + pk + 'LateFeeDate').each(function() {
+					if(val !== $(this).text())
+						$(this).text(val);
+				});
+				addGlow($('.inputSchoolPayment' + pk + 'LateFeeDate'));
 			}
 			var val = o['inheritPk'];
 			if(vars.includes('inheritPk')) {

@@ -297,9 +297,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPk = $formulaireValeurs.find('.valeurPk').val();
 	var removePk = $formulaireValeurs.find('.removePk').val() === 'true';
 	var setPk = removePk ? null : $formulaireValeurs.find('.setPk').val();
+	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(removePk || setPk != null && setPk !== '')
 		vals['setPk'] = setPk;
-	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(addPk != null && addPk !== '')
 		vals['addPk'] = addPk;
 	var removePk = $formulaireValeurs.find('.removePk').val();
@@ -309,9 +309,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurCree = $formulaireValeurs.find('.valeurCree').val();
 	var removeCree = $formulaireValeurs.find('.removeCree').val() === 'true';
 	var setCree = removeCree ? null : $formulaireValeurs.find('.setCree').val();
+	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(removeCree || setCree != null && setCree !== '')
 		vals['setCree'] = setCree;
-	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(addCree != null && addCree !== '')
 		vals['addCree'] = addCree;
 	var removeCree = $formulaireValeurs.find('.removeCree').val();
@@ -321,9 +321,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurModifie = $formulaireValeurs.find('.valeurModifie').val();
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val() === 'true';
 	var setModifie = removeModifie ? null : $formulaireValeurs.find('.setModifie').val();
+	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(removeModifie || setModifie != null && setModifie !== '')
 		vals['setModifie'] = setModifie;
-	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(addModifie != null && addModifie !== '')
 		vals['addModifie'] = addModifie;
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val();
@@ -333,9 +333,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurObjetId = $formulaireValeurs.find('.valeurObjetId').val();
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val() === 'true';
 	var setObjetId = removeObjetId ? null : $formulaireValeurs.find('.setObjetId').val();
+	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(removeObjetId || setObjetId != null && setObjetId !== '')
 		vals['setObjetId'] = setObjetId;
-	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(addObjetId != null && addObjetId !== '')
 		vals['addObjetId'] = addObjetId;
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val();
@@ -348,10 +348,10 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurArchive = null;
 	if(valeurArchiveSelectVal != null && valeurArchiveSelectVal !== '')
 		valeurArchive = valeurArchiveSelectVal == 'true';
-	setArchive = removeArchive ? null : valeurArchive;
+	var setArchive = removeArchive ? null : valeurArchive;
+	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(removeArchive || setArchive != null && setArchive !== '')
 		vals['setArchive'] = setArchive;
-	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(addArchive != null && addArchive !== '')
 		vals['addArchive'] = addArchive;
 	var removeArchive = $formulaireValeurs.find('.removeArchive').prop('checked');
@@ -364,10 +364,10 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurSupprime = null;
 	if(valeurSupprimeSelectVal != null && valeurSupprimeSelectVal !== '')
 		valeurSupprime = valeurSupprimeSelectVal == 'true';
-	setSupprime = removeSupprime ? null : valeurSupprime;
+	var setSupprime = removeSupprime ? null : valeurSupprime;
+	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(removeSupprime || setSupprime != null && setSupprime !== '')
 		vals['setSupprime'] = setSupprime;
-	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(addSupprime != null && addSupprime !== '')
 		vals['addSupprime'] = addSupprime;
 	var removeSupprime = $formulaireValeurs.find('.removeSupprime').prop('checked');
@@ -377,9 +377,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPersonnePrenom = $formulaireValeurs.find('.valeurPersonnePrenom').val();
 	var removePersonnePrenom = $formulaireValeurs.find('.removePersonnePrenom').val() === 'true';
 	var setPersonnePrenom = removePersonnePrenom ? null : $formulaireValeurs.find('.setPersonnePrenom').val();
+	var addPersonnePrenom = $formulaireValeurs.find('.addPersonnePrenom').val();
 	if(removePersonnePrenom || setPersonnePrenom != null && setPersonnePrenom !== '')
 		vals['setPersonnePrenom'] = setPersonnePrenom;
-	var addPersonnePrenom = $formulaireValeurs.find('.addPersonnePrenom').val();
 	if(addPersonnePrenom != null && addPersonnePrenom !== '')
 		vals['addPersonnePrenom'] = addPersonnePrenom;
 	var removePersonnePrenom = $formulaireValeurs.find('.removePersonnePrenom').val();
@@ -389,9 +389,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurFamilleNom = $formulaireValeurs.find('.valeurFamilleNom').val();
 	var removeFamilleNom = $formulaireValeurs.find('.removeFamilleNom').val() === 'true';
 	var setFamilleNom = removeFamilleNom ? null : $formulaireValeurs.find('.setFamilleNom').val();
+	var addFamilleNom = $formulaireValeurs.find('.addFamilleNom').val();
 	if(removeFamilleNom || setFamilleNom != null && setFamilleNom !== '')
 		vals['setFamilleNom'] = setFamilleNom;
-	var addFamilleNom = $formulaireValeurs.find('.addFamilleNom').val();
 	if(addFamilleNom != null && addFamilleNom !== '')
 		vals['addFamilleNom'] = addFamilleNom;
 	var removeFamilleNom = $formulaireValeurs.find('.removeFamilleNom').val();
@@ -401,9 +401,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPersonnePrenomPrefere = $formulaireValeurs.find('.valeurPersonnePrenomPrefere').val();
 	var removePersonnePrenomPrefere = $formulaireValeurs.find('.removePersonnePrenomPrefere').val() === 'true';
 	var setPersonnePrenomPrefere = removePersonnePrenomPrefere ? null : $formulaireValeurs.find('.setPersonnePrenomPrefere').val();
+	var addPersonnePrenomPrefere = $formulaireValeurs.find('.addPersonnePrenomPrefere').val();
 	if(removePersonnePrenomPrefere || setPersonnePrenomPrefere != null && setPersonnePrenomPrefere !== '')
 		vals['setPersonnePrenomPrefere'] = setPersonnePrenomPrefere;
-	var addPersonnePrenomPrefere = $formulaireValeurs.find('.addPersonnePrenomPrefere').val();
 	if(addPersonnePrenomPrefere != null && addPersonnePrenomPrefere !== '')
 		vals['addPersonnePrenomPrefere'] = addPersonnePrenomPrefere;
 	var removePersonnePrenomPrefere = $formulaireValeurs.find('.removePersonnePrenomPrefere').val();
@@ -413,9 +413,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPersonneMail = $formulaireValeurs.find('.valeurPersonneMail').val();
 	var removePersonneMail = $formulaireValeurs.find('.removePersonneMail').val() === 'true';
 	var setPersonneMail = removePersonneMail ? null : $formulaireValeurs.find('.setPersonneMail').val();
+	var addPersonneMail = $formulaireValeurs.find('.addPersonneMail').val();
 	if(removePersonneMail || setPersonneMail != null && setPersonneMail !== '')
 		vals['setPersonneMail'] = setPersonneMail;
-	var addPersonneMail = $formulaireValeurs.find('.addPersonneMail').val();
 	if(addPersonneMail != null && addPersonneMail !== '')
 		vals['addPersonneMail'] = addPersonneMail;
 	var removePersonneMail = $formulaireValeurs.find('.removePersonneMail').val();
@@ -425,9 +425,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPersonneNumeroTelephone = $formulaireValeurs.find('.valeurPersonneNumeroTelephone').val();
 	var removePersonneNumeroTelephone = $formulaireValeurs.find('.removePersonneNumeroTelephone').val() === 'true';
 	var setPersonneNumeroTelephone = removePersonneNumeroTelephone ? null : $formulaireValeurs.find('.setPersonneNumeroTelephone').val();
+	var addPersonneNumeroTelephone = $formulaireValeurs.find('.addPersonneNumeroTelephone').val();
 	if(removePersonneNumeroTelephone || setPersonneNumeroTelephone != null && setPersonneNumeroTelephone !== '')
 		vals['setPersonneNumeroTelephone'] = setPersonneNumeroTelephone;
-	var addPersonneNumeroTelephone = $formulaireValeurs.find('.addPersonneNumeroTelephone').val();
 	if(addPersonneNumeroTelephone != null && addPersonneNumeroTelephone !== '')
 		vals['addPersonneNumeroTelephone'] = addPersonneNumeroTelephone;
 	var removePersonneNumeroTelephone = $formulaireValeurs.find('.removePersonneNumeroTelephone').val();
@@ -437,9 +437,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPersonneOccupation = $formulaireValeurs.find('.valeurPersonneOccupation').val();
 	var removePersonneOccupation = $formulaireValeurs.find('.removePersonneOccupation').val() === 'true';
 	var setPersonneOccupation = removePersonneOccupation ? null : $formulaireValeurs.find('.setPersonneOccupation').val();
+	var addPersonneOccupation = $formulaireValeurs.find('.addPersonneOccupation').val();
 	if(removePersonneOccupation || setPersonneOccupation != null && setPersonneOccupation !== '')
 		vals['setPersonneOccupation'] = setPersonneOccupation;
-	var addPersonneOccupation = $formulaireValeurs.find('.addPersonneOccupation').val();
 	if(addPersonneOccupation != null && addPersonneOccupation !== '')
 		vals['addPersonneOccupation'] = addPersonneOccupation;
 	var removePersonneOccupation = $formulaireValeurs.find('.removePersonneOccupation').val();
@@ -452,10 +452,10 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPersonneSms = null;
 	if(valeurPersonneSmsSelectVal != null && valeurPersonneSmsSelectVal !== '')
 		valeurPersonneSms = valeurPersonneSmsSelectVal == 'true';
-	setPersonneSms = removePersonneSms ? null : valeurPersonneSms;
+	var setPersonneSms = removePersonneSms ? null : valeurPersonneSms;
+	var addPersonneSms = $formulaireValeurs.find('.addPersonneSms').prop('checked');
 	if(removePersonneSms || setPersonneSms != null && setPersonneSms !== '')
 		vals['setPersonneSms'] = setPersonneSms;
-	var addPersonneSms = $formulaireValeurs.find('.addPersonneSms').prop('checked');
 	if(addPersonneSms != null && addPersonneSms !== '')
 		vals['addPersonneSms'] = addPersonneSms;
 	var removePersonneSms = $formulaireValeurs.find('.removePersonneSms').prop('checked');
@@ -468,10 +468,10 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPersonneContactUrgence = null;
 	if(valeurPersonneContactUrgenceSelectVal != null && valeurPersonneContactUrgenceSelectVal !== '')
 		valeurPersonneContactUrgence = valeurPersonneContactUrgenceSelectVal == 'true';
-	setPersonneContactUrgence = removePersonneContactUrgence ? null : valeurPersonneContactUrgence;
+	var setPersonneContactUrgence = removePersonneContactUrgence ? null : valeurPersonneContactUrgence;
+	var addPersonneContactUrgence = $formulaireValeurs.find('.addPersonneContactUrgence').prop('checked');
 	if(removePersonneContactUrgence || setPersonneContactUrgence != null && setPersonneContactUrgence !== '')
 		vals['setPersonneContactUrgence'] = setPersonneContactUrgence;
-	var addPersonneContactUrgence = $formulaireValeurs.find('.addPersonneContactUrgence').prop('checked');
 	if(addPersonneContactUrgence != null && addPersonneContactUrgence !== '')
 		vals['addPersonneContactUrgence'] = addPersonneContactUrgence;
 	var removePersonneContactUrgence = $formulaireValeurs.find('.removePersonneContactUrgence').prop('checked');
@@ -484,10 +484,10 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPersonneRecevoirMail = null;
 	if(valeurPersonneRecevoirMailSelectVal != null && valeurPersonneRecevoirMailSelectVal !== '')
 		valeurPersonneRecevoirMail = valeurPersonneRecevoirMailSelectVal == 'true';
-	setPersonneRecevoirMail = removePersonneRecevoirMail ? null : valeurPersonneRecevoirMail;
+	var setPersonneRecevoirMail = removePersonneRecevoirMail ? null : valeurPersonneRecevoirMail;
+	var addPersonneRecevoirMail = $formulaireValeurs.find('.addPersonneRecevoirMail').prop('checked');
 	if(removePersonneRecevoirMail || setPersonneRecevoirMail != null && setPersonneRecevoirMail !== '')
 		vals['setPersonneRecevoirMail'] = setPersonneRecevoirMail;
-	var addPersonneRecevoirMail = $formulaireValeurs.find('.addPersonneRecevoirMail').prop('checked');
 	if(addPersonneRecevoirMail != null && addPersonneRecevoirMail !== '')
 		vals['addPersonneRecevoirMail'] = addPersonneRecevoirMail;
 	var removePersonneRecevoirMail = $formulaireValeurs.find('.removePersonneRecevoirMail').prop('checked');
@@ -500,10 +500,10 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPersonneChercher = null;
 	if(valeurPersonneChercherSelectVal != null && valeurPersonneChercherSelectVal !== '')
 		valeurPersonneChercher = valeurPersonneChercherSelectVal == 'true';
-	setPersonneChercher = removePersonneChercher ? null : valeurPersonneChercher;
+	var setPersonneChercher = removePersonneChercher ? null : valeurPersonneChercher;
+	var addPersonneChercher = $formulaireValeurs.find('.addPersonneChercher').prop('checked');
 	if(removePersonneChercher || setPersonneChercher != null && setPersonneChercher !== '')
 		vals['setPersonneChercher'] = setPersonneChercher;
-	var addPersonneChercher = $formulaireValeurs.find('.addPersonneChercher').prop('checked');
 	if(addPersonneChercher != null && addPersonneChercher !== '')
 		vals['addPersonneChercher'] = addPersonneChercher;
 	var removePersonneChercher = $formulaireValeurs.find('.removePersonneChercher').prop('checked');
@@ -513,9 +513,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPhoto = $formulaireValeurs.find('.valeurPhoto').val();
 	var removePhoto = $formulaireValeurs.find('.removePhoto').val() === 'true';
 	var setPhoto = removePhoto ? null : $formulaireValeurs.find('.setPhoto').val();
+	var addPhoto = $formulaireValeurs.find('.addPhoto').val();
 	if(removePhoto || setPhoto != null && setPhoto !== '')
 		vals['setPhoto'] = setPhoto;
-	var addPhoto = $formulaireValeurs.find('.addPhoto').val();
 	if(addPhoto != null && addPhoto !== '')
 		vals['addPhoto'] = addPhoto;
 	var removePhoto = $formulaireValeurs.find('.removePhoto').val();
@@ -529,9 +529,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurInheritPk = $formulaireValeurs.find('.valeurInheritPk').val();
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val() === 'true';
 	var setInheritPk = removeInheritPk ? null : $formulaireValeurs.find('.setInheritPk').val();
+	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(removeInheritPk || setInheritPk != null && setInheritPk !== '')
 		vals['setInheritPk'] = setInheritPk;
-	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(addInheritPk != null && addInheritPk !== '')
 		vals['addInheritPk'] = addInheritPk;
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val();
@@ -541,9 +541,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurSessionId = $formulaireValeurs.find('.valeurSessionId').val();
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val() === 'true';
 	var setSessionId = removeSessionId ? null : $formulaireValeurs.find('.setSessionId').val();
+	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(removeSessionId || setSessionId != null && setSessionId !== '')
 		vals['setSessionId'] = setSessionId;
-	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(addSessionId != null && addSessionId !== '')
 		vals['addSessionId'] = addSessionId;
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val();
@@ -553,9 +553,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurUtilisateurId = $formulaireValeurs.find('.valeurUtilisateurId').val();
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val() === 'true';
 	var setUtilisateurId = removeUtilisateurId ? null : $formulaireValeurs.find('.setUtilisateurId').val();
+	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(removeUtilisateurId || setUtilisateurId != null && setUtilisateurId !== '')
 		vals['setUtilisateurId'] = setUtilisateurId;
-	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(addUtilisateurId != null && addUtilisateurId !== '')
 		vals['addUtilisateurId'] = addUtilisateurId;
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val();
@@ -565,9 +565,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurUtilisateurCle = $formulaireValeurs.find('.valeurUtilisateurCle').val();
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val() === 'true';
 	var setUtilisateurCle = removeUtilisateurCle ? null : $formulaireValeurs.find('.setUtilisateurCle').val();
+	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(removeUtilisateurCle || setUtilisateurCle != null && setUtilisateurCle !== '')
 		vals['setUtilisateurCle'] = setUtilisateurCle;
-	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(addUtilisateurCle != null && addUtilisateurCle !== '')
 		vals['addUtilisateurCle'] = addUtilisateurCle;
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val();
@@ -577,9 +577,9 @@ async function patchPereScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurObjetTitre = $formulaireValeurs.find('.valeurObjetTitre').val();
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val() === 'true';
 	var setObjetTitre = removeObjetTitre ? null : $formulaireValeurs.find('.setObjetTitre').val();
+	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(removeObjetTitre || setObjetTitre != null && setObjetTitre !== '')
 		vals['setObjetTitre'] = setObjetTitre;
-	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(addObjetTitre != null && addObjetTitre !== '')
 		vals['addObjetTitre'] = addObjetTitre;
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val();
@@ -1465,10 +1465,10 @@ async function websocketPereScolaire(success) {
 			var pkPage = $('#PereScolaireForm :input[name=pk]').val();
 			var pks = json['pks'];
 			var empty = json['empty'];
-			var numFound = json['numFound'];
-			var numPATCH = json['numPATCH'];
+			var numFound = parseInt(json['numFound']);
+			var numPATCH = parseInt(json['numPATCH']);
 			var percent = Math.floor( numPATCH / numFound * 100 ) + '%';
-			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id);
+			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id).attr('data-numPATCH', numPATCH);
 			var $margin = $('<div>').attr('class', 'w3-margin ').attr('id', 'margin-' + id);
 			var $card = $('<div>').attr('class', 'w3-card w3-white ').attr('id', 'card-' + id);
 			var $header = $('<div>').attr('class', 'w3-container fa-light-blue ').attr('id', 'header-' + id);
@@ -1487,10 +1487,18 @@ async function websocketPereScolaire(success) {
 			$card.append($body);
 			$box.append($margin);
 			$margin.append($card);
-			$('.box-' + id).remove();
-			if(numPATCH < numFound)
-			$('.top-box').append($box);
-			if(pk && pkPage && pk == pkPage) {;
+			if(numPATCH < numFound) {
+				var $old_box = $('.box-' + id);
+				if(!$old_box.size()) {
+					$('.top-box').append($box);
+				} else if($old_box && $old_box.attr('data-numPATCH') < numFound) {
+					$('.box-' + id).remove();
+					$('.top-box').append($box);
+				}
+			} else {
+				$('.box-' + id).remove();
+			}
+			if(pk && pkPage && pk == pkPage) {
 				if(success)
 					success(json);
 			}

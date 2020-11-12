@@ -289,9 +289,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurPk = $formulaireValeurs.find('.valeurPk').val();
 	var removePk = $formulaireValeurs.find('.removePk').val() === 'true';
 	var setPk = removePk ? null : $formulaireValeurs.find('.setPk').val();
+	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(removePk || setPk != null && setPk !== '')
 		vals['setPk'] = setPk;
-	var addPk = $formulaireValeurs.find('.addPk').val();
 	if(addPk != null && addPk !== '')
 		vals['addPk'] = addPk;
 	var removePk = $formulaireValeurs.find('.removePk').val();
@@ -301,9 +301,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurCree = $formulaireValeurs.find('.valeurCree').val();
 	var removeCree = $formulaireValeurs.find('.removeCree').val() === 'true';
 	var setCree = removeCree ? null : $formulaireValeurs.find('.setCree').val();
+	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(removeCree || setCree != null && setCree !== '')
 		vals['setCree'] = setCree;
-	var addCree = $formulaireValeurs.find('.addCree').val();
 	if(addCree != null && addCree !== '')
 		vals['addCree'] = addCree;
 	var removeCree = $formulaireValeurs.find('.removeCree').val();
@@ -313,9 +313,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurModifie = $formulaireValeurs.find('.valeurModifie').val();
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val() === 'true';
 	var setModifie = removeModifie ? null : $formulaireValeurs.find('.setModifie').val();
+	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(removeModifie || setModifie != null && setModifie !== '')
 		vals['setModifie'] = setModifie;
-	var addModifie = $formulaireValeurs.find('.addModifie').val();
 	if(addModifie != null && addModifie !== '')
 		vals['addModifie'] = addModifie;
 	var removeModifie = $formulaireValeurs.find('.removeModifie').val();
@@ -325,9 +325,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurObjetId = $formulaireValeurs.find('.valeurObjetId').val();
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val() === 'true';
 	var setObjetId = removeObjetId ? null : $formulaireValeurs.find('.setObjetId').val();
+	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(removeObjetId || setObjetId != null && setObjetId !== '')
 		vals['setObjetId'] = setObjetId;
-	var addObjetId = $formulaireValeurs.find('.addObjetId').val();
 	if(addObjetId != null && addObjetId !== '')
 		vals['addObjetId'] = addObjetId;
 	var removeObjetId = $formulaireValeurs.find('.removeObjetId').val();
@@ -340,10 +340,10 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurArchive = null;
 	if(valeurArchiveSelectVal != null && valeurArchiveSelectVal !== '')
 		valeurArchive = valeurArchiveSelectVal == 'true';
-	setArchive = removeArchive ? null : valeurArchive;
+	var setArchive = removeArchive ? null : valeurArchive;
+	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(removeArchive || setArchive != null && setArchive !== '')
 		vals['setArchive'] = setArchive;
-	var addArchive = $formulaireValeurs.find('.addArchive').prop('checked');
 	if(addArchive != null && addArchive !== '')
 		vals['addArchive'] = addArchive;
 	var removeArchive = $formulaireValeurs.find('.removeArchive').prop('checked');
@@ -356,10 +356,10 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurSupprime = null;
 	if(valeurSupprimeSelectVal != null && valeurSupprimeSelectVal !== '')
 		valeurSupprime = valeurSupprimeSelectVal == 'true';
-	setSupprime = removeSupprime ? null : valeurSupprime;
+	var setSupprime = removeSupprime ? null : valeurSupprime;
+	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(removeSupprime || setSupprime != null && setSupprime !== '')
 		vals['setSupprime'] = setSupprime;
-	var addSupprime = $formulaireValeurs.find('.addSupprime').prop('checked');
 	if(addSupprime != null && addSupprime !== '')
 		vals['addSupprime'] = addSupprime;
 	var removeSupprime = $formulaireValeurs.find('.removeSupprime').prop('checked');
@@ -369,9 +369,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurBlocHeureDebut = $formulaireValeurs.find('.valeurBlocHeureDebut').val();
 	var removeBlocHeureDebut = $formulaireValeurs.find('.removeBlocHeureDebut').val() === 'true';
 	var setBlocHeureDebut = removeBlocHeureDebut ? null : $formulaireValeurs.find('.setBlocHeureDebut').val();
+	var addBlocHeureDebut = $formulaireValeurs.find('.addBlocHeureDebut').val();
 	if(removeBlocHeureDebut || setBlocHeureDebut != null && setBlocHeureDebut !== '')
 		vals['setBlocHeureDebut'] = setBlocHeureDebut;
-	var addBlocHeureDebut = $formulaireValeurs.find('.addBlocHeureDebut').val();
 	if(addBlocHeureDebut != null && addBlocHeureDebut !== '')
 		vals['addBlocHeureDebut'] = addBlocHeureDebut;
 	var removeBlocHeureDebut = $formulaireValeurs.find('.removeBlocHeureDebut').val();
@@ -381,9 +381,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurBlocHeureFin = $formulaireValeurs.find('.valeurBlocHeureFin').val();
 	var removeBlocHeureFin = $formulaireValeurs.find('.removeBlocHeureFin').val() === 'true';
 	var setBlocHeureFin = removeBlocHeureFin ? null : $formulaireValeurs.find('.setBlocHeureFin').val();
+	var addBlocHeureFin = $formulaireValeurs.find('.addBlocHeureFin').val();
 	if(removeBlocHeureFin || setBlocHeureFin != null && setBlocHeureFin !== '')
 		vals['setBlocHeureFin'] = setBlocHeureFin;
-	var addBlocHeureFin = $formulaireValeurs.find('.addBlocHeureFin').val();
 	if(addBlocHeureFin != null && addBlocHeureFin !== '')
 		vals['addBlocHeureFin'] = addBlocHeureFin;
 	var removeBlocHeureFin = $formulaireValeurs.find('.removeBlocHeureFin').val();
@@ -393,9 +393,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurBlocPrixParMois = $formulaireValeurs.find('.valeurBlocPrixParMois').val();
 	var removeBlocPrixParMois = $formulaireValeurs.find('.removeBlocPrixParMois').val() === 'true';
 	var setBlocPrixParMois = removeBlocPrixParMois ? null : $formulaireValeurs.find('.setBlocPrixParMois').val();
+	var addBlocPrixParMois = $formulaireValeurs.find('.addBlocPrixParMois').val();
 	if(removeBlocPrixParMois || setBlocPrixParMois != null && setBlocPrixParMois !== '')
 		vals['setBlocPrixParMois'] = setBlocPrixParMois;
-	var addBlocPrixParMois = $formulaireValeurs.find('.addBlocPrixParMois').val();
 	if(addBlocPrixParMois != null && addBlocPrixParMois !== '')
 		vals['addBlocPrixParMois'] = addBlocPrixParMois;
 	var removeBlocPrixParMois = $formulaireValeurs.find('.removeBlocPrixParMois').val();
@@ -408,10 +408,10 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurBlocLundi = null;
 	if(valeurBlocLundiSelectVal != null && valeurBlocLundiSelectVal !== '')
 		valeurBlocLundi = valeurBlocLundiSelectVal == 'true';
-	setBlocLundi = removeBlocLundi ? null : valeurBlocLundi;
+	var setBlocLundi = removeBlocLundi ? null : valeurBlocLundi;
+	var addBlocLundi = $formulaireValeurs.find('.addBlocLundi').prop('checked');
 	if(removeBlocLundi || setBlocLundi != null && setBlocLundi !== '')
 		vals['setBlocLundi'] = setBlocLundi;
-	var addBlocLundi = $formulaireValeurs.find('.addBlocLundi').prop('checked');
 	if(addBlocLundi != null && addBlocLundi !== '')
 		vals['addBlocLundi'] = addBlocLundi;
 	var removeBlocLundi = $formulaireValeurs.find('.removeBlocLundi').prop('checked');
@@ -424,10 +424,10 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurBlocMardi = null;
 	if(valeurBlocMardiSelectVal != null && valeurBlocMardiSelectVal !== '')
 		valeurBlocMardi = valeurBlocMardiSelectVal == 'true';
-	setBlocMardi = removeBlocMardi ? null : valeurBlocMardi;
+	var setBlocMardi = removeBlocMardi ? null : valeurBlocMardi;
+	var addBlocMardi = $formulaireValeurs.find('.addBlocMardi').prop('checked');
 	if(removeBlocMardi || setBlocMardi != null && setBlocMardi !== '')
 		vals['setBlocMardi'] = setBlocMardi;
-	var addBlocMardi = $formulaireValeurs.find('.addBlocMardi').prop('checked');
 	if(addBlocMardi != null && addBlocMardi !== '')
 		vals['addBlocMardi'] = addBlocMardi;
 	var removeBlocMardi = $formulaireValeurs.find('.removeBlocMardi').prop('checked');
@@ -440,10 +440,10 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurBlocMercredi = null;
 	if(valeurBlocMercrediSelectVal != null && valeurBlocMercrediSelectVal !== '')
 		valeurBlocMercredi = valeurBlocMercrediSelectVal == 'true';
-	setBlocMercredi = removeBlocMercredi ? null : valeurBlocMercredi;
+	var setBlocMercredi = removeBlocMercredi ? null : valeurBlocMercredi;
+	var addBlocMercredi = $formulaireValeurs.find('.addBlocMercredi').prop('checked');
 	if(removeBlocMercredi || setBlocMercredi != null && setBlocMercredi !== '')
 		vals['setBlocMercredi'] = setBlocMercredi;
-	var addBlocMercredi = $formulaireValeurs.find('.addBlocMercredi').prop('checked');
 	if(addBlocMercredi != null && addBlocMercredi !== '')
 		vals['addBlocMercredi'] = addBlocMercredi;
 	var removeBlocMercredi = $formulaireValeurs.find('.removeBlocMercredi').prop('checked');
@@ -456,10 +456,10 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurBlocJeudi = null;
 	if(valeurBlocJeudiSelectVal != null && valeurBlocJeudiSelectVal !== '')
 		valeurBlocJeudi = valeurBlocJeudiSelectVal == 'true';
-	setBlocJeudi = removeBlocJeudi ? null : valeurBlocJeudi;
+	var setBlocJeudi = removeBlocJeudi ? null : valeurBlocJeudi;
+	var addBlocJeudi = $formulaireValeurs.find('.addBlocJeudi').prop('checked');
 	if(removeBlocJeudi || setBlocJeudi != null && setBlocJeudi !== '')
 		vals['setBlocJeudi'] = setBlocJeudi;
-	var addBlocJeudi = $formulaireValeurs.find('.addBlocJeudi').prop('checked');
 	if(addBlocJeudi != null && addBlocJeudi !== '')
 		vals['addBlocJeudi'] = addBlocJeudi;
 	var removeBlocJeudi = $formulaireValeurs.find('.removeBlocJeudi').prop('checked');
@@ -472,10 +472,10 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurBlocVendredi = null;
 	if(valeurBlocVendrediSelectVal != null && valeurBlocVendrediSelectVal !== '')
 		valeurBlocVendredi = valeurBlocVendrediSelectVal == 'true';
-	setBlocVendredi = removeBlocVendredi ? null : valeurBlocVendredi;
+	var setBlocVendredi = removeBlocVendredi ? null : valeurBlocVendredi;
+	var addBlocVendredi = $formulaireValeurs.find('.addBlocVendredi').prop('checked');
 	if(removeBlocVendredi || setBlocVendredi != null && setBlocVendredi !== '')
 		vals['setBlocVendredi'] = setBlocVendredi;
-	var addBlocVendredi = $formulaireValeurs.find('.addBlocVendredi').prop('checked');
 	if(addBlocVendredi != null && addBlocVendredi !== '')
 		vals['addBlocVendredi'] = addBlocVendredi;
 	var removeBlocVendredi = $formulaireValeurs.find('.removeBlocVendredi').prop('checked');
@@ -493,9 +493,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurInheritPk = $formulaireValeurs.find('.valeurInheritPk').val();
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val() === 'true';
 	var setInheritPk = removeInheritPk ? null : $formulaireValeurs.find('.setInheritPk').val();
+	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(removeInheritPk || setInheritPk != null && setInheritPk !== '')
 		vals['setInheritPk'] = setInheritPk;
-	var addInheritPk = $formulaireValeurs.find('.addInheritPk').val();
 	if(addInheritPk != null && addInheritPk !== '')
 		vals['addInheritPk'] = addInheritPk;
 	var removeInheritPk = $formulaireValeurs.find('.removeInheritPk').val();
@@ -505,9 +505,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurSessionId = $formulaireValeurs.find('.valeurSessionId').val();
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val() === 'true';
 	var setSessionId = removeSessionId ? null : $formulaireValeurs.find('.setSessionId').val();
+	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(removeSessionId || setSessionId != null && setSessionId !== '')
 		vals['setSessionId'] = setSessionId;
-	var addSessionId = $formulaireValeurs.find('.addSessionId').val();
 	if(addSessionId != null && addSessionId !== '')
 		vals['addSessionId'] = addSessionId;
 	var removeSessionId = $formulaireValeurs.find('.removeSessionId').val();
@@ -517,9 +517,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurUtilisateurId = $formulaireValeurs.find('.valeurUtilisateurId').val();
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val() === 'true';
 	var setUtilisateurId = removeUtilisateurId ? null : $formulaireValeurs.find('.setUtilisateurId').val();
+	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(removeUtilisateurId || setUtilisateurId != null && setUtilisateurId !== '')
 		vals['setUtilisateurId'] = setUtilisateurId;
-	var addUtilisateurId = $formulaireValeurs.find('.addUtilisateurId').val();
 	if(addUtilisateurId != null && addUtilisateurId !== '')
 		vals['addUtilisateurId'] = addUtilisateurId;
 	var removeUtilisateurId = $formulaireValeurs.find('.removeUtilisateurId').val();
@@ -529,9 +529,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurUtilisateurCle = $formulaireValeurs.find('.valeurUtilisateurCle').val();
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val() === 'true';
 	var setUtilisateurCle = removeUtilisateurCle ? null : $formulaireValeurs.find('.setUtilisateurCle').val();
+	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(removeUtilisateurCle || setUtilisateurCle != null && setUtilisateurCle !== '')
 		vals['setUtilisateurCle'] = setUtilisateurCle;
-	var addUtilisateurCle = $formulaireValeurs.find('.addUtilisateurCle').val();
 	if(addUtilisateurCle != null && addUtilisateurCle !== '')
 		vals['addUtilisateurCle'] = addUtilisateurCle;
 	var removeUtilisateurCle = $formulaireValeurs.find('.removeUtilisateurCle').val();
@@ -541,9 +541,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurObjetTitre = $formulaireValeurs.find('.valeurObjetTitre').val();
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val() === 'true';
 	var setObjetTitre = removeObjetTitre ? null : $formulaireValeurs.find('.setObjetTitre').val();
+	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(removeObjetTitre || setObjetTitre != null && setObjetTitre !== '')
 		vals['setObjetTitre'] = setObjetTitre;
-	var addObjetTitre = $formulaireValeurs.find('.addObjetTitre').val();
 	if(addObjetTitre != null && addObjetTitre !== '')
 		vals['addObjetTitre'] = addObjetTitre;
 	var removeObjetTitre = $formulaireValeurs.find('.removeObjetTitre').val();
@@ -553,9 +553,9 @@ async function patchBlocScolaire($formulaireFiltres, $formulaireValeurs, pk, suc
 	var valeurEcoleAddresse = $formulaireValeurs.find('.valeurEcoleAddresse').val();
 	var removeEcoleAddresse = $formulaireValeurs.find('.removeEcoleAddresse').val() === 'true';
 	var setEcoleAddresse = removeEcoleAddresse ? null : $formulaireValeurs.find('.setEcoleAddresse').val();
+	var addEcoleAddresse = $formulaireValeurs.find('.addEcoleAddresse').val();
 	if(removeEcoleAddresse || setEcoleAddresse != null && setEcoleAddresse !== '')
 		vals['setEcoleAddresse'] = setEcoleAddresse;
-	var addEcoleAddresse = $formulaireValeurs.find('.addEcoleAddresse').val();
 	if(addEcoleAddresse != null && addEcoleAddresse !== '')
 		vals['addEcoleAddresse'] = addEcoleAddresse;
 	var removeEcoleAddresse = $formulaireValeurs.find('.removeEcoleAddresse').val();
@@ -1369,10 +1369,10 @@ async function websocketBlocScolaire(success) {
 			var pkPage = $('#BlocScolaireForm :input[name=pk]').val();
 			var pks = json['pks'];
 			var empty = json['empty'];
-			var numFound = json['numFound'];
-			var numPATCH = json['numPATCH'];
+			var numFound = parseInt(json['numFound']);
+			var numPATCH = parseInt(json['numPATCH']);
 			var percent = Math.floor( numPATCH / numFound * 100 ) + '%';
-			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id);
+			var $box = $('<div>').attr('class', 'w3-display-topright w3-quarter box-' + id + ' ').attr('id', 'box-' + id).attr('data-numPATCH', numPATCH);
 			var $margin = $('<div>').attr('class', 'w3-margin ').attr('id', 'margin-' + id);
 			var $card = $('<div>').attr('class', 'w3-card w3-white ').attr('id', 'card-' + id);
 			var $header = $('<div>').attr('class', 'w3-container fa-indigo ').attr('id', 'header-' + id);
@@ -1391,10 +1391,18 @@ async function websocketBlocScolaire(success) {
 			$card.append($body);
 			$box.append($margin);
 			$margin.append($card);
-			$('.box-' + id).remove();
-			if(numPATCH < numFound)
-			$('.top-box').append($box);
-			if(pk && pkPage && pk == pkPage) {;
+			if(numPATCH < numFound) {
+				var $old_box = $('.box-' + id);
+				if(!$old_box.size()) {
+					$('.top-box').append($box);
+				} else if($old_box && $old_box.attr('data-numPATCH') < numFound) {
+					$('.box-' + id).remove();
+					$('.top-box').append($box);
+				}
+			} else {
+				$('.box-' + id).remove();
+			}
+			if(pk && pkPage && pk == pkPage) {
 				if(success)
 					success(json);
 			}
